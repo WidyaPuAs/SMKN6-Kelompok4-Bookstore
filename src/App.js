@@ -10,7 +10,7 @@ function App() {
   return (
     
     <div>
-      {<Desc />}
+      {/*<Desc />*/}
       {/* <Halaman_Home_Guest /> */}
       {/* <Halaman_Login /> */}
       {/* <Halaman_Keranjang /> */}
