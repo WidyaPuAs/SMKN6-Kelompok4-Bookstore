@@ -11,14 +11,8 @@ function App() {
   return (
     
     <div>
-      {/* <Halaman_Home_Guest /> */}
-      <Halaman_Account />
-      {/* <Login /> */}
-      {/* <Desc /> */}
-      {/* <Halaman_Account /> */}
-      {/* <Halaman_Keranjang /> */}
-      {/* <Halaman_Login /> */}
-      {/* <Test /> */}
+      <Halaman_Home_Guest />
+
     </div>
   );
 }
