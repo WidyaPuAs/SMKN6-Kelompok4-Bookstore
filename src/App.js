@@ -5,17 +5,14 @@ import Halaman_Home_Guest from './components/halaman_home_guest/home_guest';
 import Halaman_Login from './components/halaman_login/login';
 import Halaman_Keranjang from './components/halaman_keranjang/keranjang';
 import Test from './components/tes';
+import Test2 from './components/tes2';
 
 function App() {
   return (
     
     <div>
-      {/*<Desc />*/}
-      {/* <Halaman_Home_Guest /> */}
-      {/* <Halaman_Login /> */}
-      {/* <Halaman_Keranjang /> */}
-      {/* <Test /> */}
-      <Halaman_Account/>
+      <Halaman_Home_Guest />
+
     </div>
   );
 }
