@@ -5,7 +5,6 @@ module.exports = {
       fontFamily: {
         'barlow': ['Barlow', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
-        'ubuntu': ['Ubuntu', 'sans-serif'],
       },
       colors: {
         "dark-cream": "#d9aa64",
@@ -18,9 +17,6 @@ module.exports = {
         "button": '#ece6d6',
         "buttonhover": '#d4d0c6',
         "dark": '#272935',
-        'bg_cream': '#edebde',
-        'bg_button': '#363739',
-        'bg_button_hover': '#5e5f61',
       },
       scale: {
         '80': '0.8',
