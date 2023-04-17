@@ -15,7 +15,7 @@ function App() {
       {/* <Halaman_Login /> */}
       {/* <Halaman_Keranjang /> */}
       {/* <Test /> */}
-
+      <Halaman_Account/>
     </div>
   );
 }
