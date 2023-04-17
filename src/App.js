@@ -6,13 +6,14 @@ import Halaman_Login from './components/halaman_login/login';
 import Halaman_Keranjang from './components/halaman_keranjang/keranjang';
 import Test from './components/tes';
 import Test2 from './components/tes2';
+import Halaman_Pembelian from './components/halaman_pembelian/pembelian';
 
 function App() {
   return (
     
     <div>
-      <Halaman_Home_Guest />
-
+      {/* <Halaman_Home_Guest /> */}
+      <Halaman_Pembelian />
     </div>
   );
 }
