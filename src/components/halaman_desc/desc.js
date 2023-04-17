@@ -16,13 +16,17 @@ function Desc() {
           <div className="bg-transparent p-4"> 
             <img src={image} style={{ maxWidth: "80%", maxHeight: "80%" }} className="max-w-full h-auto" alt="Book Cover"/>
               <div className="description">
-                <h1 className="font-barlow font-bold text-lg ml-20 -mt-16">Description</h1>
+                <h1 className="font-barlow font-bold text-lg ml-20 -mt-16">Deskripsi</h1>
                   <p className="font-barlow text-sm mt-5 ml-20">
-                    Cerita berlangsung selama tahun keenam Harry di Hogwarts School of Witchcraft and Wizardry.
-                    Di mana dia menemukan lebih banyak tentang. Masa lalu Lord Voldemort dan ramalan yang meramalkan kekalahannya.<br></br>
+                    Harry Potter dan Pangeran Berdarah Campuran Edisi Ravenclaw House ini merayakan karakter mulia dari asrama Hogwarts yang terkenal 
+                    karena kecerdasan, pembelajaran, dan kebijaksanaannya. Tahun keenam Harry di Hogwarts dikemas dengan momen dan karakter Ravenclaw 
+                    yang lebih hebat paling tidak komentar Quidditch debut Luna Lovegood.<br></br>
 
-                    <br></br>Dengan urutan penuh aksi, twist yang mengejutkan, dan momen tragedi yang menyayat hati, "Half-Blood Prince"
-                    adalah bacaan wajib bagi setiap penggemar seri Harry Potter.
+                    <br></br>Setiap Ravenclaw House Edition menampilkan tepian yang disemprotkan dengan warna cerah dan pelapisan perunggu yang rumit. 
+                    Desain sampul yang menakjubkan memiliki potret bergaya cameo dari Pangeran Berdarah Campuran sebagai ikon sentral, dibingkai oleh ikonografi 
+                    bertema rumah yang indah. Selain pengenalan yang dipesan lebih dahulu, Edisi Ravenclaw juga berisi ilustrasi baru oleh pemenang Medali Kate Greenaway Levi Pinfold, 
+                    termasuk potret siswa Ravenclaw yang tak ada bandingannya, Luna Lovegood, dan gambar indah Gilderoy Lockhart menandatangani salinan Magical Me untuk menyertai fitur magis buku. 
+                    Ketujuh buku dalam seri ini akan diterbitkan dalam House Editions yang sangat dapat dikoleksi dan dibuat dengan indah ini, dirancang untuk dihargai dan dibaca selama bertahun-tahun yang akan datang.
                   </p>
               </div>
           
@@ -63,7 +67,9 @@ function Desc() {
           </p>
 
           <div className="button mt-10 grid-cols-3 w-auto">
-            <button className="bg-dark hover:bg-darkhover text-white py-2 px-14 text-sm rounded-full">Buy Now</button>
+          <p className="text-2xl font-bold">Rp 260.000</p>
+
+            <button className="bg-dark hover:bg-darkhover text-white py-3 px-16 text-sm rounded-full mt-10">Buy Now</button>
 
             <button className="bg-button  hover:bg-buttonhover text-white py-4 px-4 text-sm rounded-full ml-72">
               <img src={cart} className="max-w-full h-auto" alt="Book Cover"/>
@@ -79,19 +85,20 @@ function Desc() {
           </div>
 
           <div className="editors ml-40">
-            <h1 className="font-poppins font-bold text-lg mt-44">Editors</h1>
+            <h1 className="font-poppins font-bold text-lg mt-32">Editor</h1>
             <p className="font-barlow text-sm mt-6">
-              JK. Rowling (author), Christopher Reath, Alena Gestabon, Steve Korg
+              JK. Rowling (Penulis), Christopher Reath, Alena Gestabon, Steve Korg
             </p>
 
-            <h1 className="font-poppins font-bold text-lg mt-16">Language</h1>
+            <h1 className="font-poppins font-bold text-lg mt-14">Bahasa</h1>
             <p className="font-barlow text-sm mt-6">
               Standard English (USA & UK)
             </p>
 
-            <h1 className="font-poppins font-bold text-lg mt-16">Paperback</h1>
+            <h1 className="font-poppins font-bold text-lg mt-14">Paperback</h1>
             <p className="font-barlow text-sm mt-6">
-              Paper textured, full colour, 345 pages
+              Paper textured, full colour, 345 pages<br></br>
+              ISBN: 987 3 32564 455 B
             </p>
           </div>
         </div>
