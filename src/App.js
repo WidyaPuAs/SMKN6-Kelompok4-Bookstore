@@ -1,13 +1,12 @@
-import Home from './pages/home';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Buku_Terlaris from './pages/keranjang';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Halaman_Keranjang from './components/halaman_keranjang/keranjang';
 import Halaman_Account from './components/halaman_account/account'
 import Halaman_Chat from './components/halaman_chat/chat';
-import Halaman_Home_Guest from './components/halaman_account/account';
 import Halaman_Pembelian from './components/halaman_pembelian/pembelian';
 import Pembayaran from './pages/pembayaran';
 import Desc from './components/halaman_desc/desc';
+import Halaman_Home_Guest from './components/halaman_home_guest/home_guest';
 
 function App() {
   return (
@@ -25,5 +24,5 @@ function App() {
       </Router>
   );
 }
-
 export default App;
+
