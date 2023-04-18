@@ -2,9 +2,11 @@ import '../../../src/App.css';
 import '../../../src/index.css';
 import Bar from '../navbar/navbar';
 import image from '../../assets/picbuku.png';
+import { navigate, useNavigate } from 'react-router-dom';
 
 
 function Halaman_Keranjang() {
+  const navigate = useNavigate()
   return (
     <div className="bg-bg_cream min-h-screen">
       <Bar/>
@@ -111,7 +113,7 @@ function Halaman_Keranjang() {
                 </div>
                 
               </li>
-              <button className="bg-bg_button hover:bg-bg_button_hover tnteext-sm text-white py-2 px-24 ml-2 mt-6 mb-5 rounded">Check Out</button> 
+              <button onClick={() => navigate('/pembayaran')} className="bg-bg_button hover:bg-bg_button_hover tnteext-sm text-white py-2 px-24 ml-2 mt-6 mb-5 rounded">Check Out</button> 
             </ul> 
           </div>
         </div>
