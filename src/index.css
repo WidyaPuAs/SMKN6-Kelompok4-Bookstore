@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: #edebde;
-}
+
  
 .font-playfair-semi{
     font-family: 'Playfair Display', serif;
