@@ -8,7 +8,7 @@ import comment1 from '../../assets/comment1.jpg';
 import comment2 from '../../assets/comment2.jpg';
 import Bar from '../navbar/navbar';
 
-function Desc() {
+function Desc2() {
   return (
     <div className='bg-bg_cream'>
       <Bar />
@@ -107,4 +107,4 @@ function Desc() {
   );
 }
 
-export default Desc;
+export default Desc2;
