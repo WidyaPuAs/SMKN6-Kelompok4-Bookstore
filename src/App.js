@@ -13,7 +13,8 @@ function App() {
     
     <div>
       {/* <Halaman_Home_Guest /> */}
-      <Halaman_Pembelian />
+      {/* <Halaman_Pembelian /> */}
+      <Halaman_Account/>
     </div>
   );
 }
