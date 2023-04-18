@@ -31,7 +31,7 @@ function Bar() {
 				<a href='#' className='p-2'>
 				<img src={logoMessage} className='h-6 w-6' />
     			</a>
-				<a href='../halaman_account/account.js' className='p-2'>
+				<a href='../profile/profil.js' className='p-2'>
 				<img src={logoAccount} className='h-6 w-6' />
     			</a>
 			</div>
