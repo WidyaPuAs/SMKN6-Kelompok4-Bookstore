@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-playfair-semi {
-  font-family: "Playfair Display", serif;
+body {
+    background-color: #edebde;
+}
+ 
+.font-playfair-semi{
+    font-family: 'Playfair Display', serif;
 }
 
-.font-barlow {
-  font-family: "Barlow", sans-serif;
+.font-barlow{
+    font-family: 'Barlow', sans-serif;
 }
 
-.font-poppins {
-  font-family: "Poppins", sans-serif;
+.font-poppins{
+    font-family: 'Poppins', sans-serif;
 }
