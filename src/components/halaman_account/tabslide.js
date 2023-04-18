@@ -2,7 +2,6 @@ import '../../../src/App.css';
 import '../../../src/index.css';
 import Pp from '../../assets/pp.png';
 import { useState } from 'react';
-
 const Test = () => {
     const [activeTab, setActiveTab] = useState(0);
     const tabs = ['Biodata', 'Pemesanan', 'Pengaturan'];
