@@ -1,4 +1,3 @@
-import Home from './pages/Home';
 import Buku_Terlaris from './pages/keranjang';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Halaman_Keranjang from './components/halaman_keranjang/keranjang';
@@ -20,5 +19,5 @@ function App() {
       </Router>
   );
 }
-
 export default App;
+

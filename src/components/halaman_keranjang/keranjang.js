@@ -6,7 +6,7 @@ import image from '../../assets/picbuku.png';
 
 function Halaman_Keranjang() {
   return (
-    <div className="bg-bg_cream min-h-screen">
+    <div className="bg-bg_cream">
       <Bar/>
 
       <div class="max-w-7xl mx-8 py-8 flex mt-7">
