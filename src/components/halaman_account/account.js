@@ -10,7 +10,7 @@ function Halaman_Account() {
 	  <div>
         <Bar />
         <div className='container flex flex-row'>
-          <div className='basis-2/3 mx-auto w-1/5 h-screen bg-light-cream my-6 rounded-xl p-0' id='kotak-top'>
+          <div className='basis-2/3 mx-auto w-1/5 h-screen bg- my-6 rounded-xl p-0' id='kotak-top'>
            <div className='flex'>
             <img src={Pp} className='w-36 border-white border-2 rounded-full m-3'/>
            <div className='py-8'>

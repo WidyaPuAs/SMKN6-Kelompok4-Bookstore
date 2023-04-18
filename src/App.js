@@ -1,9 +1,3 @@
-import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
-import Desc from './components/halaman_desc/desc';
-import Halaman_Home_Guest from './components/halaman_home_guest/home_guest';
-import Halaman_Login from './components/halaman_login/login';
 import Home from './pages/home';
 import Buku_Terlaris from './pages/keranjang';
 import Halaman_Keranjang from './components/halaman_keranjang/keranjang';
