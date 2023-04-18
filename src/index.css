@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
- 
 .font-playfair-semi{
     font-family: 'Playfair Display', serif;
 }
