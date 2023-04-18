@@ -1,12 +1,14 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
+import Bar from "../navbar/navbar";
 
 
 
 function Halaman_Chat() {
   return (
-	<div>
-        
+	  <div>
+        <Bar />
+        Chat
     </div>
   );
 };

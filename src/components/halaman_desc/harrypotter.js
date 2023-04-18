@@ -3,7 +3,7 @@ import '../../../src/App.css';
 import image from '../../assets/picbuku.png';
 import save from '../../assets/save.png';
 import share from '../../assets/share.png';
-import cart from '../../assets/cart.png';
+import cart from '../../assets/card.png';
 import comment1 from '../../assets/comment1.jpg';
 import comment2 from '../../assets/comment2.jpg';
 import Bar from '../navbar/navbar';
