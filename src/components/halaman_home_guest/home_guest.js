@@ -39,42 +39,26 @@ function Halaman_Home_Guest() {
         </div>
       </div>
 
-      {/* <div className='w-11/12 mx-auto grid grid-rows-2 py-3'>
-        <div className='row-span-1 grid grid-co'>
-          <div>
-            <h4>Popular Now</h4>
-          </div>
-          <div>
-            <h4>View All</h4>
-          </div>
-        </div>
-        <div className='row-span-2'>
-                  
-        </div>
-      </div> */}
 
-      <div className="grid grid-rows-2 w-11/12 mx-auto py-3 mt-8">
-        <div className="row-span-1 flex justify-between items-center">
-          <div className="text-2xl font-bold text-black">
-            <h4>Popular Now</h4>
-          </div>
-          <div className="text-lg text-gray-500">
-            <h4>View All</h4>
-          </div>
+        <div class="flex justify-between mx-20 mt-14">
+          <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
+          <a href="#" class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
         </div>
-        <div className="row-span-2">
-          <div className="grid grid-rows"></div>
-          <div id="book-view" class="grid grid-cols-1 gap-2">
-            <div class="flex flex-col items-center border border-violet-700 -mt-16">
-              <img src={tereliyePergi} class="w-32 h-auto" />
-              <p class="text-center">Buku 1</p>
-              <p class="text-center">Nama Pembuat Buku 1</p>
-              <p class="text-center">Rp. 100.000</p>
+        
+        <div class="flex justify-center mt-5">
+          <div class="bg-white rounded-lg shadow-xl border border-black p-6 flex flex-col" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-16 h-20 mb-4"/>
+            <div class="mb-4">
+              <h2 class="text-lg font-medium">Nama Buku</h2>
+              <p class="text-sm text-gray-500">Nama Penulis</p>
             </div>
+            <div class="text-lg font-medium text-gray-700 mb-4">Harga: Rp. 100.000</div>
           </div>
         </div>
+
+
+
       </div>
-    </div>
   );
 }
 

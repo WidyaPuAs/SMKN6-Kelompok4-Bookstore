@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <Halaman_Home_Guest />
+      {/* <Test2 /> */}
     </div>
   );
 }
