@@ -1,8 +1,8 @@
+import Halaman_Home_Guest from "../components/halaman_home_guest/home_guest";
+
 const Home = () => {
     return (
-        <div>
-            
-        </div>
+        <Halaman_Home_Guest />
     )
 }
 

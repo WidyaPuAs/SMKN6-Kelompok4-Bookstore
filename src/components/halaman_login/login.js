@@ -11,8 +11,7 @@ function Halaman_Login() {
   return (
     <div
       className="bg-white-buram w-screen h-screen flex items-center justify-center"
-      id="kotak-tengah"
-    >
+      id="kotak-tengah">
       <div className="bg-white-apik w-3/4 h-3/4 rounded-xl grid grid-cols-2">
         <div className="col-span-1">
           <div className="flex items-center justify-center mt-16 ">

@@ -1,5 +1,6 @@
 import "../..//App.css";
 import "../../index.css";
+import { Navigate, useNavigate } from 'react-router-dom';
 import Bar from "../navbar/navbar";
 import Books from "../../assets/books.png";
 import tereliyePergi from "../../assets/tereliye-pergi.jpg";
@@ -39,18 +40,57 @@ function Halaman_Home_Guest() {
         </div>
       </div>
 
-
         <div class="flex justify-between mx-20 mt-14">
           <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
           <a href="#" class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
         </div>
         
-        <div class="flex justify-center mt-5">
-          <div class="bg-white rounded-lg shadow-xl border border-black p-6 flex flex-col" id="book-view">
-            <img src={tereliyePergi} alt="Gambar Buku" class="w-16 h-20 mb-4"/>
+        <div class="flex justify-center mt-5 gap-5 mb-5">
+          <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center text-center" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-40 h-56 mb-4"/>
             <div class="mb-4">
-              <h2 class="text-lg font-medium">Nama Buku</h2>
-              <p class="text-sm text-gray-500">Nama Penulis</p>
+              <h2 class="text-lg font-medium">Pergi</h2>
+              <p class="text-sm text-gray-500">Tereliye</p>
+            </div>
+            <div class="text-lg font-medium text-gray-700 mb-4">Rp. 100.000</div>
+          </div>
+          <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center text-center" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-40 h-56 mb-4"/>
+            <div class="mb-4">
+              <h2 class="text-lg font-medium">Pergi</h2>
+              <p class="text-sm text-gray-500">Tereliye</p>
+            </div>
+            <div class="text-lg font-medium text-gray-700 mb-4">Rp. 100.000</div>
+          </div>
+          <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center text-center" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-40 h-56 mb-4"/>
+            <div class="mb-4">
+              <h2 class="text-lg font-medium">Pergi</h2>
+              <p class="text-sm text-gray-500">Tereliye</p>
+            </div>
+            <div class="text-lg font-medium text-gray-700 mb-4">Rp. 100.000</div>
+          </div>
+          <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center text-center" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-40 h-56 mb-4"/>
+            <div class="mb-4">
+              <h2 class="text-lg font-medium">Pergi</h2>
+              <p class="text-sm text-gray-500">Tereliye</p>
+            </div>
+            <div class="text-lg font-medium text-gray-700 mb-4">Rp. 100.000</div>
+          </div>
+          <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center text-center" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-40 h-56 mb-4"/>
+            <div class="mb-4">
+              <h2 class="text-lg font-medium">Pergi</h2>
+              <p class="text-sm text-gray-500">Tereliye</p>
+            </div>
+            <div class="text-lg font-medium text-gray-700 mb-4">Harga: Rp. 100.000</div>
+          </div>
+          <div class="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center text-center" id="book-view">
+            <img src={tereliyePergi} alt="Gambar Buku" class="w-40 h-56 mb-4"/>
+            <div class="mb-4">
+              <h2 class="text-lg font-medium">Pergi</h2>
+              <p class="text-sm text-gray-500">Tereliye</p>
             </div>
             <div class="text-lg font-medium text-gray-700 mb-4">Harga: Rp. 100.000</div>
           </div>

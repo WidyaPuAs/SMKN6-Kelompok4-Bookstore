@@ -1,13 +1,16 @@
+import { Navigate, useNavigate } from 'react-router-dom';
 import '../App.css';
 import '../index.css';
 
-function Test() {
+const Test1 = () => {
+    const navigate = useNavigate()
     return (
-        <div>
-           <h1>This is Test Page</h1>
-        </div>
+      <div>
+        <h3>Halaman Awal</h3>
+        <button onClick={() => navigate('/laris')}> Buku Terlaris </button>
+      </div>
+    )
+};
 
-);
-}
+export default Test1;
 
-export default Test;
