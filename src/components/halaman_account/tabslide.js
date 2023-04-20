@@ -100,13 +100,8 @@ const Test = () => {
                     <p>Daftar pemesanan Anda:</p>
                 }
                 {tab === 'Pengaturan' &&
-                    <div>
-                    <h3>Pengaturan akun</h3>
-                    <ul>
-                        <li>Email: johndoe@example.com</li>
-                        <li>Password: **********</li>
-                        <li>Notifikasi: ON</li>
-                    </ul>
+                    <div class="ml-6 text-gray-700">
+                      <p className='text-4xl font-bold ml-3 mb-3'></p>
                     </div>
                 }
               </div>
