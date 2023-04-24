@@ -227,7 +227,7 @@ function Halaman_Home_Guest() {
 
       {/* EEEEE */}
       <section class="flex flex-col lg:flex-row items-center lg:items-stretch justify-center lg:justify-start my-10 py-8 px-4 mx-10 bg-brown-cream rounded-xl z-0">
-        <div class="w-full lg:w-1/2">
+        <div class="w-full lg:w-1/2 ml-5">
           <h2 class="text-2xl lg:text-3xl text-white font-bold mb-4">Temukan Penulis Terkenal</h2>
           <p class="text-white mb-8">Penulis penulis ini telah meliris banyak karya top seller</p>
           <a href="#" class="bg-cornflower-blue text-dark-purple py-3 px-6 rounded-full text-lg transition duration-300 hover:bg-opacity-80 hover:shadow-md bg-light-cream">Cari Sekarang</a>
