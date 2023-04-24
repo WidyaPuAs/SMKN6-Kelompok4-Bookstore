@@ -11,7 +11,7 @@ function Halaman_Keranjang() {
     <div className="bg-bg_cream">
       <Bar/>
 
-      <div class="max-w-7xl mx-8 py-8 flex mt-7">
+      <div class="max-w-7xl mx-8 py-8 flex mt-3">
         <div class="w-4/5">
           <div class="bg-white shadow-md rounded-lg overflow-hidden px-10 py-4">
             <p class="text-sm mb-2 font-bold">KERANJANG BUKU</p>
