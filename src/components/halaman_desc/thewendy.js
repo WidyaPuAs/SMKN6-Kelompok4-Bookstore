@@ -3,7 +3,7 @@ import '../../../src/App.css';
 import image from '../../assets/thewendy.png';
 import save from '../../assets/save.png';
 import share from '../../assets/share.png';
-import cart from '../../assets/card.png';
+import cart from '../../assets/cart.png';
 import comment1 from '../../assets/comment1.jpg';
 import comment2 from '../../assets/comment2.jpg';
 import Bar from '../navbar/navbar';
@@ -14,7 +14,7 @@ function Desc2() {
       <Bar />
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-transparent p-4"> 
-            <img src={image} style={{ maxWidth: "80%", maxHeight: "80%" }} className="max-w-full h-auto" alt="Book Cover"/>
+            <img src={image} style={{ maxWidth: "75%", maxHeight: "75%" }} className="max-w-full h-auto" alt="Book Cover"/>
               <div className="description">
                 <h1 className="font-barlow font-bold text-lg ml-20 -mt-16">Deskripsi</h1>
                   <p className="font-barlow text-sm mt-5 ml-20">
@@ -72,15 +72,15 @@ function Desc2() {
             <button className="bg-dark hover:bg-darkhover text-white py-3 px-16 text-sm rounded-full mt-10">Buy Now</button>
 
             <button className="bg-button  hover:bg-buttonhover text-white py-4 px-4 text-sm rounded-full ml-72">
-              <img src={cart} className="max-w-full h-auto" alt="Book Cover"/>
+              <img src={cart} className="max-w-7 h-7" alt="Book Cover"/>
             </button>
             
             <button className="bg-button  hover:bg-buttonhover text-white py-3 px-3 text-sm rounded-full ml-5">
-              <img src={save} className="max-w-full h-auto" alt="Book Cover"/>
+              <img src={save} className="max-w-7 h-7" alt="Book Cover"/>
             </button>
 
             <button className="bg-button  hover:bg-buttonhover text-white py-3 px-3 text-sm rounded-full ml-5">
-              <img src={share} className="max-w-full h-auto" alt="Book Cover"/>
+              <img src={share} className="max-w-7 h-7" alt="Book Cover"/>
             </button>
           </div>
 
