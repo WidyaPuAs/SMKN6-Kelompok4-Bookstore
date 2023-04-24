@@ -8,7 +8,7 @@ function Halaman_about() {
   return (
 	  <div>
         <Bar />
-        Chat
+        About
     </div>
   );
 };

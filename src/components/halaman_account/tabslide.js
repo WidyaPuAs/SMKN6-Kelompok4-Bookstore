@@ -1,5 +1,6 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
+import { Navigate, useNavigate } from 'react-router-dom';
 import Pp from '../../assets/pp.png';
 import language from '../../assets/language.png';
 import pallete from '../../assets/pallete.png';
@@ -11,6 +12,7 @@ import { useState } from 'react';
 const Test = () => {
     const [activeTab, setActiveTab] = useState(0);
     const tabs = ['Biodata', 'Pemesanan', 'Pengaturan'];
+    const navigate = useNavigate()
   
     return (
       <div className="bg">
@@ -190,7 +192,7 @@ const Test = () => {
 
                     {/* ABOUT DEVELOPMENT */}
 
-                    <div class="w-auto ml-5 mr-5 mt-3 bg-white border border-gray-200 rounded-lg shadow">
+                    <div class="w-auto ml-5 mr-5 mt-3 bg-white border border-gray-200 rounded-lg shadow" onClick={() => navigate('/about')} >
                       <div class="flex justify-between items-center px-3 py-4">
                         <span class="text-gray-700">
                           <img src={about} alt="Aboutdevelopment" class="w-5 h-5 mr-5 inline-block"/> 
