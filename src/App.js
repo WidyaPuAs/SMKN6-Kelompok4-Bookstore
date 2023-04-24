@@ -8,6 +8,8 @@ import Pembayaran from './pages/pembayaran';
 import Home from './pages/home'
 import Halaman_Home_Guest from './components/halaman_home_guest/home_guest';
 import Desc from './components/halaman_desc/harrypotter';
+import Halaman_Login from './components/halaman_login/login'
+import Halaman_SignUp from './components/halaman_login/signup'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path='/buku-terlaris' element={<Buku_Terlaris/>} />
           <Route path='/pembayaran' element={<Pembayaran/>} />
           <Route path='/book-pergi' element={<Desc/>} />
+          <Route path='/login' element={<Halaman_Login/>} />
+          <Route path='/signup' element={<Halaman_SignUp/>} />
         </Routes>
       </Router>
   );
