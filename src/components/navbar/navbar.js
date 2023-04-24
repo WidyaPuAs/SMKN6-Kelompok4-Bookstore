@@ -29,13 +29,13 @@ function Bar() {
 			{/* Perkumpulan */}
 			<div className='flex items-center'>
 				<a onClick={() => navigate('/keranjang')} className='p-2 hidden sm:block'>
-				<img src={logoBasket} className='h-6 w-6' />
+				<img src={logoBasket} className='h-6 w-6 ml-3' />
     			</a>
 				<a onClick={() => navigate('/chat')} className='p-2 hidden sm:block'>
-				<img src={logoMessage} className='h-6 w-6' />
+				<img src={logoMessage} className='h-6 w-6 ml-3' />
     			</a>
 				<a onClick={() => navigate('/profile')} className='p-2 hidden sm:block'>
-				<img src={logoAccount} className='h-6 w-6 ml-3' />
+				<img src={logoAccount} className='h-6 w-6 ml-3 mr-3' />
     			</a>
 				{/* <a>
 				<img src={Menu} className='h-6 w-6 block sm:hidden' />
