@@ -5,6 +5,7 @@ import Pp from '../../assets/pp.png';
 import language from '../../assets/language.png';
 import pallete from '../../assets/pallete.png';
 import notifikasi from '../../assets/notifikasi.png';
+import Halaman_Status_Pembelian from '../halaman_status_pembelian/status_pembelian';
 import about from '../../assets/about.png';
 import help from '../../assets/help.png';
 import { useState } from 'react';
@@ -103,7 +104,9 @@ const Test = () => {
                     </div>
                 }
                 {tab === 'Pemesanan' &&
-                    <p>Daftar pemesanan Anda:</p>
+                  <div className='status'>
+                    <Halaman_Status_Pembelian />
+                  </div>
                     
                 }
 
