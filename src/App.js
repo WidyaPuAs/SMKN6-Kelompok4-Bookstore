@@ -5,8 +5,12 @@ import Halaman_Account from './components/halaman_account/account'
 import Halaman_Chat from './components/halaman_chat/chat';
 import Halaman_Pembelian from './components/halaman_pembelian/pembelian';
 import Pembayaran from './pages/pembayaran';
-import Desc from './components/halaman_desc/desc';
+import Home from './pages/home'
 import Halaman_Home_Guest from './components/halaman_home_guest/home_guest';
+import Desc from './components/halaman_desc/harrypotter';
+import Halaman_Login from './components/halaman_login/login'
+import Halaman_SignUp from './components/halaman_login/signup'
+import Halaman_about from './components/halaman_about/about';
 
 function App() {
   return (
@@ -20,6 +24,9 @@ function App() {
           <Route path='/buku-terlaris' element={<Buku_Terlaris/>} />
           <Route path='/pembayaran' element={<Pembayaran/>} />
           <Route path='/book-pergi' element={<Desc/>} />
+          <Route path='/login' element={<Halaman_Login/>} />
+          <Route path='/signup' element={<Halaman_SignUp/>} />
+          <Route path='/about' element={<Halaman_about/>} />
         </Routes>
       </Router>
   );

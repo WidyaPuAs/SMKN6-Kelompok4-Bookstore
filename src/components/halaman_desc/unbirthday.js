@@ -3,12 +3,12 @@ import '../../../src/App.css';
 import image from '../../assets/unbirthday.png';
 import save from '../../assets/save.png';
 import share from '../../assets/share.png';
-import cart from '../../assets/card.png';
+import cart from '../../assets/cart.png';
 import comment1 from '../../assets/comment1.jpg';
 import comment2 from '../../assets/comment2.jpg';
 import Bar from '../navbar/navbar';
 
-function Desc() {
+function Desc2() {
   return (
     <div className='bg-bg_cream'>
       <Bar />
@@ -72,15 +72,15 @@ function Desc() {
             <button className="bg-dark hover:bg-darkhover text-white py-3 px-16 text-sm rounded-full mt-10">Buy Now</button>
 
             <button className="bg-button  hover:bg-buttonhover text-white py-4 px-4 text-sm rounded-full ml-72">
-              <img src={cart} className="max-w-full h-auto" alt="Book Cover"/>
+              <img src={cart} className="max-w-7 h-7" alt="Book Cover"/>
             </button>
             
             <button className="bg-button  hover:bg-buttonhover text-white py-3 px-3 text-sm rounded-full ml-5">
-              <img src={save} className="max-w-full h-auto" alt="Book Cover"/>
+              <img src={save} className="max-w-7 h-7" alt="Book Cover"/>
             </button>
 
             <button className="bg-button  hover:bg-buttonhover text-white py-3 px-3 text-sm rounded-full ml-5">
-              <img src={share} className="max-w-full h-auto" alt="Book Cover"/>
+              <img src={share} className="max-w-7 h-7" alt="Book Cover"/>
             </button>
           </div>
 
@@ -107,4 +107,4 @@ function Desc() {
   );
 }
 
-export default Desc;
+export default Desc2;
