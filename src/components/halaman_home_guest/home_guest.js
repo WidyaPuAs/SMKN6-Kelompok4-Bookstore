@@ -51,7 +51,7 @@ function Halaman_Home_Guest() {
       
       <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
 
-      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center" onClick={() => navigate('/book-pergi')}>
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Judul Buku 4</h2>
@@ -60,7 +60,7 @@ function Halaman_Home_Guest() {
         <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
       </div>
 
-      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center" onClick={() => navigate('/book-pergi')}>
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Judul Buku 4</h2>
@@ -256,6 +256,96 @@ function Halaman_Home_Guest() {
         </ul>
       </section>
 
+      {/* View 2 */}
+      <div class="flex justify-between mx-20 mt-10">
+        <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
+        <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
+      </div>
+      
+      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      </div>
 
       {/* RRRRRR */}
 
