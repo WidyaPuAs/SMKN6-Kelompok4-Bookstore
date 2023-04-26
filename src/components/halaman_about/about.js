@@ -35,7 +35,7 @@ function Halaman_about() {
               <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-gray-800 text-xs font-semibold uppercase tracking-widest"></div>
             </div>
 
-            <p class="text-slate-800 text-base text-center mt-3">Widya Pudji Astuti</p>
+            <p class="text-slate-800 text-base text-center mt-3">Widya Puji Astuti</p>
           </a>
           </div>                  
           
