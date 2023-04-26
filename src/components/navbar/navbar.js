@@ -20,6 +20,10 @@ function Bar() {
     			<img src={logoBook} alt='Logo' className='w-10 h-10 mr-2'/>
     			<span className='font-bold text-xl'>Bookstore</span>
   			</div>
+		
+			<div className='flex items-center'>
+				
+			</div>
 
 			{/* Search Bar */}
 			<div className='flex-1 mx-4'>
@@ -40,7 +44,7 @@ function Bar() {
 				{/* <a>
 				<img src={Menu} className='h-6 w-6 block sm:hidden' />
     			</a> */}
-				<button className='relative flex justify-center items-center focus:outline-none focus:ring group'>
+				<button className='relative justify-center items-center focus:outline-none focus:ring group block sm:hidden'>
 					<img src={Menu} className='h-5 w-5' />
 					<div className='absolute hidden group-focus:block top-full min-w-full w-screen bg-light-cream shadow-md mt-1 rounded'>
 						<ul className='text-left border rounded'>
