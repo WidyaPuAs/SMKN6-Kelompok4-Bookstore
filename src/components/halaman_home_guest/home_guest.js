@@ -51,7 +51,7 @@ function Halaman_Home_Guest() {
       
       <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
 
-      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center" onClick={() => navigate('/book-pergi')}>
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Judul Buku 4</h2>
@@ -60,7 +60,7 @@ function Halaman_Home_Guest() {
         <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
       </div>
 
-      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center" onClick={() => navigate('/book-pergi')}>
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Judul Buku 4</h2>
