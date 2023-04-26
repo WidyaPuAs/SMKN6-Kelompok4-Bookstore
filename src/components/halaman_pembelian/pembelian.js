@@ -4,8 +4,7 @@ import Bar from "../navbar/navbar";
 
 function Halaman_Pembelian() {
   return (
-	<div>
-<<<<<<< HEAD
+	  <div>
     <div>
     <div class="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
   <a href="#" class="text-2xl font-bold text-gray-800">sneekpeeks</a>
@@ -156,9 +155,6 @@ function Halaman_Pembelian() {
 </div>
 
     </div>
-=======
-    <Bar />
->>>>>>> 64b81491bab50648a1708fc0827ec37af474b5bc
   </div>
   );
 };
