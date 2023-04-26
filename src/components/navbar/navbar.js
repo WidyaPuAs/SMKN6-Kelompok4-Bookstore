@@ -1,6 +1,7 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
 import { Navigate, useNavigate } from 'react-router-dom';
+import Dropdown from '../dropdown_kategori/dropdown';
 import logoBook from '../../assets/icons8-book-65.png';
 import logoBasket from '../../assets/icons8-shopping-basket-90.png';
 import logoMessage from '../../assets/icons8-secured-letter-90.png';
@@ -40,6 +41,7 @@ function Bar() {
 					</li>
 					</ul>
 				</div>
+				{/* <Dropdown/> */}
     			<input type='text' className='w-10/12 border border-gray-300 px-4 py-2 rounded-r-md' placeholder='Cari Buku ...'/>
   			</div>
 
