@@ -1,6 +1,6 @@
 import '../../../src/index.css';
 import '../../../src/App.css';
-import image from '../../assets/picbuku.png';
+import image from '../../assets/thewendy.png';
 import save from '../../assets/save.png';
 import share from '../../assets/share.png';
 import cart from '../../assets/cart.png';
@@ -8,7 +8,7 @@ import comment1 from '../../assets/comment1.jpg';
 import comment2 from '../../assets/comment2.jpg';
 import Bar from '../navbar/navbar';
 
-function Desc() {
+function Desc2() {
   return (
     <div className='bg-bg_cream'>
       <Bar />
@@ -18,15 +18,15 @@ function Desc() {
               <div className="description">
                 <h1 className="font-barlow font-bold text-lg ml-20 -mt-16">Deskripsi</h1>
                   <p className="font-barlow text-sm mt-5 ml-20">
-                    Harry Potter dan Pangeran Berdarah Campuran Edisi Ravenclaw House ini merayakan karakter mulia dari asrama Hogwarts yang terkenal 
-                    karena kecerdasan, pembelajaran, dan kebijaksanaannya. Tahun keenam Harry di Hogwarts dikemas dengan momen dan karakter Ravenclaw 
-                    yang lebih hebat paling tidak komentar Quidditch debut Luna Lovegood.<br></br>
+                    London. 1789. Lebih dari apa pun di dunia, Wendy Darling ingin menjadi kapten kapal, 
+                    tetapi wanita tidak diizinkan masuk Angkatan Laut Kerajaan. Ketika dia mengetahui Home Office 
+                    menerima segelintir wanita ke dalam jajarannya, dia langsung mengambil kesempatan itu, bergabung 
+                    dalam perang melawan ancaman paling tangguh yang pernah dihadapi Inggris. Sihir.<br></br>
 
-                    <br></br>Setiap Ravenclaw House Edition menampilkan tepian yang disemprotkan dengan warna cerah dan pelapisan perunggu yang rumit. 
-                    Desain sampul yang menakjubkan memiliki potret bergaya cameo dari Pangeran Berdarah Campuran sebagai ikon sentral, dibingkai oleh ikonografi 
-                    bertema rumah yang indah. Selain pengenalan yang dipesan lebih dahulu, Edisi Ravenclaw juga berisi ilustrasi baru oleh pemenang Medali Kate Greenaway Levi Pinfold, 
-                    termasuk potret siswa Ravenclaw yang tak ada bandingannya, Luna Lovegood, dan gambar indah Gilderoy Lockhart menandatangani salinan Magical Me untuk menyertai fitur magis buku. 
-                    Ketujuh buku dalam seri ini akan diterbitkan dalam House Editions yang sangat dapat dikoleksi dan dibuat dengan indah ini, dirancang untuk dihargai dan dibaca selama bertahun-tahun yang akan datang.
+                    <br></br>Tapi dinas rahasia tidak persis seperti yang dia harapkan. Ditemani oleh pemeran 
+                    yang ditata ulang dari Peter Pan asli, Wendy segera menemukan bahwa mimpinya sejauh ini, 
+                    bahwa memilih sisi tidak sesederhana yang dia pikirkan, dan bahwa satu-satunya pria yang 
+                    tidak dibutakan oleh jenis kelaminnya. .. mungkin musuh terbesar bangsanya.
                   </p>
               </div>
           
@@ -60,14 +60,14 @@ function Desc() {
           </div>
                     
         <div className="bg-transparent p-4 -ml-20"> 
-          <h1 className="font-playfair-semi text-5xl mt-40">Harry Potter: Half Blood Prince</h1>
-          <p className="font-barlow text-lg mt-7">JK Rowling</p>
+          <h1 className="font-playfair-semi text-5xl mt-32">The Wendy</h1>
+          <p className="font-barlow text-lg mt-7">Erin Michelle Sky</p>
           <p className="font-barlow italic text-sm mt-7">
-            Bersiaplah untuk mengungkap rahasia kelam dan pengkhianatan dalam buku ini. Petualangan mendebarkan menanti Anda.
+            Ketika dunia tidak ingin Anda menjadi diri Anda sendiri, Anda harus menjadi diri Anda lebih dari yang Anda tahu.
           </p>
 
           <div className="button mt-10 grid-cols-3 w-auto">
-          <p className="text-2xl font-bold">Rp 260.000</p>
+          <p className="text-2xl font-bold">Rp 112.000</p>
 
             <button className="bg-dark hover:bg-darkhover text-white py-3 px-16 text-sm rounded-full mt-10">Buy Now</button>
 
@@ -85,20 +85,21 @@ function Desc() {
           </div>
 
           <div className="editors ml-40">
-            <h1 className="font-poppins font-bold text-lg mt-32">Editor</h1>
+            <h1 className="font-poppins font-bold text-lg mt-36">Editor</h1>
             <p className="font-barlow text-sm mt-6">
-              JK. Rowling (Penulis), Christopher Reath, Alena Gestabon, Steve Korg
+                Erin Michelle Sky (Penulis), Steven Brown
             </p>
 
             <h1 className="font-poppins font-bold text-lg mt-14">Bahasa</h1>
             <p className="font-barlow text-sm mt-6">
-              Standard English (USA & UK)
+                Standard English (USA & UK)
             </p>
 
             <h1 className="font-poppins font-bold text-lg mt-14">Paperback</h1>
             <p className="font-barlow text-sm mt-6">
-              Paper textured, full colour, 345 pages<br></br>
-              ISBN: 987 3 32564 455 B
+                Paper textured, full colour, 294 pages<br></br>
+                ISBN-10: 1946137057<br></br>
+                ISBN-13: 978-1946137050
             </p>
           </div>
         </div>
@@ -107,4 +108,4 @@ function Desc() {
   );
 }
 
-export default Desc;
+export default Desc2;
