@@ -23,7 +23,7 @@ function Bar() {
   			</div>
 
 			{/* Search Bar */}
-			<div className='flex-1 ml-10'>
+			<div className='flex-1 ml-14'>
 				<button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">All categories <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 				<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
 					<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
@@ -48,18 +48,18 @@ function Bar() {
 			{/* Perkumpulan */}
 			<div className='flex items-center'>
 				<a onClick={() => navigate('/keranjang')} className='p-2 hidden sm:block'>
-				<img src={logoBasket} className='h-6 w-6 ml-3' />
+				<img src={logoBasket} className='h-6 w-6' />
     			</a>
 				<a onClick={() => navigate('/chat')} className='p-2 hidden sm:block'>
-				<img src={logoMessage} className='h-6 w-6 ml-3' />
+				<img src={logoMessage} className='h-6 w-6' />
     			</a>
 				<a onClick={() => navigate('/profile')} className='p-2 hidden sm:block'>
-				<img src={logoAccount} className='h-6 w-6 ml-3 mr-3' />
+				<img src={logoAccount} className='h-6 w-6' />
     			</a>
 				{/* <a>
 				<img src={Menu} className='h-6 w-6 block sm:hidden' />
     			</a> */}
-				<button className='relative flex justify-center items-center focus:outline-none focus:ring group'>
+				<button className='relative justify-center items-center focus:outline-none focus:ring group block sm:hidden'>
 					<img src={Menu} className='h-5 w-5' />
 					<div className='absolute hidden group-focus:block top-full min-w-full w-screen bg-light-cream shadow-md mt-1 rounded'>
 						<ul className='text-left border rounded'>
