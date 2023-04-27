@@ -79,7 +79,7 @@ function Halaman_Login() {
             </div>
           </div>
         </div>
-        <div className="col-span-1 flex items-center justify-center">
+        <div className="col-span-1 items-center justify-center">
           <img className="h-full w-full object-cover" src={logoutama} />
         </div>
       </div>

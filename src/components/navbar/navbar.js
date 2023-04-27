@@ -48,18 +48,18 @@ function Bar() {
 			{/* Perkumpulan */}
 			<div className='flex items-center'>
 				<a onClick={() => navigate('/keranjang')} className='p-2 hidden sm:block'>
-				<img src={logoBasket} className='h-6 w-6 ml-3' />
+				<img src={logoBasket} className='h-6 w-6' />
     			</a>
 				<a onClick={() => navigate('/chat')} className='p-2 hidden sm:block'>
-				<img src={logoMessage} className='h-6 w-6 ml-3' />
+				<img src={logoMessage} className='h-6 w-6' />
     			</a>
 				<a onClick={() => navigate('/profile')} className='p-2 hidden sm:block'>
-				<img src={logoAccount} className='h-6 w-6 ml-3 mr-3' />
+				<img src={logoAccount} className='h-6 w-6' />
     			</a>
 				{/* <a>
 				<img src={Menu} className='h-6 w-6 block sm:hidden' />
     			</a> */}
-				<button className='relative flex justify-center items-center focus:outline-none focus:ring group'>
+				<button className='relative justify-center items-center focus:outline-none focus:ring group block sm:hidden'>
 					<img src={Menu} className='h-5 w-5' />
 					<div className='absolute hidden group-focus:block top-full min-w-full w-screen bg-light-cream shadow-md mt-1 rounded'>
 						<ul className='text-left border rounded'>
