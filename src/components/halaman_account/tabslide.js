@@ -8,7 +8,10 @@ import notifikasi from '../../assets/notifikasi.png';
 import Halaman_Status_Pembelian from '../halaman_status_pembelian/status_pembelian';
 import about from '../../assets/about.png';
 import help from '../../assets/help.png';
-import Search from '../../assets/search.png'
+import Search from '../../assets/search.png';
+import Padlock from '../../assets/padlock.png';
+import Show from '../../assets/show.png';
+import Device from '../../assets/device.png';
 import { useState } from 'react';
 const Test = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -47,7 +50,7 @@ const Test = () => {
                     <div className='container mx-5 mt-2 flex'>
                         <div class="w-52 -mt-5 bg-white border border-gray-200 rounded-lg shadow">
                             <a href="#">
-                                <img class="w-44 mx-auto my-4"  src={Pp} alt="" />
+                                <img class="lg:w-44  mx-auto my-4"  src={Pp} alt="" />
                             </a>
                                 <a href="#" class="p-2 mx-12 text-sm font-medium text-center text-white bg-dark-cream rounded-lg hover:bg-brown-cream focus:ring-4 focus:outline-none focus:ring-blue-300">
                                     Ubah Gambar
@@ -106,7 +109,7 @@ const Test = () => {
                 }
 
                 {tab === 'Daftar Alamat' &&
-                  <div className='overflow-scroll'>
+                  <div className='overflow-scroll mx-4'>
                     <div className='flex'>
                       <input type='text' className='w-4/12 border border-gray-300 px-3 py-1 rounded-l-md ml-2' placeholder='Cari Alamat...'/>
                       <button  className='bg-dark-cream text-white p-1 rounded-r-md'><img src={Search} className='w-5 p-1'></img></button>
@@ -148,7 +151,34 @@ const Test = () => {
                   
                 }
                 {tab === 'Keamanan' &&
-                  <div></div>
+                  <div className=' -mt-3'>
+                    <div className='ml-8'>
+                      <div className='mb-3'>
+                        <button className='border rounded-lg p-2 w-48 '>
+                        <span class="text-gray-700 ">
+                            <img src={Show} alt="Sandi" class="w-5 mr-5 inline-block"/> 
+                              Buat Kata Sandi
+                          </span>
+                        </button>
+                      </div>
+                      <div className='mb-3'>
+                        <button className='border rounded-lg p-2 w-48 '>
+                          <span class="text-gray-700 ">
+                              <img src={Padlock} alt="pin" class="w-5 -ml-4 mr-5 inline-block"/> 
+                                Pin Bookstore
+                            </span>
+                          </button>
+                      </div>
+                      <div>
+                        <button className='border rounded-lg p-2 w-48 '>
+                        <span class="text-gray-700 ">
+                            <img src={Device} alt="scan" class="w-5 -ml-2 mr-5 inline-block"/> 
+                              Verifikasi instan
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 }
                 {tab === 'Wishlist' &&
                   <div></div>
