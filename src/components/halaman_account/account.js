@@ -24,11 +24,11 @@ function Halaman_Account() {
             <h1 className='font-barlow font-bold text-lg'>Delavonte</h1>
             <h1 className='font-barlow text-sm'>Lalunadelavonte@gmail.com</h1>
             <h1 className='font-barlow text-sm'>Member Silver</h1>
-            <button className="h-7 w-20 mt-4 bg-dark-cream  hover:bg-brown-cream font-barlow text-gray-900 text-xs rounded-full">Logout</button>
+            <button className="h-7 w-20 mt-4 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full">Logout</button>
            </div>
            <div className='py-8 px-7 ml-auto'>
-            <button className="h-8 w-24 m-3 bg-dark-cream  hover:bg-brown-cream font-barlow text-gray-900 text-xs rounded-full">Message</button>
-            <button className="h-8 w-24 m-3 bg-dark-cream  hover:bg-brown-cream font-barlow text-gray-900 text-xs rounded-full">Edit Profile</button>
+            <button className="h-8 w-24 m-3 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full">Message</button>
+            <button className="h-8 w-24 m-3 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full">Edit Profile</button>
            </div>
            </div>
            <Tabslide/>
