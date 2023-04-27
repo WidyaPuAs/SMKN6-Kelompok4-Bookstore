@@ -11,7 +11,7 @@ import help from '../../assets/help.png';
 import { useState } from 'react';
 const Test = () => {
     const [activeTab, setActiveTab] = useState(0);
-    const tabs = ['Biodata', 'Pengaturan'];
+    const tabs = ['Biodata', 'Daftar Alamat', 'Keamanan', 'Wishlist', 'Pengaturan'];
     const navigate = useNavigate()
   
     return (
@@ -102,6 +102,16 @@ const Test = () => {
                               </div>
                           </div>
                     </div>
+                }
+
+                {tab === 'Daftar Alamat' &&
+                  <div></div>
+                }
+                {tab === 'Keamanan' &&
+                  <div></div>
+                }
+                {tab === 'Wishlist' &&
+                  <div></div>
                 }
 
                 {tab === 'Pengaturan' &&

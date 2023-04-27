@@ -28,7 +28,7 @@ function Halaman_about() {
           </div>
 
           <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/rajaagra/">
+          <a href="https://www.instagram.com//">
             <div class="relative overflow-hidden rounded-xl">
               <img src={Woman} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
               <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>

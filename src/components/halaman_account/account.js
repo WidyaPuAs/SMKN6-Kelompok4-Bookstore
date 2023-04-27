@@ -4,6 +4,13 @@ import Bar from '../navbar/navbar';
 import Tabslide from './tabslide.js'
 import Bgpp from '../../assets/bgpp.jpg';
 import Pp from '../../assets/pp.png';
+import Rewardsilver from '../../assets/RewardsSilver.svg'
+import Ovo from  '../../assets/ovo.png'
+// import Dana from  '../../assets/dana.png'
+import Saldo from  '../../assets/saldo.png'
+import Gopay from  '../../assets/gopay.png'
+import StatusPembelian from '../../components/halaman_status_pembelian/status_pembelian'
+
 
 function Halaman_Account() {
   return (
@@ -24,11 +31,62 @@ function Halaman_Account() {
             <button className="h-8 w-24 m-3 bg-dark-cream  hover:bg-brown-cream font-barlow text-gray-900 text-xs rounded-full">Edit Profile</button>
            </div>
            </div>
-           {/* <div class="border-t border-gray-300 my-1"></div> */}
            <Tabslide/>
           </div>
           <div className='basis-1/4 my-6  mx-auto rounded-xl bg-white h-screen'>
-            <p>ppppp</p>
+           <div className='flex'>
+            <img src={Rewardsilver} className='m-2'/>
+            <h1 className=' fort-barlow font-extrabold text-lg -ml-1 m-2'>Member Silver</h1>
+           </div>
+           <div class="border-t-2 border-gray-300"></div>
+           <div>
+            <div className='flex items-center'>
+             <img src={Saldo} className='h-7 m-2'/>
+             <h1 className=' fort-barlow font-semibold text-xs -ml-1 m-2'>Saldo</h1>
+             <h1 className=' fort-barlow font-semibold text-xs ml-auto m-2 '>Rp0</h1>
+            </div>
+            <div className='flex items-center'>
+              <img src={Ovo} className='h-7 m-2'/>
+              <h1 className=' fort-barlow font-semibold text-xs -ml-1 m-2'>Ovo Cash</h1>
+              <h1 className=' fort-barlow font-semibold text-emerald-700 text-xs ml-auto m-2 '>Aktifkan</h1>
+            </div>
+            <div className='flex items-center'>
+              <img src={Gopay} className='h-7 m-2'/>
+              <h1 className=' fort-barlow font-semibold text-xs -ml-1 m-2'>GoPay</h1>
+              <h1 className=' fort-barlow font-semibold text-emerald-700 text-xs ml-auto m-2 '>Aktifkan</h1>
+            </div>
+            <div class="border-t-2 my-1 border-gray-300"></div>
+            <div>
+              <div className='flex items-center'>
+                <h1 className=' fort-barlow font-bold text-md m-2'>Pembelian</h1>
+                <svg className="ml-auto mr-2 fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div>
+                <ul>
+                  <li className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'><a href='#'>Riwayat Transaksi</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'><a href='#'>Ulasan</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1.5 mb-3 ml-2 hover:text-gray-500'><a href='#'>Chat</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="border-t-2 my-1 border-gray-300"></div>
+            <div>
+              <div className='flex items-center'>
+                <h1 className=' fort-barlow font-bold text-md m-2'><a href='../../component/halaman_status_pembelian/status_pembelian'>Pesanan Saya</a></h1>
+                <svg className="ml-auto mr-2 fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div>
+                <ul>
+                  <li className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'><a href='../../component/halaman_status_pembelian/status_pembelian#belum_dibayar'>Belum Dibayar</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'><a href='../../component/halaman_status_pembelian/status_pembelian#sedang_dikemas'>Sedang Dikemas</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'><a href='../../component/halaman_status_pembelian/status_pembelian#dikirim'>Dikirim</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'><a href='../../component/halaman_status_pembelian/status_pembelian#selesai'>Selesai</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'><a href='../../component/halaman_status_pembelian/status_pembelian#dibatalkan'>Dibatalkan</a></li>
+                  <li className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'><a href='../../component/halaman_status_pembelian/status_pembelian#pengembalian'>Pengembalian barang</a></li>
+                </ul>
+              </div>
+            </div>
+           </div>
           </div>
         </div>
     </div>
