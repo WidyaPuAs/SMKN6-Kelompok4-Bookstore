@@ -12,6 +12,8 @@ import Search from '../../assets/search.png';
 import Padlock from '../../assets/padlock.png';
 import Show from '../../assets/show.png';
 import Device from '../../assets/device.png';
+import Alert from '../../assets/alert.png';
+import Laptop from '../../assets/laptop.png';
 import { useState } from 'react';
 const Test = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -151,7 +153,7 @@ const Test = () => {
                   
                 }
                 {tab === 'Keamanan' &&
-                  <div className=' -mt-3'>
+                  <div className='flex -mt-3'>
                     <div className='ml-8'>
                       <div className='mb-3'>
                         <button className='border rounded-lg p-2 w-48 '>
@@ -178,6 +180,15 @@ const Test = () => {
                         </button>
                       </div>
                     </div>
+                    <div class="w-8/12 mx-auto border border-gray-200 rounded-lg shadow">
+                    <p className='text-xl font-bold m-2'>Aktivitas login</p>
+                    <span class="text-red-500 text-xs ">
+                            <img src={Alert} alt="Sandi" class="ml-2 w-3 mr-2 inline-block"/> 
+                            Bila terdapat aktivitas tidak dikenal, segera klik "Keluar" dan ubah kata sandi.
+                    </span>
+                    <p className='text-sm font-semibold ml-2 mt-5 '>Aktivitas login saat ini:</p>
+                    </div>
+
                   </div>
                 }
                 {tab === 'Wishlist' &&
