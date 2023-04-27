@@ -8,6 +8,7 @@ import notifikasi from '../../assets/notifikasi.png';
 import Halaman_Status_Pembelian from '../halaman_status_pembelian/status_pembelian';
 import about from '../../assets/about.png';
 import help from '../../assets/help.png';
+import Search from '../../assets/search.png'
 import { useState } from 'react';
 const Test = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -105,7 +106,46 @@ const Test = () => {
                 }
 
                 {tab === 'Daftar Alamat' &&
-                  <div></div>
+                  <div className='overflow-scroll'>
+                    <div className='flex'>
+                      <input type='text' className='w-4/12 border border-gray-300 px-3 py-1 rounded-l-md ml-2' placeholder='Cari Alamat...'/>
+                      <button  className='bg-dark-cream text-white p-1 rounded-r-md'><img src={Search} className='w-5 p-1'></img></button>
+                      <button className="p-2 mr-2 ml-auto bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-md">Tambah Alamat</button>
+                    </div>
+                    <div class="w-auto mt-4 mx-2 bg-bg-baru border border-gray-200 rounded-lg shadow">
+                      <div class="items-center px-3 py-2">
+                      <div class="flex items-center">
+                        <h1 className='font-semibold'>Rumah</h1>
+                        <button className="p-1 ml-1 bg-brown-cream font-barlow text-white font-semibold text-xs rounded-full">Utama</button>
+                      </div>
+                      <h1 className='font-bold text-xl '>Mbak luna</h1>
+                      <h1 className='font-semibold text-sm'>082368736773</h1>
+                      <h1 className='font-semibold text-sm'>Mesir, Kairo Distrik B, Jln.Kenangan. Apartment no 7</h1>
+                      <h1 className='font-semibold text-gray-400'>Pesan: Apartment Warna Krem, Lantai 6 pojok sendiri</h1>
+                      <div className='flex mt-4'>
+                        <button className='font-bold font-xs text-emerald-500'>Share &nbsp; <span className='font-semibold text-gray-200'>|</span></button>
+                        <button className='font-bold font-xs text-emerald-500'> &nbsp; &nbsp; Ubah Alamat</button>
+                      </div>
+                      </div>
+                    </div> 
+                    {/* <div class="w-auto mt-4 mx-2 bg-bg-baru border border-gray-200 rounded-lg shadow">
+                      <div class="items-center px-3 py-2">
+                      <div class="flex items-center">
+                        <h1 className='font-semibold'>Rumah</h1>
+                        <button className="p-1 ml-1 bg-brown-cream font-barlow text-white font-semibold text-xs rounded-full">Utama</button>
+                      </div>
+                      <h1 className='font-bold text-xl '>Mbak luna</h1>
+                      <h1 className='font-semibold text-sm'>082368736773</h1>
+                      <h1 className='font-semibold text-sm'>Mesir, Kairo Distrik B, Jln.Kenangan. Apartment no 7</h1>
+                      <h1 className='font-semibold text-gray-400'>Pesan: Apartment Warna Krem, Lantai 6 pojok sendiri</h1>
+                      <div className='flex mt-4'>
+                        <button className='font-bold font-xs text-emerald-500'>Share &nbsp; <span className='font-semibold text-gray-200'>|</span></button>
+                        <button className='font-bold font-xs text-emerald-500'> &nbsp; &nbsp; Ubah Alamat</button>
+                      </div>
+                      </div>
+                    </div>  */}
+                  </div>
+                  
                 }
                 {tab === 'Keamanan' &&
                   <div></div>
