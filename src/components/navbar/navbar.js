@@ -1,6 +1,7 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
 import { Navigate, useNavigate } from 'react-router-dom';
+import Dropdown from '../dropdown_kategori/dropdown';
 import logoBook from '../../assets/icons8-book-65.png';
 import logoBasket from '../../assets/icons8-shopping-basket-90.png';
 import logoMessage from '../../assets/icons8-secured-letter-90.png';
@@ -20,10 +21,6 @@ function Bar() {
     			<img src={logoBook} alt='Logo' className='w-10 h-10 mr-2'/>
     			<span className='font-bold text-xl'>Bookstore</span>
   			</div>
-		
-			<div className='flex items-center'>
-				
-			</div>
 
 			{/* Search Bar */}
 			<div className='flex-1 ml-10'>
@@ -44,6 +41,7 @@ function Bar() {
 					</li>
 					</ul>
 				</div>
+				{/* <Dropdown/> */}
     			<input type='text' className='w-10/12 border border-gray-300 px-4 py-2 rounded-r-md' placeholder='Cari Buku ...'/>
   			</div>
 
@@ -61,7 +59,7 @@ function Bar() {
 				{/* <a>
 				<img src={Menu} className='h-6 w-6 block sm:hidden' />
     			</a> */}
-				<button className='relative justify-center items-center focus:outline-none focus:ring group block sm:hidden'>
+				<button className='relative flex justify-center items-center focus:outline-none focus:ring group'>
 					<img src={Menu} className='h-5 w-5' />
 					<div className='absolute hidden group-focus:block top-full min-w-full w-screen bg-light-cream shadow-md mt-1 rounded'>
 						<ul className='text-left border rounded'>
