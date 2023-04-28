@@ -32,7 +32,7 @@ function Bar() {
 			<div className='flex-1 ml-10'>
 				<button id="dropdown-button" data-dropdown-toggle="dropdown" onClick={handleDropdownToggle} class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">All categories <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
 				{isDropdownOpen && (
-					<ul className="absolute z-10 bg-white py-2 w-auto rounded-lg shadow-lg grid grid-cols-3">
+					<ul className="absolute z-10 bg-white text-sm py-2 w-auto rounded-lg shadow-lg grid grid-cols-3">
 					<li><a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Horror</a></li>
 					<li><a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Fiksi</a></li>
 					<li><a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Fantasi</a></li>
