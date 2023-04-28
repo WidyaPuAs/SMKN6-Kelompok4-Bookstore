@@ -16,7 +16,7 @@ function Halaman_Account() {
   return (
 	  <div className='bg-bg_cream'>
         <Bar />
-        <div className=' container flex flex-row'>
+        <div className=' container flex flex-col md:flex-row sm:flex-row'>
           <div className='basis-2/3 mx-auto w-1/5 bg-white h-screen my-6 rounded-xl p-0' id='kotak-top'>
            <div className='flex'>
             <img src={Pp} className='w-36 ml-7 border-white border-2 rounded-full m-3'/>
@@ -33,7 +33,7 @@ function Halaman_Account() {
            </div>
            <Tabslide/>
           </div>
-          <div className='basis-1/4 my-6  mx-auto rounded-xl bg-white h-screen'>
+          <div className='basis-1/2 md:basis-1/4 my-6  mx-auto rounded-xl bg-white h-screen'>
            <div className='flex'>
             <img src={Rewardsilver} className='m-2'/>
             <h1 className=' fort-barlow font-extrabold text-lg -ml-1 m-2'>Member Silver</h1>

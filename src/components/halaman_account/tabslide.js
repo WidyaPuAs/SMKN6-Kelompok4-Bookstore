@@ -180,7 +180,7 @@ const Test = () => {
                         </button>
                       </div>
                     </div>
-                    <div class="w-8/12 mx-auto border border-gray-200 rounded-lg shadow">
+                    <div class="w-8/12 sm:order-last mx-auto border border-gray-200 rounded-lg shadow">
                       <p className='text-xl font-bold m-2 -mb-1'>Aktivitas login</p>
                       <span class="text-red-500 text-xs ">
                               <img src={Alert} alt="Sandi" class="ml-2 w-3 mr-2 inline-block"/> 
@@ -206,7 +206,7 @@ const Test = () => {
                 {tab === 'Pengaturan' &&
                 <div className='pengaturan'>
                   <div class="w-auto ml-5 mr-5 -mt-2 bg-white border border-gray-200 rounded-lg shadow">
-                    <div class="flex justify-between items-center px-3 py-3">
+                    <div class="flex justify-between items-center px-3 py-2">
                       <span class="text-gray-700">
                         <img src={language} alt="Bahasa" class="w-5 h-5 mr-5 inline-block"/> 
                           Bahasa
@@ -236,7 +236,7 @@ const Test = () => {
                    {/* TAMPILAN */}
 
                     <div class="w-auto ml-5 mr-5 mt-3 bg-white border border-gray-200 rounded-lg shadow">
-                    <div class="flex justify-between items-center px-3 py-3">
+                    <div class="flex justify-between items-center px-3 py-2">
                       <span class="text-gray-700">
                         <img src={pallete} alt="Tampilan" class="w-5 h-5 mr-5 inline-block"/> 
                           Tampilan
@@ -259,7 +259,7 @@ const Test = () => {
                    {/* NOTIFIKASI */}
 
                     <div class="w-auto ml-5 mr-5 mt-3 bg-white border border-gray-200 rounded-lg shadow">
-                      <div class="flex justify-between items-center px-3 py-4">
+                      <div class="flex justify-between items-center px-3 py-3">
                         <span class="text-gray-700">
                           <img src={notifikasi} alt="Notifikasi" class="w-5 h-5 mr-5 inline-block"/> 
                             Notifikasi
@@ -276,7 +276,7 @@ const Test = () => {
                     {/* HELP */}
 
                     <div class="w-auto ml-5 mr-5 mt-3 bg-white border border-gray-200 rounded-lg shadow">
-                      <div class="flex justify-between items-center px-3 py-4">
+                      <div class="flex justify-between items-center px-3 py-3">
                         <span class="text-gray-700">
                           <img src={help} alt="Help" class="w-5 h-5 mr-5 inline-block"/> 
                             Help
@@ -288,7 +288,7 @@ const Test = () => {
                     {/* ABOUT DEVELOPMENT */}
 
                     <div class="w-auto ml-5 mr-5 mt-3 bg-white border border-gray-200 rounded-lg shadow" onClick={() => navigate('/about')} >
-                      <div class="flex justify-between items-center px-3 py-4">
+                      <div class="flex justify-between items-center  px-3 py-3">
                         <span class="text-gray-700">
                           <img src={about} alt="Aboutdevelopment" class="w-5 h-5 mr-5 inline-block"/> 
                             About Development
