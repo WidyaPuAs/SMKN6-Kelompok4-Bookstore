@@ -8,7 +8,7 @@ import Bar from "../navbar/navbar";
 import Books from "../../assets/books.png";
 import tereliyePergi from "../../assets/tereliye-pergi.jpg";
 import CoverTop from "../../assets/cover.png";
-import Test from "../../assets/test.png"
+import Test from "../../assets/test.png";
 
 function Halaman_Home_Guest() {
   const navigate = useNavigate()

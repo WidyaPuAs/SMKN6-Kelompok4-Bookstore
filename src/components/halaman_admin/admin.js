@@ -1,16 +1,11 @@
-import '../../../src/App.css';
 import '../../../src/index.css';
-import Bar from "../navbar/navbar";
+import '../../../src/App.css';
+import Bar from '../navbar/navbar';
 
-
-
-function Halaman_Admin() {
-  return (
-	  <div>
-      <Bar/>
-        
-    </div>
-  );
-};
+const Halaman_Admin = () => {
+    return (
+        <Bar />
+    )
+}
 
 export default Halaman_Admin;
