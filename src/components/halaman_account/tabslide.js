@@ -181,12 +181,20 @@ const Test = () => {
                       </div>
                     </div>
                     <div class="w-8/12 mx-auto border border-gray-200 rounded-lg shadow">
-                    <p className='text-xl font-bold m-2'>Aktivitas login</p>
-                    <span class="text-red-500 text-xs ">
-                            <img src={Alert} alt="Sandi" class="ml-2 w-3 mr-2 inline-block"/> 
-                            Bila terdapat aktivitas tidak dikenal, segera klik "Keluar" dan ubah kata sandi.
-                    </span>
-                    <p className='text-sm font-semibold ml-2 mt-5 '>Aktivitas login saat ini:</p>
+                      <p className='text-xl font-bold m-2 -mb-1'>Aktivitas login</p>
+                      <span class="text-red-500 text-xs ">
+                              <img src={Alert} alt="Sandi" class="ml-2 w-3 mr-2 inline-block"/> 
+                              Bila terdapat aktivitas tidak dikenal, segera klik "Keluar" dan ubah kata sandi.
+                      </span>
+                      <p className='text-sm font-semibold ml-2 mt-5 '>Aktivitas login saat ini:</p>
+                      <div className='m-4 flex'>
+                        <img src={Laptop} alt="Sandi" class="ml-2 w-12 mr-2 inline-block"/> 
+                        <div>
+                          <p className='text-sm font-bold ml-2'>Chrome di Windows 10</p>
+                          <p className='text-sm font-semibold ml-2'>182.347.39</p>
+                          <button className="p-1 ml-1 bg-dark-cream font-barlow text-white font-semibold text-xs rounded-full">Sedang Aktif</button>
+                        </div>
+                      </div>
                     </div>
 
                   </div>
