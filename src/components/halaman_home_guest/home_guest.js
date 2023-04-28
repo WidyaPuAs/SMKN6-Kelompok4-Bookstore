@@ -1,6 +1,7 @@
 import "../..//App.css";
 import "../../index.css";
 import Css from '../halaman_home_guest/home.css'
+import Java from '../halaman_home_guest/java.js'
 import { useState } from "react";
 import { Navigate, useNavigate } from 'react-router-dom';
 import Bar from "../navbar/navbar";
@@ -385,6 +386,21 @@ function Halaman_Home_Guest() {
         </div>
       </section> */}
 
+      <div className="grid grid-row-3 gap-96 items-center text-center my-20">
+
+      <h1 className="row-span-1 hidden">wwwwwwwwwwwwwwwwwwwwwwwwww</h1>
+
+      <section className="row-span-1 hidden">
+        <h3>wwwwwwwwwwwwwwwww</h3>
+        <h3>wwwwwwwwwwwwwwwww</h3>
+      </section>
+
+      <section className="row-span-1 hidden">
+        djwidjwijdwijdwidjwidjwdw
+        dwjdnwjdnwidnon2onoe2noen
+      </section>
+
+      </div>
 
 
 

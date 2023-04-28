@@ -9,7 +9,7 @@ function Halaman_Account() {
   return (
 	  <div className='bg-bg_cream'>
         <Bar />
-        <div className=' container flex flex-row'>
+        <div className=' container flex flex-row md:grid-col-2'>
           <div className='basis-2/3 mx-auto w-1/5 bg-white h-screen my-6 rounded-xl p-0' id='kotak-top'>
            <div className='flex'>
             <img src={Pp} className='w-36 ml-7 border-white border-2 rounded-full m-3'/>

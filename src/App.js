@@ -12,6 +12,7 @@ import Halaman_Login from './components/halaman_login/login'
 import Halaman_SignUp from './components/halaman_login/signup'
 import Halaman_about from './components/halaman_about/about';
 import Desc3 from './components/halaman_desc/unbirthday';
+import Halaman_Status_Pembelian from './components/halaman_status_pembelian/status_pembelian';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/login' element={<Halaman_Login/>} />
           <Route path='/signup' element={<Halaman_SignUp/>} />
           <Route path='/about' element={<Halaman_about/>} />
+          <Route path='/status' element={<Halaman_Status_Pembelian/>} />
           <Route path='/test' element={<Desc3/>} />
         </Routes>
       </Router>
