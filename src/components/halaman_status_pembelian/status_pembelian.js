@@ -4,10 +4,12 @@ import Bar from '../navbar/navbar';
 
 function Halaman_Status_Pembelian() {
   return (
-	<div className=''>
+   <div className=''>
     <Bar />
-    
-  </div>
+    <div classname=''>
+      
+    </div> 
+   </div>
   );
 };
 
