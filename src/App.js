@@ -13,12 +13,16 @@ import Halaman_SignUp from './components/halaman_login/signup'
 import Halaman_about from './components/halaman_about/about';
 import Desc3 from './components/halaman_desc/unbirthday';
 import Halaman_Status_Pembelian from './components/halaman_status_pembelian/status_pembelian';
+import Halaman_Admin from './components/halaman_admin/admin';
+import Tesst from './test/test';
+import Halaman_Home_Login from './components/halaman_home_login/home_login';
 
 function App() {
   return (
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Halaman_Home_Guest/>} />
+          <Route path='/log' element={<Halaman_Home_Login/>} />
           <Route path='/keranjang' element={<Halaman_Keranjang/>} />
           <Route path='/chat' element={<Halaman_Chat/>} />
           <Route path='/profile' element={<Halaman_Account/>} />
@@ -30,7 +34,8 @@ function App() {
           <Route path='/signup' element={<Halaman_SignUp/>} />
           <Route path='/about' element={<Halaman_about/>} />
           <Route path='/status' element={<Halaman_Status_Pembelian/>} />
-          <Route path='/test' element={<Desc3/>} />
+          <Route path='/admin' element={<Halaman_Admin/>} />
+          <Route path='/test' element={<Tesst/>} />
         </Routes>
       </Router>
   );

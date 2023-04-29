@@ -4,17 +4,25 @@ import Css from '../halaman_home_guest/home.css'
 import Java from '../halaman_home_guest/java.js'
 import { useState } from "react";
 import { Navigate, useNavigate } from 'react-router-dom';
-import Bar from "../navbar/navbar";
 import Books from "../../assets/books.png";
 import tereliyePergi from "../../assets/tereliye-pergi.jpg";
 import CoverTop from "../../assets/cover.png";
 import Test from "../../assets/test.png";
+import Modal_Login from "./modal_login";
+import Bar_Guest from "../navbar/navbar_guest";
 
 function Halaman_Home_Guest() {
   const navigate = useNavigate()
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const handleOpenModal = () => {
+  //   setIsModalOpen(true);
+  // };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
   return (
     <div className="bg-bg-baru">
-      <Bar />
+      <Bar_Guest />
       {/* Kotak Top */}
       <div className="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 h-4/5 bg-light-cream mt-14 py-4 rounded-md" id="kotak-top">
         <div className="grid grid-cols-10 gap-4 h-3/4">
@@ -385,22 +393,6 @@ function Halaman_Home_Guest() {
           <img src={Test} class="h-62 w-full mt-4"/>
         </div>
       </section> */}
-
-      <div className="grid grid-row-3 gap-96 items-center text-center my-20">
-
-      <h1 className="row-span-1 hidden">wwwwwwwwwwwwwwwwwwwwwwwwww</h1>
-
-      <section className="row-span-1 hidden">
-        <h3>wwwwwwwwwwwwwwwww</h3>
-        <h3>wwwwwwwwwwwwwwwww</h3>
-      </section>
-
-      <section className="row-span-1 hidden">
-        djwidjwijdwijdwidjwidjwdw
-        dwjdnwjdnwidnon2onoe2noen
-      </section>
-
-      </div>
 
 
 

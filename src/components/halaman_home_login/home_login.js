@@ -1,13 +1,14 @@
 import "../..//App.css";
 import "../../index.css";
 import Css from '../halaman_home_guest/home.css'
+import Java from '../halaman_home_guest/java.js'
 import { useState } from "react";
 import { Navigate, useNavigate } from 'react-router-dom';
-import Bar from "../navbar/navbar";
 import Books from "../../assets/books.png";
 import tereliyePergi from "../../assets/tereliye-pergi.jpg";
 import CoverTop from "../../assets/cover.png";
-import Test from "../../assets/test.png"
+import Test from "../../assets/test.png";
+import Bar from "../navbar/navbar";
 
 function Halaman_Home_Login() {
   const navigate = useNavigate()
@@ -384,11 +385,6 @@ function Halaman_Home_Login() {
           <img src={Test} class="h-62 w-full mt-4"/>
         </div>
       </section> */}
-
-
-
-
-
 
       </div>
   );

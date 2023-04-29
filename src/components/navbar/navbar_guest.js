@@ -11,11 +11,21 @@ import Menu from '../../assets/menu.png'
 import Account from '../../assets/user.png';
 import Email from '../../assets/email.png';
 import Basket from '../../assets/shopping-cart.png';
+import Modal_Login from '../halaman_home_guest/modal_login';
 
 
 
-function Bar() {
+function Bar_Guest() {
 	const navigate = useNavigate()
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
 	const handleDropdownToggle = () => {
@@ -26,7 +36,7 @@ function Bar() {
 		<nav className='top-0 z-50 bg-white p-4 flex items-center justify-between'>
 
 			{/* Logo Bookstore */}
-			<div className='flex items-center' onClick={() => navigate('/log')}>
+			<div className='flex items-center' onClick={() => navigate('/')}>
     			<img src={logoBook} alt='Logo' className='w-10 h-10 mr-2'/>
     			<span className='font-bold text-xl'>Bookstore</span>
   			</div>
@@ -55,33 +65,19 @@ function Bar() {
   			</div>
 
 			{/* Perkumpulan */}
-			<div className="flex justify-between items-center">
-				<div className="flex items-center gap-1">
-					<a onClick={() => navigate('/keranjang')} className="p-2">
-					<img src={Basket} className="h-6 w-6" />
-					</a>
-					<a onClick={() => navigate('/chat')} className="p-2">
-					<img src={Email} className="h-6 w-6" />
-					</a>
-					<a onClick={() => navigate('/profile')} className="p-2">
-					<img src={Account} className="h-6 w-6" />
-					</a>
-				</div>
-				<button className="relative justify-center items-center focus:outline-none focus:ring group block sm:hidden">
-					<img src={Menu} className="h-5 w-5" />
-					<div className="absolute hidden group-focus:block top-full min-w-full w-screen bg-light-cream shadow-md mt-1 rounded">
-					<ul className="text-left border rounded">
-						<li className="px-4 py-1 hover:bg-bg_cream border-b">Store</li>
-						<li className="px-4 py-1 hover:bg-bg_cream border-b">Store</li>
-						<li className="px-4 py-1 hover:bg-bg_cream border-b">Store</li>
-					</ul>
-					</div>
-				</button>
+			<div className='flex items-center self-center'>		
+			<button className="bg-dark-cream text-white py-2 px-4 rounded-lg hover:bg-green-600" // onClick={handleOpenModal}
+				onClick={() => navigate('/login')}> Login
+			</button>
+			
+			<Modal_Login isOpen={isModalOpen} onClose={handleCloseModal} />
 			</div>
-		</nav>
+					
+
+				</nav>
 	</div>
     
   );
 };
 
-export default Bar;
+export default Bar_Guest;

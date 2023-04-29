@@ -1,5 +1,6 @@
 import "../../App.css";
 import "../../index.css";
+import { Navigate, useNavigate } from 'react-router-dom';
 import logoBook from "../../assets/icons8-book-65.png";
 import logoutama from "../../assets/logoutama.png";
 import logogg from "../../assets/logogg.png";
@@ -8,13 +9,14 @@ import logofb from "../../assets/logofb.png";
 import logoMessage from "../../assets/icons8-secured-letter-90.png";
 
 function Halaman_Login() {
+  const navigate = useNavigate()
   return (
     <div
       className="bg-white-buram w-screen h-screen flex items-center justify-center"
       id="kotak-tengah">
       <div className="bg-white-apik w-3/4 h-3/4 rounded-xl grid grid-cols-2">
         <div className="col-span-1">
-          <div className="flex items-center justify-center mt-16 ">
+          <div className="flex items-center justify-center mt-16" onClick={() => navigate('/')}>
             <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
             <span className="font-bold text-xl">Bookstore</span>
           </div>
@@ -50,14 +52,14 @@ function Halaman_Login() {
                   placeholder="Password"
                 />
               </div>
-              <div class="row-span-1 hover:scale-105 duration-400">
+              <div class="row-span-1 hover:scale-105 duration-400" onClick={() => navigate('/log')}>
                 <button class="w-64 bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
                   Login
                 </button>
               </div>
             </form>
             <div class=" items-center text-gray-400 my-7">
-              <p class="text-center text-sm ">OR, Sign in With</p>
+              <p class="text-center text-sm ">OR, Login With</p>
             </div>
             <div className="px-10">
               <div className="grid grid-cols-3 items-center justify-center gap-50">
@@ -71,7 +73,7 @@ function Halaman_Login() {
                   <img className="w-10" src={logotwt} />
                 </div>
               </div>
-              <div class="text-gray-500 text-center mt-8">
+              <div class="text-gray-500 text-center mt-8" onClick={() => navigate('/signup')}>
                 <p class=" text-black hover:scale-105 duration-300">
                   <u>Don't have an account yet?</u>
                 </p>
