@@ -9,23 +9,52 @@ import logofb from "../../assets/logofb.png";
 import logoMessage from "../../assets/icons8-secured-letter-90.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Halaman_Login() {
   const navigate = useNavigate()
-  const [email, emailupdate] = useState('');
-  const [password, passwordupdate] = useState('');
+  const usenavigate = useNavigate()
+
+  const[username,usernameupdate] = useState ('');
+  const[password,passwordupdate] = useState ('');
 
   const ProsesLogin = (e) => {
     e.preventDefault();
-    if(validate()) {
-      console.log('user')
-      fetch("https://localhost:3000/log");
+    if (validate()) {
+      // console.log('proceed');
+      fetch("http://localhost:8000/user" + username).then((res) => {
+        return res.json();
+      }).then((resp) => {
+        // console.log(resp)
+        if(Object.keys(resp).length === 0) {
+          toast.error('Username tidak Terdaftar');
+        } else {
+          if(resp.password === password) {
+            toast.success('Login Berhasil');
+            usenavigate('/log')
+          } else {
+            toast.error('Password Salah');
+          }
+        }
+      }).catch((err) => {
+         toast.error('Login Gagal, tolong periksa : ' + err.message);
+      });
     }
   }
-  const validate=() => {
+
+  const validate = () => {
     let result = true;
+    if(username === '' || username === null) {
+      result = false;
+      toast.warning('Masukkan Username');
+    }
+    if(password === '' || password === null) {
+      result = false;
+      toast.warning('Masukkan Password');
+    }
     return result;
   }
+
   return (
     <div
       className="bg-white-buram w-screen h-screen flex items-center justify-center"
@@ -55,11 +84,10 @@ function Halaman_Login() {
               <div className="row-span-1 hover:scale-105 duration-300">
                 <input
                   class="w-64 p-2 rounded-xl border"
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={e=>emailupdate(e.target.value)}
+                  name="username"
+                  placeholder="Username"
+                  value={username}
+                  onChange={e=>usernameupdate(e.target.value)}
                 />
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -72,7 +100,7 @@ function Halaman_Login() {
                   onChange={e=>passwordupdate(e.target.value)}
                 />
               </div>
-              <div class="row-span-1 hover:scale-105 duration-400" onClick={() => navigate('/log')}>
+              <div class="row-span-1 hover:scale-105 duration-400">
                 <button class="w-64 bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
                   Login
                 </button>

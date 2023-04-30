@@ -46,12 +46,12 @@ function Halaman_SignUp() {
     return isproceed;
   }
 
-  const prosesSubmit=(e)=> {
+  const prosesSignUp=(e)=> {
     e.preventDefault();
     let regobj = {username,email,password};
     if (IsValidate()) {
       // console.log(regobj);
-      fetch("http://localhost:8000/user",{
+      fetch("http://localhost:8000/user/",{
         method:"POST",
         headers:{'content-type':'application/json'},
         body:JSON.stringify(regobj)
@@ -87,13 +87,12 @@ function Halaman_SignUp() {
           </div>
           <div>
             <form
-              action="" onSubmit={prosesSubmit}
+              action="" onSubmit={prosesSignUp}
               class="gap-4 grid grid-rows-3 items-center justify-center"
             >
               <div className="row-span-1 hover:scale-105 duration-300">
                 <input
                   class="w-64 p-2 rounded-xl border"
-                  type="username"
                   name="username"
                   placeholder="Username"
                   value={username}

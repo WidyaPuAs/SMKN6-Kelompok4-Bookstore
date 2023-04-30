@@ -1,10 +1,22 @@
 {
   "user": [
     {
-      "username": "Kuronashii",
+      "username": "Rajendra Maheswara",
       "email": "rajendraagrafm@gmail.com",
-      "password": "123",
+      "password": "test",
       "id": 1
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 2
+    },
+    {
+      "username": "king",
+      "email": "king@gmail.com",
+      "password": "king",
+      "id": 3
     }
   ]
 }
