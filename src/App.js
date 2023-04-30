@@ -16,9 +16,12 @@ import Halaman_Status_Pembelian from './components/halaman_status_pembelian/stat
 import Halaman_Admin from './components/halaman_admin/admin';
 import Tesst from './test/test';
 import Halaman_Home_Login from './components/halaman_home_login/home_login';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
+    <div>
+      <ToastContainer></ToastContainer>
       <Router>
         <Routes>
           <Route path='/' element={<Halaman_Home_Guest/>} />
@@ -38,6 +41,7 @@ function App() {
           <Route path='/test' element={<Tesst/>} />
         </Routes>
       </Router>
+      </div>
   );
 }
 export default App;

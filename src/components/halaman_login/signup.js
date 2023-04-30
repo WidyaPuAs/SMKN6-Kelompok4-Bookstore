@@ -8,27 +8,62 @@ import logotwt from "../../assets/logotwt.png";
 import logofb from "../../assets/logofb.png";
 import logoMessage from "../../assets/icons8-secured-letter-90.png";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function Halaman_SignUp() {
-  const navigate = useNavigate()
+
   const[username,usernameChange] = useState("");
   const[email,emailChange] = useState("");
   const[password,passwordChange] = useState("");
+
+  const navigate = useNavigate()
+
+  const IsValidate = () => {
+    let isproceed = true;
+    let errormessage = 'Tolong Masukkan ';
+    if( username == null || username == '') {
+      isproceed = false;
+      errormessage += 'Username';
+    }
+    if( email == null || email == '') {
+      isproceed = false;
+      errormessage += 'Email';
+    }
+    if( password == null || password == '') {
+      isproceed = false;
+      errormessage += 'Password';
+    }
+    if (!isproceed) {
+      toast.warning(errormessage)
+    } else {
+      if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
+
+      } else {
+        isproceed = false;
+        toast.warning('Email tidak Valid')
+      }
+    }
+    return isproceed;
+  }
+
   const prosesSubmit=(e)=> {
     e.preventDefault();
     let regobj = {username,email,password};
-    // console.log(regobj);
-
-    fetch("http://localhost:8000/user",{
-      method:"POST",
-      headers:{'content-type':'application/json'},
-      body:JSON.stringify(regobj)
-    }).then((res) => {
-      navigate('/login');
-    }).catch((err) => {
-
-    });
+    if (IsValidate()) {
+      // console.log(regobj);
+      fetch("http://localhost:8000/user",{
+        method:"POST",
+        headers:{'content-type':'application/json'},
+        body:JSON.stringify(regobj)
+      }).then((res) => {
+        toast.success('Registered Successfully.')
+        navigate('/login');
+      }).catch((err) => {
+        toast.error('Failed : '+err.message);
+      });
+    }
   }
+
   return (
     <div
       className="bg-white-buram w-screen h-screen flex items-center justify-center"
