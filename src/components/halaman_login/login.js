@@ -7,9 +7,25 @@ import logogg from "../../assets/logogg.png";
 import logotwt from "../../assets/logotwt.png";
 import logofb from "../../assets/logofb.png";
 import logoMessage from "../../assets/icons8-secured-letter-90.png";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Halaman_Login() {
   const navigate = useNavigate()
+  const [email, emailupdate] = useState('');
+  const [password, passwordupdate] = useState('');
+
+  const ProsesLogin = (e) => {
+    e.preventDefault();
+    if(validate()) {
+      console.log('user')
+      fetch("https://localhost:3000/log");
+    }
+  }
+  const validate=() => {
+    let result = true;
+    return result;
+  }
   return (
     <div
       className="bg-white-buram w-screen h-screen flex items-center justify-center"
@@ -33,7 +49,7 @@ function Halaman_Login() {
           </div>
           <div>
             <form
-              action=""
+              action="" onSubmit={ProsesLogin}
               class="gap-4 grid grid-rows-3 items-center justify-center"
             >
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -42,6 +58,8 @@ function Halaman_Login() {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={e=>emailupdate(e.target.value)}
                 />
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -50,6 +68,8 @@ function Halaman_Login() {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  value={password}
+                  onChange={e=>passwordupdate(e.target.value)}
                 />
               </div>
               <div class="row-span-1 hover:scale-105 duration-400" onClick={() => navigate('/log')}>

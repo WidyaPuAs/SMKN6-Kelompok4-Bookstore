@@ -7,9 +7,28 @@ import logogg from "../../assets/logogg.png";
 import logotwt from "../../assets/logotwt.png";
 import logofb from "../../assets/logofb.png";
 import logoMessage from "../../assets/icons8-secured-letter-90.png";
+import { useState } from "react";
 
 function Halaman_SignUp() {
   const navigate = useNavigate()
+  const[username,usernameChange] = useState("");
+  const[email,emailChange] = useState("");
+  const[password,passwordChange] = useState("");
+  const prosesSubmit=(e)=> {
+    e.preventDefault();
+    let regobj = {username,email,password};
+    // console.log(regobj);
+
+    fetch("http://localhost:8000/user",{
+      method:"POST",
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify(regobj)
+    }).then((res) => {
+      navigate('/login');
+    }).catch((err) => {
+
+    });
+  }
   return (
     <div
       className="bg-white-buram w-screen h-screen flex items-center justify-center"
@@ -21,10 +40,10 @@ function Halaman_SignUp() {
             <span className="font-bold text-xl">Bookstore</span>
           </div>
           <div className="text-center mt-10 font-bold text-4xl">
-            <h1>Welcome To Bookstore</h1>
+            Welcome To Bookstore
           </div>
           <div className="flex items-center justify-center mt-10">
-            <h2 class="font-bold text-2xl text-[#002D74] ">Sign Up</h2>
+            <p class="font-bold text-2xl text-[#002D74] ">Sign Up</p>
           </div>
           <div className="flex items-center justify-center mb-5">
             <p class="text-xs mt-4 text-[#002D74]">
@@ -33,7 +52,7 @@ function Halaman_SignUp() {
           </div>
           <div>
             <form
-              action=""
+              action="" onSubmit={prosesSubmit}
               class="gap-4 grid grid-rows-3 items-center justify-center"
             >
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -42,6 +61,8 @@ function Halaman_SignUp() {
                   type="username"
                   name="username"
                   placeholder="Username"
+                  value={username}
+                  onChange={e=>usernameChange(e.target.value)}
                 />
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -50,6 +71,8 @@ function Halaman_SignUp() {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={e=>emailChange(e.target.value)}
                 />
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -58,9 +81,13 @@ function Halaman_SignUp() {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  value={password}
+                  onChange={e=>passwordChange(e.target.value)}
                 />
               </div>
-              <div class="row-span-1 hover:scale-105 duration-400" onClick={() => navigate('/login')}>
+              <div class="row-span-1 hover:scale-105 duration-400" 
+              // onClick={() => navigate('/login')}
+              >
                 <button class="w-64 bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
                   Sign Up
                 </button>

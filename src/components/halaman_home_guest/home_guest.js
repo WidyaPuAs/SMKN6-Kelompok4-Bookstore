@@ -54,8 +54,8 @@ function Halaman_Home_Guest() {
 
       {/* View */}
       <div class="flex justify-between mx-20 mt-14">
-        <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
-        <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
+        <h2 class="text-2xl sm:text-sm font-bold text-gray-800">Popular Now</h2>
+        <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4  hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
       </div>
       
       <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
