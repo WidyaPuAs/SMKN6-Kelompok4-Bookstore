@@ -1,13 +1,16 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
 import Bar from '../navbar/navbar';
+import Tabslide from '../tabslide_status.js';
 
 function Halaman_Status_Pembelian() {
   return (
-	<div className=''>
+   <div className=''>
     <Bar />
-    
-  </div>
+    <div classname=''>
+      <Tabslide />
+    </div> 
+   </div>
   );
 };
 
