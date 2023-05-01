@@ -4,7 +4,7 @@ import Bar from "../navbar/navbar";
 import tereliyePergi from "../../assets/tereliye-pergi.jpg";
 
 
-function Book_View() {
+function Buku_Terbaru() {
   return (
 	  <div>
         <Bar />
@@ -14,4 +14,4 @@ function Book_View() {
   );
 };
 
-export default Book_View;
+export default Buku_Terbaru;

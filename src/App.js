@@ -17,6 +17,8 @@ import Halaman_Admin from './components/halaman_admin/admin';
 import Tesst from './test/test';
 import Halaman_Home_Login from './components/halaman_home_login/home_login';
 import { ToastContainer } from 'react-toastify';
+import Book_View from './components/halaman_book_view/book_view';
+import Buku_Terbaru from './components/halaman_book_view/buku_terbaru';
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
           <Route path='/keranjang' element={<Halaman_Keranjang/>} />
           <Route path='/chat' element={<Halaman_Chat/>} />
           <Route path='/profile' element={<Halaman_Account/>} />
-          <Route path='/view-all-1' element={<Buku_Terlaris/>} />
+          <Route path='/buku-terbaru' element={<Buku_Terbaru/>} />
           <Route path='/buku-terlaris' element={<Buku_Terlaris/>} />
           <Route path='/pembayaran' element={<Pembayaran/>} />
           <Route path='/book-pergi' element={<Desc/>} />

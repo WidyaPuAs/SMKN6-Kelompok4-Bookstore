@@ -24,43 +24,41 @@ function Halaman_Home_Guest() {
     <div className="bg-bg-baru">
       <Bar_Guest />
       {/* Kotak Top */}
-      <div className="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 h-4/5 bg-light-cream mt-14 py-4 rounded-md" id="kotak-top">
-        <div className="grid grid-cols-10 gap-4 h-3/4">
-          <div
-            className="col-span-4 border ml-10"
-            id="text-terlaris">
-            <h1 className="text-4xl mt-10 ml-2 antialiased text-dark-purple bold font-bold">
+      <div class="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 h-4/5 bg-light-cream mt-14 py-4 rounded-md" id="kotak-top">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-10 gap-4 h-full">
+          <div class="sm:col-span-2 md:col-span-4 border ml-10" id="text-terlaris">
+            <h1 class="text-4xl mt-10 md:mt-16 ml-2 antialiased text-dark-purple bold font-bold">
               Temukan Buku Terbaru
             </h1>
-            <div className="mt-3">
-              <p className="ml-3">
+            <div class="mt-3">
+              <p class="ml-3">
                 Jangan lewatkan buku-buku baru yang telah dirilis!
               </p>
-              <p className="ml-3">
+              <p class="ml-3">
                 Temukan buku terbaru dari segala macam genre
               </p>
             </div>
-            <a>
-              <button className="bg-brown-cream rounded-lg antialiased font-sans text-white py-2 px-2 ml-3 mt-5 mb-5">
+            <a href="#">
+              <button class="bg-brown-cream rounded-lg antialiased font-sans text-white py-2 px-2 ml-3 mt-5 mb-5">
                 Buku Terbaru
               </button>
             </a>
           </div>
-          <div className="col-span-6">
-            {/* <img src={CoverTop} className="" /> */}
+          <div class="hidden sm:block sm:col-span-1 md:col-span-6">
+            {/* <img src={CoverTop} class="object-cover h-full w-full" alt="Cover Top" /> */}
           </div>
         </div>
       </div>
 
       {/* View */}
-      <div class="flex justify-between mx-20 mt-14">
-        <h2 class="text-2xl sm:text-sm font-bold text-gray-800">Popular Now</h2>
-        <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4  hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
+      <div class="flex justify-between mx-10 sm:mx-20 mt-14">
+        <h2 class="text-lg sm:text-2xl font-bold text-gray-800">Popular Now</h2>
+        <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
       </div>
       
-      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
+      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-4 md:mx-16 gap-7 scroll-smooth py-5">
 
-      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center" onClick={() => navigate('/book-pergi')}>
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Judul Buku 4</h2>
@@ -69,7 +67,16 @@ function Halaman_Home_Guest() {
         <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
       </div>
 
-      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center" onClick={() => navigate('/book-pergi')}>
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Judul Buku 4</h2>
@@ -144,12 +151,12 @@ function Halaman_Home_Guest() {
       </div>
 
       {/* View 2 */}
-      <div class="flex justify-between mx-20 mt-14">
-        <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
+      <div class="flex justify-between mx-10 sm:mx-20 mt-14">
+        <h2 class="text-lg sm:text-2xl font-bold text-gray-800">Popular Now</h2>
         <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
       </div>
       
-      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
+      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-4 md:mx-16 gap-7 scroll-smooth py-5">
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
@@ -231,6 +238,18 @@ function Halaman_Home_Guest() {
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
       </div>
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
+
+
+      
 
       </div>
 
@@ -266,12 +285,21 @@ function Halaman_Home_Guest() {
       </section>
 
       {/* View 2 */}
-      <div class="flex justify-between mx-20 mt-10">
-        <h2 class="text-2xl font-bold text-gray-800">Popular Now</h2>
+      <div class="flex justify-between mx-10 sm:mx-20 mt-14">
+        <h2 class="text-lg sm:text-2xl font-bold text-gray-800">Popular Now</h2>
         <a onClick={() => navigate('/book-view-1')} class="text-sm hover:text-gray-800 ml-4 hover:bg-gray-100 border border-gray-400 rounded-lg py-1 px-3">View All</a>
       </div>
       
-      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-16 gap-7 scroll-smooth py-5">
+      <div class="flex flex-nowrap overflow-x-auto snap-x snap-start mx-4 md:mx-16 gap-7 scroll-smooth py-5">
+
+      <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
+        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <div class="text-center mb-4">
+          <h2 class="text-lg font-medium">Judul Buku 4</h2>
+          <p class="text-sm text-gray-500">Penulis Buku 4</p>
+        </div>
+        <div class="text-lg font-medium text-gray-700">Rp. 250.000</div>
+      </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
         <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
