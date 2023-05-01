@@ -37,27 +37,27 @@ const Status = () => {
                 }`}
               >
                 {tab === 'belum dibayar' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='container mx-5 -mt-2 flex'>
                         
                     </div>
                 }
                 {tab === 'Sedang dikemas' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='container mx-5 -mt-2 flex'>
                         
                     </div>
                 }
                 {tab === 'telah dikirim' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='container mx-5 -mt-2 flex'>
                         
                     </div>
                 }
                 {tab === 'selesai' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='container mx-5 -mt-2 flex'>
                         
                     </div>
                 }
                 {tab === 'dibatalkan' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='container mx-5 -mt-2 flex'>
                         
                     </div>
                 }
