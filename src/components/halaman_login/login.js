@@ -10,7 +10,8 @@ import logoMessage from "../../assets/icons8-secured-letter-90.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import axios from "axios";
+  
 function Halaman_Login() {
   const navigate = useNavigate()
   const usenavigate = useNavigate()
@@ -21,24 +22,23 @@ function Halaman_Login() {
   const ProsesLogin = (e) => {
     e.preventDefault();
     if (validate()) {
-      // console.log('proceed');
-      fetch("http://localhost:8000/user" + username).then((res) => {
-        return res.json();
-      }).then((resp) => {
-        // console.log(resp)
-        if(Object.keys(resp).length === 0) {
+
+      axios.get("http://localhost:8000/user/").then(({ data }) => {
+        const user = data.find((u) => u.username === username);
+        console.log(user.username)
+        if(user.username === 0) {
           toast.error('Username tidak Terdaftar');
         } else {
-          if(resp.password === password) {
+          if(user.password === password) {
             toast.success('Login Berhasil');
             usenavigate('/log')
-          } else {
+          } else { 
             toast.error('Password Salah');
           }
         }
-      }).catch((err) => {
-         toast.error('Login Gagal, tolong periksa : ' + err.message);
-      });
+      }).catch(({err}) => {
+        console.log(err)
+      })
     }
   }
 
