@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "username": "admin",
+      "email": "dermawandidan123@gmail.com",
+      "password": "admin",
+      "id": 1
+    },
+    {
+      "username": "17048",
+      "email": "dermawandidan123@gmail.com",
+      "password": "1",
+      "id": 2
+    },
+    {
+      "username": "1",
+      "email": "dermawandidan123@gmail.com",
+      "password": "1",
+      "id": 3
+    }
+  ]
+}
