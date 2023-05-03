@@ -6,7 +6,10 @@ import Tabslide from '../halaman_status_pembelian/Tabslide_status';
 function Halaman_Status_Pembelian() {
   return (
    <div>
-    jbhgkb
+     <Bar />
+     <div>
+        <Tabslide />
+     </div>
    </div>
   );
 };

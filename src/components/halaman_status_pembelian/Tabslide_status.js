@@ -10,7 +10,7 @@ const Status = () => {
   
     return (
       <div className="bg">
-        <div className="max-w-6xl mx-auto ">
+        <div className="max-w-screen">
           <div className="border-0 rounded">
             <nav className="-mb-px flex">
               {tabs.map((tab, index) => (
