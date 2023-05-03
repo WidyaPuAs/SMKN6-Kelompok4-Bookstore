@@ -1,17 +1,14 @@
-// import '../../../src/App.css';
-// import '../../../src/index.css';
-// import Bar from '../navbar/navbar';
-// import Tabslide from '../tabslide_status.js';
+import '../../../src/App.css';
+import '../../../src/index.css';
+import Bar from '../navbar/navbar';
+import Tabslide from '../halaman_status_pembelian/Tabslide_status';
 
-// function Halaman_Status_Pembelian() {
-//   return (
-//    <div className=''>
-//     {/* <Bar /> */}
-//     <div classname=''>
-//       {/* <Tabslide /> */}
-//     </div> 
-//    </div>
-//   );
-// };
+function Halaman_Status_Pembelian() {
+  return (
+   <div>
+    jbhgkb
+   </div>
+  );
+};
 
-// export default Halaman_Status_Pembelian;
+export default Halaman_Status_Pembelian;

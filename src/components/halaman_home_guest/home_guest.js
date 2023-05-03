@@ -10,6 +10,7 @@ import CoverTop from "../../assets/cover.png";
 import Test from "../../assets/test.png";
 import Modal_Login from "./modal_login";
 import Bar_Guest from "../navbar/navbar_guest";
+// import Bar from "../navbar/navbar";
 
 function Halaman_Home_Guest() {
   const navigate = useNavigate()

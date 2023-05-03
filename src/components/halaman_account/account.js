@@ -75,17 +75,17 @@ function Halaman_Account() {
             <div class="border-t-2 my-1 border-gray-300"></div>
             <div>
               <div className='flex items-center'>
-                <h1 onClick={() => navigate('/status_pembelian')} className=' fort-barlow font-bold text-md m-2'>Pesanan Saya</h1>
+                <h1 onClick={() => navigate('/status')} className=' fort-barlow font-bold text-md m-2'>Pesanan Saya</h1>
                 <svg className="ml-auto mr-2 fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>
               </div>
               <div>
                 <ul>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Belum Dibayar</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Sedang Dikemas</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Dikirim</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Selesai</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Dibatalkan</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Pengembalian barang</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Belum Dibayar</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Sedang Dikemas</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Dikirim</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Selesai</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Dibatalkan</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Pengembalian barang</li>
                 </ul>
               </div>
             </div>
