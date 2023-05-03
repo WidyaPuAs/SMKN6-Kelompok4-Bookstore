@@ -37,8 +37,8 @@ const Status = () => {
                 }`}
               >
                 {tab === 'belum dibayar' &&
-                    <div className='container mx-5 -mt-2 flex'>
-                        
+                    <div className='container mx-auto -mt-2 flex'>
+                        <span className='text-9xl font-playfair m-auto mt-28'>Yahh, kosong!</span>
                     </div>
                 }
                 {tab === 'Sedang dikemas' &&
