@@ -52,8 +52,9 @@ const Status = () => {
                     </div>
                 }
                 {tab === 'selesai' &&
-                    <div className='container mx-5 -mt-2 flex'>
-                        
+                    <div className='ml-3 container -mt-2'>
+                        <input type='text' className='w-11/12 mx-auto border border-gray-300 px-4 py-2 rounded-r-md' placeholder='Cari berdasarkan Nama Penjual, No. Pesanan atau Nama produk dalam semua pesanan'/>
+                        <div className='mt-3 bg-white rounded-md border'></div>
                     </div>
                 }
                 {tab === 'dibatalkan' &&
