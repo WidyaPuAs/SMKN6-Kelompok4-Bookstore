@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import image from '../../assets/picbuku.png';
+import harrypotter from '../../assets/picbuku.png';
+import unbirthday from '../../assets/unbirthday.png';
+import thewendy from '../../assets/thewendy.png';
 import Bar from '../navbar/navbar';
 
 function Halaman_Keranjang() {
   const [cartItems, setCartItems] = useState([
-  { id: 1, name: "Harry Potter: Half Blood Prince", price: 10, quantity: 2, image: "https://imgur.com/c1GmL6Q" },
-  { id: 2, name: "Unbirthday", price: 20, quantity: 1, image: "https://imgur.com/undefined" },
+  { id: 1, name: "Harry Potter: Half Blood Prince", price: 20, quantity: 1, image: harrypotter },
+  { id: 2, name: "Unbirthday", price: 30, quantity: 1, image: unbirthday },
+  { id: 3, name: "The Wendy", price: 10, quantity: 1, image: thewendy },
 ]);
 
 
@@ -51,16 +54,19 @@ function Halaman_Keranjang() {
   
             <h1 className="text-2xl font-bold mb-10 mt-5">Keranjang Buku</h1>
             {cartItems.length === 0 ? (
-              <p>Your cart is empty.</p>
+              <div className="flex justify-center items-center h-40">
+                <p className="text-gray-500 text-xl font-medium">Your cart is empty</p>
+              </div>
             ) : (
+              
               <div className="overflow-x-auto">
                 <table className="table-auto w-full mb-4">
                   <thead>
                     <tr>
-                      <th className="px-2 md:px-4 py-2">Product</th>
-                      <th className="px-2 md:px-4 py-2">Price</th>
-                      <th className="px-2 md:px-4 py-2">Quantity</th>
-                      <th className="px-2 md:px-4 py-2">Subtotal</th>
+                      <th className="px-2 md:px-4 py-2">Produk</th>
+                      <th className="px-2 md:px-4 py-2">Harga</th>
+                      <th className="px-2 md:px-4 py-2">Jumlah</th>
+                      <th className="px-2 md:px-4 py-2">Total</th>
                       <th className="px-2 md:px-4 py-2"></th>
                     </tr>
                   </thead>
@@ -69,7 +75,7 @@ function Halaman_Keranjang() {
                       <tr key={item.id}>
                         <td className="border px-2 md:px-4 py-2">
                           <div className="flex items-center">
-                            <img src={image} alt={item.name} className="w-16 h-auto mr-4" />
+                            <img src={item.image} alt={item.name} className="w-16 h-auto mr-4" />
                             {item.name}
                           </div>
                         </td>
@@ -87,7 +93,9 @@ function Halaman_Keranjang() {
                     <td className="border px-2 md:px-4 py-2">${item.price * item.quantity}</td>
                     <td className="border px-2 md:px-4 py-2">
 
-                    <button onClick={() => handleRemoveItem(item.id)} className="text-red-500 hover:text-red-800">Remove</button>
+                    <div className="flex justify-center">
+                      <button onClick={() => handleRemoveItem(item.id)} className="text-red-500 hover:text-red-800">Remove</button>
+                    </div>
                   </td>
                 </tr>
               ))}
