@@ -22,25 +22,27 @@ function Halaman_Login() {
   const ProsesLogin = (e) => {
     e.preventDefault();
     if (validate()) {
-
-      axios.get("http://localhost:8000/user/").then(({ data }) => {
-        const user = data.find((u) => u.username === username);
-        console.log(user.username)
-        if(user.username === 0) {
-          toast.error('Username tidak Terdaftar');
-        } else {
-          if(user.password === password) {
-            toast.success('Login Berhasil');
-            usenavigate('/log')
-          } else { 
-            toast.error('Password Salah');
+      axios
+        .get("http://localhost:8000/user/")
+        .then(({ data }) => {
+          const user = data.find(
+            (u) => u.username === username || u.email === username
+          );
+          if (!user) {
+            toast.error("Username atau email tidak terdaftar");
+          } else if (user.password !== password) {
+            toast.error("Password salah");
+          } else {
+            toast.success("Login berhasil");
+            usenavigate("/log");
           }
-        }
-      }).catch(({err}) => {
-        console.log(err)
-      })
+        })
+        .catch(({ err }) => {
+          console.log(err);
+        });
     }
-  }
+  };
+  
 
   const validate = () => {
     let result = true;
