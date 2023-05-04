@@ -49,7 +49,7 @@ const Test = () => {
                 }`}
               >
                 {tab === 'Biodata' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='w-auto container mx-5 mt-2 flex'>
                         <div class="w-52 -mt-5 bg-white border border-gray-200 rounded-lg shadow">
                             <a href="#">
                                 <img class="lg:w-44  mx-auto my-4"  src={Pp} alt="" />
@@ -291,7 +291,7 @@ const Test = () => {
                       <div class="flex justify-between items-center  px-3 py-3">
                         <span class="text-gray-700">
                           <img src={about} alt="Aboutdevelopment" class="w-5 h-5 mr-5 inline-block"/> 
-                            About Development
+                            Tentang Tim
                         </span>
                       </div>
                     </div> 
