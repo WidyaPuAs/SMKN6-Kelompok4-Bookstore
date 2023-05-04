@@ -10,7 +10,7 @@ function Halaman_about() {
     <div className="bg-bg_cream min-h-screen"> 
       <Bar />
 
-	    <div className="flex flex-col py-14 items-center">
+	    <div className="flex flex-col py-10 items-center">
         <h1 className="text-3xl font-bold mb-4">Tentang Tim Developer</h1>
         <p className="text-lg text-gray-700 mb-8">
           Kami adalah tim yang berdedikasi untuk memberikan pengalaman pengguna yang terbaik dalam setiap produk yang kami buat. 
@@ -19,7 +19,7 @@ function Halaman_about() {
       <section class="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
         <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
 
-          <div className="grid grid-cols-3 gap-4 py-5 m-5 ">
+          <div className="grid grid-cols-3 gap-4 py-2 m-5 ">
             <div className="mx-4">
               <div className="flex flex-col items-center">
                 <img src={Man} alt="Anggota Tim" className="rounded-full w-32 h-32 object-cover" />
@@ -43,7 +43,7 @@ function Halaman_about() {
                   <p className="text-gray-700">UI Designer</p>
                 </div>
               </div>
-              
+
             </div>
           </ul>
         </section>
