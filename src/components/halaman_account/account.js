@@ -1,5 +1,6 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
+import '../halaman_login/login';
 import Bar from '../navbar/navbar';
 import { useNavigate } from 'react-router-dom';
 import Tabslide from './tabslide.js'
@@ -11,21 +12,35 @@ import Ovo from  '../../assets/ovo.png'
 import Saldo from  '../../assets/saldo.png'
 import Gopay from  '../../assets/gopay.png'
 import StatusPembelian from '../halaman_status_pembelian/status_pembelian'
-
+import { useState } from "react";
+import axios from "axios";
+import Users from "../../base.json";
+import Halaman_Login from '../halaman_login/login';
 
 function Halaman_Account() {
   const navigate = useNavigate();
+  const[username,usernameupdate] = useState ('');
+
+  
+  const user = Users.user.find((u) => u.username);
+  console.log(user)
+  
+
+
   return (
 	  <div className='bg-bg_cream'>
         <Bar />
+        <div className='hidden'>
+        <Halaman_Login/>
+        </div>
         <div className=' container flex flex-row md:grid-col-2'>
         <div className=' container flex flex-col md:flex-row sm:flex-row'>
           <div className='basis-2/3 mx-auto w-1/5 bg-white h-screen my-6 rounded-xl p-0' id='kotak-top'>
            <div className='flex'>
             <img src={Pp} className='w-36 ml-7 border-white border-2 rounded-full m-3'/>
            <div className='mx-4 py-8'>
-            <h1 className='font-barlow font-bold text-lg'>Delavonte</h1>
-            <h1 className='font-barlow text-sm'>Lalunadelavonte@gmail.com</h1>
+            <h1 className='font-barlow font-bold text-lg'>{user.username}</h1>
+            <h1 className='font-barlow text-sm'>{user.email}</h1>
             <h1 className='font-barlow text-sm'>Member Silver</h1>
             <button className="h-7 w-20 mt-4 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full" onClick={() => navigate('/login')}>Logout</button>
            </div>
@@ -75,17 +90,17 @@ function Halaman_Account() {
             <div class="border-t-2 my-1 border-gray-300"></div>
             <div>
               <div className='flex items-center'>
-                <h1 onClick={() => navigate('/status_pembelian')} className=' fort-barlow font-bold text-md m-2'>Pesanan Saya</h1>
+                <h1 onClick={() => navigate('/status')} className=' fort-barlow font-bold text-md m-2'>Pesanan Saya</h1>
                 <svg className="ml-auto mr-2 fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>
               </div>
               <div>
                 <ul>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Belum Dibayar</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Sedang Dikemas</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Dikirim</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Selesai</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Dibatalkan</li>
-                  <li onClick={() => navigate('/status_pembelian')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Pengembalian barang</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Belum Dibayar</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Sedang Dikemas</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1.5 ml-2 hover:text-gray-500'>Dikirim</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Selesai</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Dibatalkan</li>
+                  <li onClick={() => navigate('/status')} className='fort-barlow font-semibold text-sm my-1 ml-2 hover:text-gray-500'>Pengembalian barang</li>
                 </ul>
               </div>
             </div>
