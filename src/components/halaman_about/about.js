@@ -4,106 +4,51 @@ import Bar from "../navbar/navbar";
 import Man from "../../assets/man.jpg"
 import Woman from "../../assets/woman.jpg"
 
-
-
 function Halaman_about() {
   return (
-	  <div className="bg-bg_cream"> 
+
+    <div className="bg-bg_cream min-h-screen"> 
       <Bar />
 
-      <div className="text-black text-3xl py-10 px-10 font-bold text-center">ABOUT DEVELOPMENT</div>
-        <section class="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
-        <ul class="flex flex-wrap items-center justify-center  w-full lg:w-2/3 mt-8 lg:mt-0">
+	    <div className="flex flex-col py-14 items-center">
+        <h1 className="text-3xl font-bold mb-4">Tentang Tim Developer</h1>
+        <p className="text-lg text-gray-700 mb-8">
+          Kami adalah tim yang berdedikasi untuk memberikan pengalaman pengguna yang terbaik dalam setiap produk yang kami buat. 
+        </p>
 
-        <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/rjndr.kr/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@rjndr.kr</div>
+      <section class="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
+        <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
+
+          <div className="grid grid-cols-3 gap-4 py-5 m-5 ">
+            <div className="mx-4">
+              <div className="flex flex-col items-center">
+                <img src={Man} alt="Anggota Tim" className="rounded-full w-32 h-32 object-cover" />
+                <h2 className="text-xl font-semibold mt-4">Rajendra Agra F</h2>
+                <p className="text-gray-700">UI Designer</p>
+              </div>
             </div>
 
-            <p class="text-slate-800 text-sm text-center mt-3">Rajendra Agra Farrel M</p>
-          </a>
-          </div>     
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-32 h-32 object-cover" />
+                  <h2 className="text-xl font-semibold mt-4">Rajendra Agra F</h2>
+                  <p className="text-gray-700">UI Designer</p>
+                </div>
+              </div>
 
-          <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/vio_lance56/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Woman} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold uppercase tracking-widest"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@vio_lance56</div>
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-32 h-32 object-cover" />
+                  <h2 className="text-xl font-semibold mt-4">Rajendra Agra F</h2>
+                  <p className="text-gray-700">UI Designer</p>
+                </div>
+              </div>
+              
             </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Widya Puji Astuti</p>
-          </a>
-          </div>                  
-          
-          <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/kylrnahsn/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Woman} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@kylrnahsn</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Kayla Raniahasna A</p>
-          </a>
-          </div>
-
-        <div class="flex flex-nowrap">
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/dmssptiaji/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@dmssptiaji</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Dimas Ulung Septiaji</p>
-          </a>
-          </div>
-
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/zyyaaja/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@zyyaaja</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Ardhiansyah Ichwan P</p>
-          </a>
-          </div>
-
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/17obie_/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@17obie_</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Ilham Nugroho</p>
-          </a>
-          </div>
-
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/didandermawann/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@didandermawann</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Didan Dermawan</p>
-          </a>
-          </div>
-          </div>
-        </ul>
-      </section>
-        </div>
+          </ul>
+        </section>
+      </div>
+    </div>
   );
 };
 

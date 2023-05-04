@@ -58,7 +58,7 @@ function Halaman_Keranjang() {
                 <p className="text-gray-500 text-xl font-medium">Your cart is empty</p>
               </div>
             ) : (
-              
+
               <div className="overflow-x-auto">
                 <table className="table-auto w-full mb-4">
                   <thead>
@@ -94,7 +94,7 @@ function Halaman_Keranjang() {
                     <td className="border px-2 md:px-4 py-2">
 
                     <div className="flex justify-center">
-                      <button onClick={() => handleRemoveItem(item.id)} className="text-red-500 hover:text-red-800">Remove</button>
+                      <button onClick={() => handleRemoveItem(item.id)} className="text-red-500 hover:text-red-800">Hapus</button>
                     </div>
                   </td>
                 </tr>

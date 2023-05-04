@@ -291,7 +291,7 @@ const Test = () => {
                       <div class="flex justify-between items-center  px-3 py-3">
                         <span class="text-gray-700">
                           <img src={about} alt="Aboutdevelopment" class="w-5 h-5 mr-5 inline-block"/> 
-                            About Team Development
+                            Tentang Tim
                         </span>
                       </div>
                     </div> 
