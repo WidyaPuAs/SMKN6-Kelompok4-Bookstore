@@ -3,6 +3,8 @@ import '../../../src/index.css';
 import Bar from "../navbar/navbar";
 import Man from "../../assets/man.jpg"
 import Woman from "../../assets/woman.jpg"
+import instagram from "../../assets/instagram.png"
+import whastapp from "../../assets/whatsapp.png"
 
 function Halaman_about() {
   return (
@@ -18,37 +20,66 @@ function Halaman_about() {
           <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
             <div className="grid grid-cols-3 gap-4 py-2 m-5 ">
 
-            <div className="mx-4">
-  <div className="flex flex-col items-center">
-    <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-    <h2 className="text-xl font-semibold mt-4">Rajendra Agra F </h2>
-    <p className="text-gray-700">UI Designer</p>
-    <div className="flex justify-center space-x-4 mt-2">
-      <a href="#" className="text-gray-700 hover:text-blue-500">
-        <i className="fab fa-instagram"></i>
-      </a>
-      <a href="#" className="text-gray-700 hover:text-green-500">
-        <i className="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-                  <h2 className="text-xl font-semibold mt-4">Maria</h2>
-                  <p className="text-gray-700">UI Designer</p>
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/rjndr.kr/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6281215279935'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Rajendra Agra F</h2>
+                  <p className="text-gray-700">Full Stack Developer</p>  
                 </div>
               </div>
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-                  <h2 className="text-xl font-semibold mt-4">Steve</h2>
-                  <p className="text-gray-700">Full-stack Developer</p>
+                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/vio_lance56/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6287789194255'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Widya Pudji A</h2>
+                  <p className="text-gray-700">Full Stack Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/kylrnahsn/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6285725602090'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Kayla Raniahasna A</h2>
+                  <p className="text-gray-700">UI Developer</p>  
                 </div>
               </div>
             </div>
@@ -59,35 +90,87 @@ function Halaman_about() {
           <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
 
             <div className="grid grid-cols-4 gap-4 py-2 m-5 ">
-              <div className="mx-4">
+            <div className="mx-4">
                 <div className="flex flex-col items-center">
                   <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-                  <h2 className="text-xl font-semibold mt-4">Rajendra Agra F</h2>
-                  <p className="text-gray-700">UI Designer</p>
-                </div>
-              </div>
 
-              <div className="mx-4">
-                <div className="flex flex-col items-center">
-                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-                  <h2 className="text-xl font-semibold mt-4">Maria</h2>
-                  <p className="text-gray-700">UI Designer</p>
-                </div>
-              </div>
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/zyyaaja/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
 
-              <div className="mx-4">
-                <div className="flex flex-col items-center">
-                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-                  <h2 className="text-xl font-semibold mt-4">Steve</h2>
-                  <p className="text-gray-700">Full-stack Developer</p>
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6289630984128'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Ardhiansyah Ichwan P</h2>
+                  <p className="text-gray-700">UI Developer</p>  
                 </div>
               </div>
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
                   <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
-                  <h2 className="text-xl font-semibold mt-4">Steve</h2>
-                  <p className="text-gray-700">Full-stack Developer</p>
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/dmssptiaji/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6281772886039'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Dimas Ulung S</h2>
+                  <p className="text-gray-700">UI Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/17obie_/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6283149596357'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Ilham Nugroho</h2>
+                  <p className="text-gray-700">UI Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/didandermawann/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/62895346404969'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Didan Dermawan</h2>
+                  <p className="text-gray-700">Database Developer</p>  
                 </div>
               </div>
             </div>

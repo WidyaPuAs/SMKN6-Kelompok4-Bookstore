@@ -19,6 +19,11 @@ function Halaman_Keranjang() {
   
 
   const handleQuantityChange = (id, newQuantity) => {
+
+    if (newQuantity < 1) {
+      newQuantity = 1;
+    }
+    
     const updatedCartItems = cartItems.map((item) => {
       if (item.id === id) {
         return { ...item, quantity: newQuantity };
