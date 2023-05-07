@@ -117,7 +117,7 @@ function Halaman_about() {
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
-                      onClick={() => window.location.href = 'https://www.instagram.com/dmssptiaji/'}>
+                      onClick={() => window.location.href = 'https://www.instagram.com/dmssptiaji*/'}>
                       <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
                     </button>
 

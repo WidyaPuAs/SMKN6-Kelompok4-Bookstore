@@ -11,6 +11,7 @@ import Desc from './components/halaman_desc/harrypotter';
 import Halaman_Login from './components/halaman_login/login'
 import Halaman_SignUp from './components/halaman_login/signup'
 import Halaman_about from './components/halaman_about/about';
+import Halaman_help from './components/halaman_help/help';
 import Desc3 from './components/halaman_desc/unbirthday';
 import Halaman_Status_Pembelian from './components/halaman_status_pembelian/status_pembelian';
 import Halaman_Admin from './components/halaman_admin/admin';
@@ -38,6 +39,7 @@ function App() {
           <Route path='/login' element={<Halaman_Login/>} />
           <Route path='/signup' element={<Halaman_SignUp/>} />
           <Route path='/about' element={<Halaman_about/>} />
+          <Route path='/help' element={<Halaman_help/>} />
           <Route path='/status' element={<Halaman_Status_Pembelian/>} />
           <Route path='/admin' element={<Halaman_Admin/>} />
           <Route path='/test' element={<Tesst/>} />
