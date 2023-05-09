@@ -49,7 +49,7 @@ const Test = () => {
                 }`}
               >
                 {tab === 'Biodata' &&
-                    <div className='container mx-5 mt-2 flex'>
+                    <div className='w-auto container mx-5 mt-2 flex'>
                         <div class="w-52 -mt-5 bg-white border border-gray-200 rounded-lg shadow">
                             <a href="#">
                                 <img class="lg:w-44  mx-auto my-4"  src={Pp} alt="" />
@@ -119,17 +119,17 @@ const Test = () => {
                     </div>
                     <div class="w-auto mt-4 mx-2 bg-bg-baru border border-gray-200 rounded-lg shadow">
                       <div class="items-center px-3 py-2">
-                      <div class="flex items-center">
+                      <div class="flex items-center mt-1">
                         <h1 className='font-semibold'>Rumah</h1>
                         <button className="p-1 ml-1 bg-brown-cream font-barlow text-white font-semibold text-xs rounded-full">Utama</button>
                       </div>
-                      <h1 className='font-bold text-xl '>Mbak luna</h1>
-                      <h1 className='font-semibold text-sm'>082368736773</h1>
+                      <h1 className='font-bold text-xl mt-2'>Mbak luna</h1>
+                      <h1 className='font-semibold text-sm mt-1'>082368736773</h1>
                       <h1 className='font-semibold text-sm'>Mesir, Kairo Distrik B, Jln.Kenangan. Apartment no 7</h1>
                       <h1 className='font-semibold text-gray-400'>Pesan: Apartment Warna Krem, Lantai 6 pojok sendiri</h1>
                       <div className='flex mt-4'>
-                        <button className='font-bold font-xs text-emerald-500'>Share &nbsp; <span className='font-semibold text-gray-200'>|</span></button>
-                        <button className='font-bold font-xs text-emerald-500'> &nbsp; &nbsp; Ubah Alamat</button>
+                        <button className='font-bold font-xs text-emerald-500 hover:text-emerald-700'>Share &nbsp; <span className='font-semibold text-gray-200'>|</span></button>
+                        <button className='font-bold font-xs text-emerald-500 hover:text-emerald-700'> &nbsp; &nbsp; Ubah Alamat</button>
                       </div>
                       </div>
                     </div> 
@@ -191,8 +191,8 @@ const Test = () => {
                         <img src={Laptop} alt="Sandi" class="ml-2 w-12 mr-2 inline-block"/> 
                         <div>
                           <p className='text-sm font-bold ml-2'>Chrome di Windows 10</p>
-                          <p className='text-sm font-semibold ml-2'>182.347.39</p>
-                          <button className="p-1 ml-1 bg-dark-cream font-barlow text-white font-semibold text-xs rounded-full">Sedang Aktif</button>
+                          <p className='text-sm font-semibold ml-2 mt-1'>182.347.39</p>
+                          <button className="p-1 ml-1 bg-dark-cream font-barlow text-white font-semibold text-xs rounded-full mt-1">Sedang Aktif</button>
                         </div>
                       </div>
                     </div>
@@ -291,7 +291,7 @@ const Test = () => {
                       <div class="flex justify-between items-center  px-3 py-3">
                         <span class="text-gray-700">
                           <img src={about} alt="Aboutdevelopment" class="w-5 h-5 mr-5 inline-block"/> 
-                            About Development
+                            Tentang Tim
                         </span>
                       </div>
                     </div> 

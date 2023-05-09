@@ -85,7 +85,7 @@ function Desc() {
           </div>
 
           <div className="editors ml-40">
-            <h1 className="font-poppins font-bold text-lg mt-32">Editor</h1>
+            <h1 className="font-poppins font-bold text-lg mt-60">Editor</h1>
             <p className="font-barlow text-sm mt-6">
               JK. Rowling (Penulis), Christopher Reath, Alena Gestabon, Steve Korg
             </p>

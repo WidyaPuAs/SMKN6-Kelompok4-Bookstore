@@ -3,108 +3,183 @@ import '../../../src/index.css';
 import Bar from "../navbar/navbar";
 import Man from "../../assets/man.jpg"
 import Woman from "../../assets/woman.jpg"
-
-
+import instagram from "../../assets/instagram.png"
+import whastapp from "../../assets/whatsapp.png"
 
 function Halaman_about() {
   return (
-	  <div className="bg-bg_cream"> 
+    <div className="bg-bg_cream min-h-screen"> 
       <Bar />
+      <div className="flex flex-col py-10 items-center">
+        <h1 className="text-3xl font-bold mb-4">Tentang Tim Developer</h1>
+        <p className="text-lg text-gray-700 mb-8">
+          Kami adalah tim yang berdedikasi untuk memberikan pengalaman pengguna yang terbaik dalam setiap produk yang kami buat. 
+        </p>
 
-      <div className="text-black text-3xl py-10 px-10 font-bold text-center">ABOUT DEVELOPMENT</div>
         <section class="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
-        <ul class="flex flex-wrap items-center justify-center  w-full lg:w-2/3 mt-8 lg:mt-0">
+          <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
+            <div className="grid grid-cols-3 gap-4 py-2 m-5 ">
 
-        <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/rjndr.kr/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold uppercase tracking-widest">@rjndr.kr</div>
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/rjndr.kr/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6281215279935'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Rajendra Agra F</h2>
+                  <p className="text-gray-700">Full Stack Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/vio_lance56/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6287789194255'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Widya Pudji A</h2>
+                  <p className="text-gray-700">Full Stack Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/kylrnahsn/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6285725602090'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Kayla Raniahasna A</h2>
+                  <p className="text-gray-700">UI Developer</p>  
+                </div>
+              </div>
             </div>
+          </ul>
+        </section>
 
-            <p class="text-slate-800 text-sm text-center mt-3">Rajendra Agra Farrel M</p>
-          </a>
-          </div>     
+        <section class="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
+          <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
 
-          <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/vio_lance56/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Woman} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold uppercase tracking-widest"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@vio_lance56</div>
+            <div className="grid grid-cols-4 gap-4 py-2 m-5 ">
+            <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/zyyaaja/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6289630984128'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Ardhiansyah Ichwan P</h2>
+                  <p className="text-gray-700">UI Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/dmssptiaji*/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6281772886039'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Dimas Ulung S</h2>
+                  <p className="text-gray-700">UI Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/17obie_/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/6283149596357'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Ilham Nugroho</h2>
+                  <p className="text-gray-700">UI Developer</p>  
+                </div>
+              </div>
+
+              <div className="mx-4">
+                <div className="flex flex-col items-center">
+                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+
+                  <div className="flex mt-4">
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
+                      onClick={() => window.location.href = 'https://www.instagram.com/didandermawann/'}>
+                      <img src={instagram} className="max-w-5 h-5" alt="instagram"/>
+                    </button>
+
+                    <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full"
+                      onClick={() => window.location.href = 'https://wa.me/62895346404969'}>
+                      <img src={whastapp} className="max-w-5 h-5" alt="whatsapp"/>
+                    </button>
+                  </div>
+
+                  <h2 className="text-xl font-semibold mt-2">Didan Dermawan</h2>
+                  <p className="text-gray-700">Database Developer</p>  
+                </div>
+              </div>
             </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Widya Puji Astuti</p>
-          </a>
-          </div>                  
-          
-          <div class="w-full w-30 h-30 lg:w-1/5 md:1/5 mb-4 lg:mb-0 lg:mr-14">
-          <a href="https://www.instagram.com/kylrnahsn/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Woman} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@kylrnahsn</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Kayla Raniahasna A</p>
-          </a>
-          </div>
-
-        <div class="flex flex-nowrap">
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/dmssptiaji/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@dmssptiaji</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Dimas Ulung Septiaji</p>
-          </a>
-          </div>
-
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/zyyaaja/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@zyyaaja</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Ardhiansyah Ichwan P</p>
-          </a>
-          </div>
-
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/17obie_/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@17obie_</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Ilham Nugroho</p>
-          </a>
-          </div>
-
-          <div class="w-full w-30 h-30 lg:w-1/4 md:1/5 mb-4 lg:mb-0 lg:mr-14 mt-14">
-          <a href="https://www.instagram.com/didandermawann/">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src={Man} alt="Man" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-20 transition duration-300 hover:opacity-0"></div>
-              <div class="absolute bottom-0 left-0 w-full py-2 px-2 text-gray-800 text-xs font-semibold tracking-widest">@didandermawann</div>
-            </div>
-
-            <p class="text-slate-800 text-sm text-center mt-3">Didan Dermawan</p>
-          </a>
-          </div>
-          </div>
-        </ul>
-      </section>
-        </div>
+          </ul>
+        </section>
+      </div>
+    </div>
   );
-};
+}
 
 export default Halaman_about;
+              
