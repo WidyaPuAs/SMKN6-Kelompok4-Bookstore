@@ -17,6 +17,18 @@
       "email": "dermawandidan123@gmail.com",
       "password": "1",
       "id": 3
+    },
+    {
+      "username": "user",
+      "email": "rajendraagrafm@gmail.com",
+      "password": "user",
+      "id": 4
+    },
+    {
+      "username": "3",
+      "email": "rajendraagrafm@gmail.com",
+      "password": "3",
+      "id": 5
     }
   ]
 }
