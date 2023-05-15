@@ -1,14 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import harrypotter from '../../assets/picbuku.png';
 import unbirthday from '../../assets/unbirthday.png';
 import thewendy from '../../assets/thewendy.png';
+import { Navigate, useNavigate } from 'react-router-dom';
+import axios from "axios";
 import Bar from '../navbar/navbar';
 
 function Halaman_Keranjang() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    getProduct();
+  }, []);
+
+  function getProduct() {
+    axios.get('http://localhost:80/api/book_product/').then(function(response){
+      console.log(response.data);
+    });
+  }
   const [cartItems, setCartItems] = useState([
-  { id: 1, name: "Harry Potter: Half Blood Prince", price: 20, quantity: 1, image: harrypotter },
-  { id: 2, name: "Unbirthday", price: 30, quantity: 1, image: unbirthday },
-  { id: 3, name: "The Wendy", price: 10, quantity: 1, image: thewendy },
+  { id: 1, name: "Harry Potter: Half Blood Prince", price: 20000, quantity: 1, image: harrypotter },
+  { id: 2, name: "Unbirthday", price: 30000, quantity: 1, image: unbirthday },
+  { id: 3, name: "The Wendy", price: 10000, quantity: 1, image: thewendy },
 ]);
 
 
@@ -52,7 +65,6 @@ function Halaman_Keranjang() {
   return (
     <div className="bg-bg_cream min-h-screen">
       <Bar />
-  
       <div className="flex mt-3 container mx-auto">
         <div className="mx-4 md:mx-8 py-8 w-full">
           <div className="bg-white shadow-md rounded-lg overflow-hidden px-4 md:px-10 py-4">
@@ -85,7 +97,7 @@ function Halaman_Keranjang() {
                           </div>
                         </td>
 
-                        <td className="border px-2 md:px-4 py-2">${item.price}</td>
+                        <td className="border px-2 md:px-4 py-2">Rp {item.price}</td>
 
                         <td className="border px-2 md:px-4 py-2 ">
                           <div className="flex items-center justify-center">
@@ -95,7 +107,7 @@ function Halaman_Keranjang() {
                           </div>
                         </td>
 
-                    <td className="border px-2 md:px-4 py-2">${item.price * item.quantity}</td>
+                    <td className="border px-2 md:px-4 py-2">Rp {item.price * item.quantity}</td>
                     <td className="border px-2 md:px-4 py-2">
 
                     <div className="flex justify-center">
@@ -110,11 +122,13 @@ function Halaman_Keranjang() {
         
             )}
             <div className="flex justify-end mt-5">
-              <p className="text-lg font-bold text-gray-800">Subtotal: ${subtotal}</p>
+              <p className="text-lg font-bold text-gray-800">Subtotal: Rp {subtotal}</p>
             </div>
             
             <div className="flex justify-center mt-10">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleCheckout}>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
+              // onClick={handleCheckout}
+              onClick={() => navigate('/pembayaran')}>
                 Checkout
               </button>
             </div>

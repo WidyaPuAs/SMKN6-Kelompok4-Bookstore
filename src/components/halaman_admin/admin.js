@@ -1,26 +1,48 @@
 import '../../../src/index.css';
 import '../../../src/App.css';
 import Bar from '../navbar/navbar';
+import { useState } from 'react';
+import axios from 'axios';
+import { navigate, useNavigate } from 'react-router-dom';
 
 const Halaman_Admin = () => {
+  const navigate = useNavigate();
+  const [inputs, setInputs] = useState({})
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios.post('http://localhost:80/api/book_product/save', inputs).then(function(response){
+      console.log(response.data);
+      navigate('/');
+    });
+
+  }
     return (
       <div>
         <Bar />
         <div class="container mx-auto p-4">
         <h1 class="text-3xl font-bold mb-4">Admin Bookstore</h1>
-        <form action="" method="POST">
+        <form action="" onSubmit={handleSubmit}>
           <div class="mb-4">
-            <label for="title" class="block font-bold mb-2">Title</label>
+            <label for="judul_buku" class="block font-bold mb-2">Judul Buku</label>
             <input
+              onChange={handleChange}
               type="text"
-              id="title"
-              name="title"
+              id="judul_buku"
+              name="judul_buku"
               placeholder="Enter book title"
               class="border rounded py-2 px-3 w-full"/>
           </div>
           <div class="mb-4">
             <label for="author" class="block font-bold mb-2">Author</label>
             <input
+              onChange={handleChange}
               type="text"
               id="author"
               name="author"
@@ -28,20 +50,22 @@ const Halaman_Admin = () => {
               class="border rounded py-2 px-3 w-full"/>
           </div>
           <div class="mb-4">
-            <label for="description" class="block font-bold mb-2" > Description </label>
+            <label for="sinopsis_buku" class="block font-bold mb-2" >Sinopsis Buku </label>
             <textarea
-              id="description"
-              name="description"
+              onChange={handleChange}
+              id="sinopsis_buku"
+              name="sinopsis_buku"
               placeholder="Enter book description"
               class="border rounded py-2 px-3 w-full"
             ></textarea>
           </div>
-          <div class="mb-4">
-            <label for="price" class="block font-bold mb-2">Price</label>
+          <div class="mb-8">
+            <label for="harga_buku" class="block font-bold mb-2">Harga Buku</label>
             <input
+              onChange={handleChange}
               type="number"
-              id="price"
-              name="price"
+              id="harga_buku"
+              name="harga_buku"
               placeholder="Enter book price"
               class="border rounded py-2 px-3 w-full"/>
           </div>
@@ -54,8 +78,6 @@ const Halaman_Admin = () => {
         </div>
 
       </div>
-        
-        
     )
 }
 
