@@ -3,6 +3,8 @@ import '../../../src/index.css';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Pp from '../../assets/books.png'
+import book1 from '../../assets/picbuku.png'
+import cowo from '../../assets/man.jpg'
 
 const Status = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -29,7 +31,7 @@ const Status = () => {
               ))}
             </nav>
           </div>
-          <div className="py-8">
+          <div className="py-1">
             {tabs.map((tab, index) => (
               <div
                 key={index}
@@ -38,9 +40,38 @@ const Status = () => {
                 }`}
               >
                 {tab === 'belum dibayar' &&
-                    <div className='container mx-auto -mt-2 flex'>
-                        <span className='text-9xl font-playfair m-auto mt-28'>Yahh, kosong!</span>
+                  <div className="bg-bg_cream flex container min-h-screen mx-auto">
+                    <div className="mx-4 md:mx-8 py-8 w-full">
+                      <div className="bg-white shadow-md rounded-lg overflow-hidden px-4 md:px-10 py-4">
+                      <div className="flex items-center mb-4">
+  <div className="w-5 h-5 rounded-full bg-gray-500 flex items-center justify-center mr-4">
+    <img src={cowo} alt="toko"/>
+  </div>
+  <div>
+    <h1 className="font-bold text-gray-900 mt-1">
+      Harry Potter: Half Blood Prince
+    </h1>
+    <p className="text-gray-500">Dijual oleh Toko Buku XYZ</p>
+  </div>
+</div>
+
+                        <div className="flex items-center justify-between mb-4">
+                          
+                <div className="flex mt-1">
+                  
+                  <img src={book1} alt="Book 1" className="mr-4 w-20 h-auto"/>
+                  <div>
+                  <h1 className="font-bold text-gray-900 mt-1 text-xl">
+  Harry Potter: Half Blood Prince
+</h1>
+                    <p className="text-gray-500">1x</p>
+                  </div>
+                </div>
+                <span className="font-bold text-gray-900">Rp 100.000</span>
+              </div>
+                      </div>
                     </div>
+                  </div>
                 }
                 {tab === 'Sedang dikemas' &&
                     <div className='container mx-5 -mt-2 flex'>

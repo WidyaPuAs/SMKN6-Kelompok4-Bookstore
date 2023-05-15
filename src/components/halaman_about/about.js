@@ -2,9 +2,14 @@ import '../../../src/App.css';
 import '../../../src/index.css';
 import Bar from "../navbar/navbar";
 import Man from "../../assets/man.jpg"
-import Woman from "../../assets/woman.jpg"
 import instagram from "../../assets/instagram.png"
 import whastapp from "../../assets/whatsapp.png"
+import ardhi from "../../assets/ardhi.jpg"
+import dimas from "../../assets/dimas.jpg"
+import ilham from "../../assets/ilham.jpg"
+import kayy from "../../assets/kayy.jpg"
+import raja from "../../assets/raja.jpg"
+import widya from "../../assets/widya.jpg"
 
 function Halaman_about() {
   return (
@@ -22,7 +27,7 @@ function Halaman_about() {
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+                  <img src={raja} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
@@ -43,7 +48,7 @@ function Halaman_about() {
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+                  <img src={widya} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
@@ -64,7 +69,7 @@ function Halaman_about() {
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Woman} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+                  <img src={kayy} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
@@ -79,7 +84,7 @@ function Halaman_about() {
                   </div>
 
                   <h2 className="text-xl font-semibold mt-2">Kayla Raniahasna A</h2>
-                  <p className="text-gray-700">UI Developer</p>  
+                  <p className="text-gray-700">Front End Developer</p>  
                 </div>
               </div>
             </div>
@@ -92,7 +97,7 @@ function Halaman_about() {
             <div className="grid grid-cols-4 gap-4 py-2 m-5 ">
             <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+                  <img src={ardhi} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
@@ -107,13 +112,13 @@ function Halaman_about() {
                   </div>
 
                   <h2 className="text-xl font-semibold mt-2">Ardhiansyah Ichwan P</h2>
-                  <p className="text-gray-700">UI Developer</p>  
+                  <p className="text-gray-700">Front End Developer</p>  
                 </div>
               </div>
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+                  <img src={dimas} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
@@ -128,13 +133,13 @@ function Halaman_about() {
                   </div>
 
                   <h2 className="text-xl font-semibold mt-2">Dimas Ulung S</h2>
-                  <p className="text-gray-700">UI Developer</p>  
+                  <p className="text-gray-700">Front End Developer</p>  
                 </div>
               </div>
 
               <div className="mx-4">
                 <div className="flex flex-col items-center">
-                  <img src={Man} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
+                  <img src={ilham} alt="Anggota Tim" className="rounded-full w-36 h-36 object-cover hover:scale-105 transition duration-300" />
 
                   <div className="flex mt-4">
                     <button className="bg-button hover:scale-105 transition duration-300 text-white py-2 px-2 text-sm rounded-full mr-2"
@@ -149,7 +154,7 @@ function Halaman_about() {
                   </div>
 
                   <h2 className="text-xl font-semibold mt-2">Ilham Nugroho</h2>
-                  <p className="text-gray-700">UI Developer</p>  
+                  <p className="text-gray-700">Front End Developer</p>  
                 </div>
               </div>
 
@@ -170,7 +175,7 @@ function Halaman_about() {
                   </div>
 
                   <h2 className="text-xl font-semibold mt-2">Didan Dermawan</h2>
-                  <p className="text-gray-700">Database Developer</p>  
+                  <p className="text-gray-700">Back End Developer</p>  
                 </div>
               </div>
             </div>

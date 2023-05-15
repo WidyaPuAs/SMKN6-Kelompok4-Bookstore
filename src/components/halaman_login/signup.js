@@ -66,9 +66,9 @@ function Halaman_SignUp() {
 
   return (
     <div
-      className="bg-white-buram w-screen h-screen flex items-center justify-center"
+      className="bg-white-buram h-full flex items-center justify-center"
       id="kotak-tengah">
-      <div className="bg-white-apik w-3/4 h-3/4 rounded-xl grid grid-cols-2">
+      <div className="bg-white-apik my-7 w-3/4 h-3/4 rounded-xl grid grid-cols-2">
         <div className="col-span-1">
           <div className="flex items-center justify-center mt-16" onClick={() => navigate('/')}>
             <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
