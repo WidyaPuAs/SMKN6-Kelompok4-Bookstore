@@ -38,28 +38,28 @@ const Dropdown = () => {
         } absolute z-10 w-44 py-1 mt-1 bg-gray-100 rounded-md shadow-lg`}
       >
         <button
-          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
           role="menuitem"
           onClick={toggleDropdown}
         >
           Fantasy
         </button>
         <button
-          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
           role="menuitem"
           onClick={toggleDropdown}
         >
           Horror
         </button>
         <button
-          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
           role="menuitem"
           onClick={toggleDropdown}
         >
           Adult
         </button>
         <button
-          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+          className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
           role="menuitem"
           onClick={toggleDropdown}
         >

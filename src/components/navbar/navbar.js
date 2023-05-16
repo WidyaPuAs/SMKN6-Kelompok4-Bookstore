@@ -1,16 +1,17 @@
 import '../../../src/App.css';
 import '../../../src/index.css';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Dropdown from '../dropdown_kategori/dropdown';
 import logoBook from '../../assets/icons8-book-65.png';
-import logoBasket from '../../assets/icons8-shopping-basket-90.png';
-import logoMessage from '../../assets/icons8-secured-letter-90.png';
-import logoAccount from '../../assets/icons8-male-user-100.png';
+// import logoBasket from '../../assets/icons8-shopping-basket-90.png';
+// import logoMessage from '../../assets/icons8-secured-letter-90.png';
+// import logoAccount from '../../assets/icons8-male-user-100.png';
 import Menu from '../../assets/menu.png'
 import Account from '../../assets/user.png';
 import Email from '../../assets/email.png';
 import Basket from '../../assets/basket.png';
+import Searchbar from '../Layout/SearchBar/Searchbar';
 
 
 
@@ -49,9 +50,10 @@ function Bar() {
 						<button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
 					</li>
 					</ul>
-				</div>
-				{/* <Dropdown/> */}
-    			<input type='text' className='w-10/12 border border-gray-300 px-4 py-2 rounded-r-md' placeholder='Cari Buku ...'/>
+					</div>
+				{/* <Dropdown/>*/}
+    			<input type='text' className='flex-grow-1 w-10/12 border border-gray-300 px-4 py-2 rounded-r-md' placeholder='Cari Buku ...'/>
+				{/* <Searchbar /> */}
   			</div>
 
 			{/* Perkumpulan */}
@@ -68,7 +70,7 @@ function Bar() {
 					</a>
 				</div>
 				<button className="relative justify-center items-center focus:outline-none focus:ring group block sm:hidden">
-					<img src={Menu} className="h-5 w-5" />
+					<img src={Menu} alt='' className="h-5 w-5" />
 					<div className="absolute hidden group-focus:block top-full min-w-full w-screen bg-light-cream shadow-md mt-1 rounded">
 					<ul className="text-left border rounded">
 						<li className="px-4 py-1 hover:bg-bg_cream border-b">Store</li>
