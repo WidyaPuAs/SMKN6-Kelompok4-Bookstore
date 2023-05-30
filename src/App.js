@@ -21,6 +21,7 @@ import { ToastContainer } from 'react-toastify';
 import Book_View from './components/halaman_book_view/book_view';
 import Buku_Terbaru from './components/halaman_book_view/buku_terbaru';
 import Halaman_kategori from './components/dropdown_kategori/dropdown';
+import Beta_Keranjang from './components/halaman_keranjang/beta_keranjang';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/log' element={<Halaman_Home_Login/>} />
           <Route path='/kategori' element={<Halaman_kategori/>} />
           <Route path='/keranjang' element={<Halaman_Keranjang/>} />
+          <Route path='/keranjang1' element={<Beta_Keranjang/>} use />
           <Route path='/chat' element={<Halaman_Chat/>} />
           <Route path='/profile' element={<Halaman_Account/>} />
           <Route path='/buku-terbaru' element={<Buku_Terbaru/>} />

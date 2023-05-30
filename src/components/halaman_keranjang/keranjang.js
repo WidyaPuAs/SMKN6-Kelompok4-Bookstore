@@ -8,16 +8,6 @@ import Bar from '../navbar/navbar';
 
 function Halaman_Keranjang() {
   const navigate = useNavigate()
-
-  useEffect(() => {
-    getProduct();
-  }, []);
-
-  function getProduct() {
-    axios.get('http://localhost:80/api/book_product/').then(function(response){
-      console.log(response.data);
-    });
-  }
   const [cartItems, setCartItems] = useState([
   { id: 1, name: "Harry Potter: Half Blood Prince", price: 20000, quantity: 1, image: harrypotter },
   { id: 2, name: "Unbirthday", price: 30000, quantity: 1, image: unbirthday },

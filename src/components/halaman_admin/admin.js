@@ -19,7 +19,7 @@ const Halaman_Admin = () => {
     event.preventDefault();
     axios.post('http://localhost:80/api/book_product/save', inputs).then(function(response){
       console.log(response.data);
-      navigate('/');
+      // navigate('/admin');
     });
 
   }
@@ -36,7 +36,7 @@ const Halaman_Admin = () => {
               type="text"
               id="judul_buku"
               name="judul_buku"
-              placeholder="Enter book title"
+              placeholder="Masusukkan Judul Buku ..."
               class="border rounded py-2 px-3 w-full"/>
           </div>
           <div class="mb-4">
@@ -46,7 +46,7 @@ const Halaman_Admin = () => {
               type="text"
               id="author"
               name="author"
-              placeholder="Enter book author"
+              placeholder="Masukkan Penulis Buku ..."
               class="border rounded py-2 px-3 w-full"/>
           </div>
           <div class="mb-4">
@@ -55,7 +55,7 @@ const Halaman_Admin = () => {
               onChange={handleChange}
               id="sinopsis_buku"
               name="sinopsis_buku"
-              placeholder="Enter book description"
+              placeholder="Masukkan Sinopsis Singkat Buku ..."
               class="border rounded py-2 px-3 w-full"
             ></textarea>
           </div>
@@ -66,7 +66,17 @@ const Halaman_Admin = () => {
               type="number"
               id="harga_buku"
               name="harga_buku"
-              placeholder="Enter book price"
+              placeholder="Masukkan Harga Buku (Rp) ..."
+              class="border rounded py-2 px-3 w-full"/>
+          </div>
+          <div class="mb-8">
+            <label for="stok_buku" class="block font-bold mb-2">Stok Buku</label>
+            <input
+              onChange={handleChange}
+              type="number"
+              id="stok_buku"
+              name="stok_buku"
+              placeholder="Masukkan Stok Buku ..."
               class="border rounded py-2 px-3 w-full"/>
           </div>
           <div>
