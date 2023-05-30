@@ -4,18 +4,18 @@ import '../halaman_login/login';
 import Bar from '../navbar/navbar';
 import { useNavigate } from 'react-router-dom';
 import Tabslide from './tabslide.js'
-import Bgpp from '../../assets/bgpp.jpg';
+// import Bgpp from '../../assets/bgpp.jpg';
 import Pp from '../../assets/pp.png';
 import Rewardsilver from '../../assets/RewardsSilver.svg'
 import Ovo from  '../../assets/ovo.png'
 // import Dana from  '../../assets/dana.png'
 import Saldo from  '../../assets/saldo.png'
 import Gopay from  '../../assets/gopay.png'
-import StatusPembelian from '../halaman_status_pembelian/status_pembelian'
+// import StatusPembelian from '../halaman_status_pembelian/status_pembelian'
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Users from "../../base.json";
-import Halaman_Login from '../halaman_login/login';
+import Halaman_login from '../halaman_login/login';
 
 function Halaman_Account() {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ function Halaman_Account() {
 	  <div className='bg-bg_cream'>
         <Bar />
         <div className='hidden'>
-        <Halaman_Login/>
+        <Halaman_login/>
         </div>
         <div className=' container flex flex-row md:grid-col-2'>
         <div className=' container flex flex-col md:flex-row sm:flex-row'>

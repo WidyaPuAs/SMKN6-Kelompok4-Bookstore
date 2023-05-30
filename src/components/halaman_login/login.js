@@ -59,20 +59,18 @@ function Halaman_Login() {
 
   return (
     <div
-      className="bg-white-buram w-full py-5 flex items-center justify-center"
+      className="bg-white-buram w-full h-screen flex items-center justify-center"
       id="kotak-tengah">
-      <div className="bg-white-apik pb-5 w-3/4 h-3/4 rounded-xl grid grid-cols-2">
+      <div className="bg-white-apik pb-5 w-3/4 rounded-xl grid grid-cols-2">
         <div className="col-span-1">
-          <div className="flex items-center ml-3 mt-4" onClick={() => navigate('/')}>
-            <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
-            <span className="font-bold text-xl">Bookstore</span>
+          <div className="text-center mt-1 font-bold text-3xl">
+            <h1>Welcome To </h1>
+            <div className="flex items-center justify-center ml-3 mt-2" onClick={() => navigate('/')}>
+              <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
+              <span className="font-bold text-xl">Bookstore</span>
+            </div>
           </div>
-          <div className="text-center mt-4 font-semibold text-xl">
-            <h1>Welcome To 
-              <span className="block text-4xl font-bold">Bookstore</span>
-              </h1>
-          </div>
-          <div className="bg-bg_cream w-3/4 rounded-2xl mx-auto">
+          <div className=" w-3/4 -mt-[23px] rounded-2xl mx-auto">
               <div className="flex items-center justify-center mt-10">
               <h2 class="font-bold mt-2 text-2xl text-[#002D74] ">Login</h2>
             </div>
@@ -81,7 +79,7 @@ function Halaman_Login() {
                 If you are already a member, easily log in
               </p>
             </div>
-            <div>
+            <div className="">
               <form
                 action="" onSubmit={ProsesLogin}
                 class="gap-4 grid grid-rows-3 items-center justify-center"
@@ -137,7 +135,7 @@ function Halaman_Login() {
           
         </div>
         <div className="col-span-1 items-center justify-center">
-          <img className="h-full w-full object-cover" src={logoutama} />
+          <img className="h-full w-full object-cover " src={logoutama} />
         </div>
       </div>
     </div>
