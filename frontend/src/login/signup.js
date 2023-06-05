@@ -6,9 +6,81 @@ import logotwt from "../assets/icons/logotwt.png";
 import logofb from "../assets/icons/logofb.png";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { Axios } from 'axios';
+
 
 function Halaman_SignUp() {
   const navigate = useNavigate()
+
+  // const [email, setEmail] = useState();
+  // const [username, setUsername] = useState();
+  // const [password, setPassword] = useState();
+  // const [registerStatus, setRegisterStatus] = useState();
+
+  // const register = (e) => {
+  //   e.preventDefault();
+  //   Axios.post("http://ocalhost:3001/register", {
+  //     email: email,
+  //     username: username,
+  //     password: password,
+  //   }).then((response) => {
+  //     if(response.data.message) {
+  //       setRegisterStatus(response.data.message);
+  //     } else {
+  //       setRegisterStatus("Berhasil Membuat Akun");
+  //     }
+  //   })
+  // }
+
+  const[username,usernameChange] = useState("");
+  const[email,emailChange] = useState("");
+  const[password,passwordChange] = useState("");
+
+  const IsValidate = () => {
+    let isproceed = true;
+    let errormessage = 'Tolong Masukkan ';
+    if( username == null || username == '') {
+      isproceed = false;
+      errormessage += 'Username';
+    }
+    if( email == null || email == '') {
+      isproceed = false;
+      errormessage += 'Email';
+    }
+    if( password == null || password == '') {
+      isproceed = false;
+      errormessage += 'Password';
+    }
+    if (!isproceed) {
+      toast.warning(errormessage)
+    } else {
+      if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
+
+      } else {
+        isproceed = false;
+        toast.warning('Email tidak Valid')
+      }
+    }
+    return isproceed;
+  }
+
+  const prosesSignUp=(e)=> {
+    e.preventDefault();
+    let regobj = {username,email,password};
+    if (IsValidate()) {
+      // console.log(regobj);
+      fetch("http://localhost:8000/user/",{
+        method:"POST",
+        headers:{'content-type':'application/json'},
+        body:JSON.stringify(regobj)
+      }).then((res) => {
+        toast.success('Registered Successfully.')
+        navigate('/login');
+      }).catch((err) => {
+        toast.error('Failed : '+err.message);
+      });
+    }
+  }
 
   return (
     <div
@@ -16,7 +88,7 @@ function Halaman_SignUp() {
       id="kotak-tengah">
       <div className="bg-white-apik my-7 w-3/4 rounded-xl grid grid-cols-2">
         <div className="col-span-1">
-          <div className="flex items-center m-3" onClick={() => navigate('/')}>
+          <div className="flex items-center justify-center m-3" onClick={() => navigate('/')}>
             <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
             <span className="font-bold text-xl">Bookstore</span>
           </div>
@@ -34,6 +106,7 @@ function Halaman_SignUp() {
           <div>
             <form
               action=""
+              onSubmit={prosesSignUp}
               class="gap-4 grid grid-rows-3 items-center justify-center"
             >
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -41,6 +114,8 @@ function Halaman_SignUp() {
                   class="w-64 p-2 rounded-xl border"
                   name="username"
                   placeholder="Username"
+                  value={username}
+                  onChange={e=>usernameChange(e.target.value)}
                 />
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -49,6 +124,8 @@ function Halaman_SignUp() {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={e=>emailChange(e.target.value)}
                 />
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -57,6 +134,8 @@ function Halaman_SignUp() {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  value={password}
+                  onChange={e=>passwordChange (e.target.value)}
                 />
               </div>
               <div class="row-span-1 hover:scale-105 duration-400" 

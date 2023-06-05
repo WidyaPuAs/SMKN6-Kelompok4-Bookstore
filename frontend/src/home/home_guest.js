@@ -2,6 +2,14 @@ import '../css/home.css';
 import { useState } from "react";
 import { Navigate, useNavigate } from 'react-router-dom';
 import tereliyePergi from "../assets/books/tereliye-pergi.jpg";
+import tereliyeBulan from "../assets/books/bulan.jpg";
+import tereliyeAnakSpecial from "../assets/books/anak_special.jpg";
+import tereliyeKomet from "../assets/books/komet.jpg";
+import tereliyeMatahari from "../assets/books/matahari.jpg";
+import tereliyeBintang from "../assets/books/bintang.jpg";
+import tereliyeBedebah from "../assets/books/negeri_para_bedebah.jpg";
+import tereliyeHujan from "../assets/books/hujan.jpg";
+import tereliyeBumi from "../assets/books/bumi.jpg";
 import CoverTop from "../assets/assets/cover.png";
 import Test from "../assets/assets/test.png";
 import Bar_Guest from "../nav/navbar_guest";
@@ -63,70 +71,70 @@ function Halaman_Home_Guest() {
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeBulan} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Bulan</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeAnakSpecial} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Si Anak Special</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeMatahari} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Matahari</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeBintang} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Bintang</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeHujan} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Hujan</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeKomet} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Komet</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeBedebah} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
-          <h2 class="text-lg font-medium">Pergi</h2>
+          <h2 class="text-lg font-medium">Negeri Para Bedebah</h2>
           <p class="text-sm text-gray-500">Tereliye</p>
         </div>
         <div class="text-lg font-medium text-gray-700">Rp. 99.000</div>
       </div>
 
       <div class="flex-shrink-0 w-44 p-4 bg-white rounded-lg shadow-lg text-center">
-        <img src={tereliyePergi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
+        <img src={tereliyeBumi} alt="Gambar Buku" class="w-36 h-52 mx-auto mb-4"/>
         <div class="text-center mb-4">
           <h2 class="text-lg font-medium">Pergi</h2>
           <p class="text-sm text-gray-500">Tereliye</p>

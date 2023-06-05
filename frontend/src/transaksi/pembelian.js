@@ -5,12 +5,13 @@ import BcaLogo from "../assets/icons/bca.png";
 import BniLogo from "../assets/icons/bni.png";
 import OvoLogo from "../assets/icons/ovo-2.png";
 import tereliyePergi from "../assets/books/tereliye-pergi.jpg";
+import tereliyeBintang from "../assets/books/bintang.jpg";
 
 function Halaman_Pembelian() {
   return (
-    <div>
+    <div className="bg-bg_cream min-h-screen">
       <Bar />
-      <div className="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 h-4/5 bg-light-cream mt-14 py-4 rounded-md" id="kotak-top">
+      <div className="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 h-4/5 mt-14 py-4 rounded-md" id="kotak-top">
     <div class="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32 gap-11">
       <div class="px-4 pt-8 mt-10 bg-gray-50 lg:rounded-md lg:mb-3 lg:mt-3">
         <p class="text-xl font-medium">Rincian Pesanan</p>
@@ -25,9 +26,9 @@ function Halaman_Pembelian() {
             </div>
           </div>
           <div class="flex flex-col rounded-lg bg-white sm:flex-row">
-            <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src={tereliyePergi} alt="" />
+            <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src={tereliyeBintang} alt="" />
             <div class="flex w-full flex-col px-4 py-4">
-              <span class="font-semibold">Tereliye - Pergi</span>
+              <span class="font-semibold">Tereliye - Bintang</span>
               <span class="float-right text-gray-400">42EU - 8.5US</span>
               <p class="mt-auto text-lg font-bold">Rp 85.000</p>
             </div>
@@ -87,7 +88,7 @@ function Halaman_Pembelian() {
             </label>
           </div>
           <div class="relative">
-            <input class="peer hidden" id="radio_4" type="radio" name="radio" checked />
+            <input class="peer hidden" id="radio_5" type="radio" name="radio" checked />
             <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
             <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_4">
               <img class="w-14 object-contain" src={OvoLogo} alt="" />

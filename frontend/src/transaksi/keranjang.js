@@ -1,16 +1,14 @@
 import Bar from "../nav/navbar";
 import React, { useEffect, useState } from "react";
-import harrypotter from '../assets/books/kayla/picbuku.png';
-import unbirthday from '../assets/books/kayla/unbirthday.png';
-import thewendy from '../assets/books/kayla/thewendy.png';
+import tereliyePergi from "../assets/books/tereliye-pergi.jpg";
+import tereliyeBintang from "../assets/books/bintang.jpg";
 import { Navigate, useNavigate } from 'react-router-dom';
 
 function Halaman_Keranjang() {
   const navigate = useNavigate()
   const [cartItems, setCartItems] = useState([
-  { id: 1, name: "Harry Potter: Half Blood Prince", price: 20000, quantity: 1, image: harrypotter },
-  { id: 2, name: "Unbirthday", price: 30000, quantity: 1, image: unbirthday },
-  { id: 3, name: "The Wendy", price: 10000, quantity: 1, image: thewendy },
+  { id: 1, name: "Tereliye - Pergi", price: 20000, quantity: 1, image: tereliyePergi },
+  { id: 2, name: "Tereliye - Bintang", price: 30000, quantity: 1, image: tereliyeBintang },
 ]);
 
 

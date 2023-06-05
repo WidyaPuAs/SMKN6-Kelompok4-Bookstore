@@ -7,9 +7,73 @@ import logofb from "../assets/icons/logofb.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { Axios } from 'axios';
   
 function Halaman_Login() {
   const navigate = useNavigate()
+  const usenavigate = useNavigate()
+
+  // const [email, setEmail] = useState();
+  // const [username, setUsername] = useState();
+  // const [password, setPassword] = useState();
+  // const [loginStatus, setloginStatus] = useState();
+
+
+  // const login = (e) => {
+  //   e.preventDefault();
+  //   Axios.post("http://ocalhost:3001/login", {
+  //     username: username,
+  //     password: password,
+  //   }).then((response) => {
+  //     if(response.data.message) {
+  //       setloginStatus(response.data.message);
+  //     } else {
+  //       setloginStatus(response.data[0].email);
+  //     }
+  //   })
+  // }
+
+    const[username,usernameupdate] = useState ('');
+    const[password,passwordupdate] = useState ('');
+
+    const ProsesLogin = (e) => {
+      e.preventDefault();
+      if (validate()) {
+        axios
+          .get("http://localhost:8000/user/")
+          .then(({ data }) => {
+            const user = data.find(
+              (u) => u.username === username || u.email === username
+            );
+            if (!user) {
+              toast.error("Username atau email tidak terdaftar");
+            } else if (user.password !== password) {
+              toast.error("Password salah");
+            } else {
+              toast.success("Login berhasil");
+              usenavigate("/log");
+            }
+          })
+          .catch(({ err }) => {
+            console.log(err);
+          });
+      }
+    };
+    
+
+    const validate = () => {
+      let result = true;
+      if(username === '' || username === null) {
+        result = false;
+        toast.warning('Masukkan Username');
+      }
+      if(password === '' || password === null) {
+        result = false;
+        toast.warning('Masukkan Password');
+      }
+      return result;
+    }
 
   return (
     <div
@@ -17,7 +81,7 @@ function Halaman_Login() {
       id="kotak-tengah">
       <div className="bg-white-apik pb-5 w-3/4 rounded-xl grid grid-cols-2">
         <div className="col-span-1">
-          <div className="text-center mt-1 font-bold text-3xl">
+          <div className="text-center font-bold text-3xl mt-20">
             <h1>Welcome To </h1>
             <div className="flex items-center justify-center ml-3 mt-2" onClick={() => navigate('/')}>
               <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
@@ -36,6 +100,7 @@ function Halaman_Login() {
             <div className="">
               <form
                 action=""
+                onSubmit={ProsesLogin}
                 class="gap-4 grid grid-rows-3 items-center justify-center"
               >
                 <div className="row-span-1 hover:scale-105 duration-300">
@@ -43,6 +108,8 @@ function Halaman_Login() {
                     class="w-64 p-2 rounded-xl border"
                     name="username"
                     placeholder="Username"
+                    value={username}
+                    onChange={e=>usernameupdate(e.target.value)}
                   />
                 </div>
                 <div className="row-span-1 hover:scale-105 duration-300">
@@ -51,6 +118,8 @@ function Halaman_Login() {
                     type="password"
                     name="password"
                     placeholder="Password"
+                    value={password}
+                    onChange={e=>passwordupdate(e.target.value)}
                   />
                 </div>
                 <div class="row-span-1 hover:scale-105 duration-400">
