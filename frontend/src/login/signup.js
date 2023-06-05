@@ -1,3 +1,4 @@
+import  Validation from './validation';
 import { Navigate, useNavigate } from 'react-router-dom';
 import logoBook from "../assets/icons/icons8-book-65.png";
 import logoutama from "../assets/icons/logoutama.png";
@@ -6,81 +7,86 @@ import logotwt from "../assets/icons/logotwt.png";
 import logofb from "../assets/icons/logofb.png";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Axios } from 'axios';
+import axios from 'axios';
 
 
 function Halaman_SignUp() {
-  const navigate = useNavigate()
+    const navigate = useNavigate()
+    const usenavigate = useNavigate()
 
-  // const [email, setEmail] = useState();
-  // const [username, setUsername] = useState();
-  // const [password, setPassword] = useState();
-  // const [registerStatus, setRegisterStatus] = useState();
+    const [values, setValues] = useState({
+      username: '',
+      email: '',
+      password: ''
+    })
 
-  // const register = (e) => {
-  //   e.preventDefault();
-  //   Axios.post("http://ocalhost:3001/register", {
-  //     email: email,
-  //     username: username,
-  //     password: password,
-  //   }).then((response) => {
-  //     if(response.data.message) {
-  //       setRegisterStatus(response.data.message);
+    const [errors, setErrors] = useState({});
+    const handleInput = (event) => {
+      setValues(prev => ({...prev, [event.target.name]: [event.target.value]  }))
+    }
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      setErrors(Validation(values));
+      if(errors.username === "" && errors.email === "" && errors.password === "") {
+        axios.post('http://localhost:8001/signup', values)
+        .then(res => {
+          navigate('/login')
+        })
+        .catch(err => console.log(err));
+      }
+
+    }
+
+  // const[username,usernameChange] = useState("");
+  // const[email,emailChange] = useState("");
+  // const[password,passwordChange] = useState("");
+
+  // const IsValidate = () => {
+  //   let isproceed = true;
+  //   let errormessage = 'Tolong Masukkan ';
+  //   if( username == null || username == '') {
+  //     isproceed = false;
+  //     errormessage += 'Username';
+  //   }
+  //   if( email == null || email == '') {
+  //     isproceed = false;
+  //     errormessage += 'Email';
+  //   }
+  //   if( password == null || password == '') {
+  //     isproceed = false;
+  //     errormessage += 'Password';
+  //   }
+  //   if (!isproceed) {
+  //     toast.warning(errormessage)
+  //   } else {
+  //     if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
+
   //     } else {
-  //       setRegisterStatus("Berhasil Membuat Akun");
+  //       isproceed = false;
+  //       toast.warning('Email tidak Valid')
   //     }
-  //   })
+  //   }
+  //   return isproceed;
   // }
 
-  const[username,usernameChange] = useState("");
-  const[email,emailChange] = useState("");
-  const[password,passwordChange] = useState("");
-
-  const IsValidate = () => {
-    let isproceed = true;
-    let errormessage = 'Tolong Masukkan ';
-    if( username == null || username == '') {
-      isproceed = false;
-      errormessage += 'Username';
-    }
-    if( email == null || email == '') {
-      isproceed = false;
-      errormessage += 'Email';
-    }
-    if( password == null || password == '') {
-      isproceed = false;
-      errormessage += 'Password';
-    }
-    if (!isproceed) {
-      toast.warning(errormessage)
-    } else {
-      if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
-
-      } else {
-        isproceed = false;
-        toast.warning('Email tidak Valid')
-      }
-    }
-    return isproceed;
-  }
-
-  const prosesSignUp=(e)=> {
-    e.preventDefault();
-    let regobj = {username,email,password};
-    if (IsValidate()) {
-      // console.log(regobj);
-      fetch("http://localhost:8000/user/",{
-        method:"POST",
-        headers:{'content-type':'application/json'},
-        body:JSON.stringify(regobj)
-      }).then((res) => {
-        toast.success('Registered Successfully.')
-        navigate('/login');
-      }).catch((err) => {
-        toast.error('Failed : '+err.message);
-      });
-    }
-  }
+  // const prosesSignUp=(e)=> {
+  //   e.preventDefault();
+  //   let regobj = {username,email,password};
+  //   if (IsValidate()) {
+  //     // console.log(regobj);
+  //     fetch("http://localhost:8000/user/",{
+  //       method:"POST",
+  //       headers:{'content-type':'application/json'},
+  //       body:JSON.stringify(regobj)
+  //     }).then((res) => {
+  //       toast.success('Registered Successfully.')
+  //       navigate('/login');
+  //     }).catch((err) => {
+  //       toast.error('Failed : '+err.message);
+  //     });
+  //   }
+  // }
 
   return (
     <div
@@ -106,7 +112,8 @@ function Halaman_SignUp() {
           <div>
             <form
               action=""
-              onSubmit={prosesSignUp}
+              // onSubmit={prosesSignUp}
+              onSubmit={handleSubmit}
               class="gap-4 grid grid-rows-3 items-center justify-center"
             >
               <div className="row-span-1 hover:scale-105 duration-300">
@@ -114,9 +121,11 @@ function Halaman_SignUp() {
                   class="w-64 p-2 rounded-xl border"
                   name="username"
                   placeholder="Username"
-                  value={username}
-                  onChange={e=>usernameChange(e.target.value)}
+                  // value={username}
+                  // onChange={e=>usernameChange(e.target.value)}
+                  onChange={handleInput}
                 />
+                {errors.username && <span className='text-red-600'>{errors.username}</span>}
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
                 <input
@@ -124,9 +133,11 @@ function Halaman_SignUp() {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  value={email}
-                  onChange={e=>emailChange(e.target.value)}
+                  // value={email}
+                  // onChange={e=>emailChange(e.target.value)}
+                  onChange={handleInput}
                 />
+                {errors.email && <span className='text-red-600'>{errors.email}</span>}
               </div>
               <div className="row-span-1 hover:scale-105 duration-300">
                 <input
@@ -134,14 +145,16 @@ function Halaman_SignUp() {
                   type="password"
                   name="password"
                   placeholder="Password"
-                  value={password}
-                  onChange={e=>passwordChange (e.target.value)}
+                  // value={password}
+                  // onChange={e=>passwordChange (e.target.value)}
+                  onChange={handleInput}
                 />
+                {errors.password && <span className='text-red-600'>{errors.password}</span>}
               </div>
               <div class="row-span-1 hover:scale-105 duration-400" 
               // onClick={() => navigate('/login')}
               >
-                <button class="w-64 bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
+                <button type='submit' class="w-64 bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
                   Sign Up
                 </button>
               </div>

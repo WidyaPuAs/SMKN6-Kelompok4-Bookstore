@@ -1,3 +1,4 @@
+import  validation from './validation';
 import { Navigate, useNavigate } from 'react-router-dom';
 import logoBook from "../assets/icons/icons8-book-65.png";
 import logoutama from "../assets/icons/logoutama.png";
@@ -11,69 +12,66 @@ import axios from "axios";
 import { Axios } from 'axios';
   
 function Halaman_Login() {
-  const navigate = useNavigate()
-  const usenavigate = useNavigate()
+    const navigate = useNavigate()
+    const usenavigate = useNavigate()
 
-  // const [email, setEmail] = useState();
-  // const [username, setUsername] = useState();
-  // const [password, setPassword] = useState();
-  // const [loginStatus, setloginStatus] = useState();
+    const [values, setValues] = useState({
+      username: '',
+      password: ''
+    })
+
+    const [errors, setErrors] = useState({});
+    const handleInput = (event) => {
+      setValues(prev => ({...prev, [event.target.name]: [event.target.value]  }))
+    }
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      setErrors(validation(values));
+
+    }
 
 
-  // const login = (e) => {
-  //   e.preventDefault();
-  //   Axios.post("http://ocalhost:3001/login", {
-  //     username: username,
-  //     password: password,
-  //   }).then((response) => {
-  //     if(response.data.message) {
-  //       setloginStatus(response.data.message);
-  //     } else {
-  //       setloginStatus(response.data[0].email);
-  //     }
-  //   })
-  // }
+    // const[username,usernameupdate] = useState ('');
+    // const[password,passwordupdate] = useState ('');
 
-    const[username,usernameupdate] = useState ('');
-    const[password,passwordupdate] = useState ('');
-
-    const ProsesLogin = (e) => {
-      e.preventDefault();
-      if (validate()) {
-        axios
-          .get("http://localhost:8000/user/")
-          .then(({ data }) => {
-            const user = data.find(
-              (u) => u.username === username || u.email === username
-            );
-            if (!user) {
-              toast.error("Username atau email tidak terdaftar");
-            } else if (user.password !== password) {
-              toast.error("Password salah");
-            } else {
-              toast.success("Login berhasil");
-              usenavigate("/log");
-            }
-          })
-          .catch(({ err }) => {
-            console.log(err);
-          });
-      }
-    };
+    // const ProsesLogin = (e) => {
+    //   e.preventDefault();
+    //   if (validate()) {
+    //     axios
+    //       .get("http://localhost:8000/user/")
+    //       .then(({ data }) => {
+    //         const user = data.find(
+    //           (u) => u.username === username || u.email === username
+    //         );
+    //         if (!user) {
+    //           toast.error("Username atau email tidak terdaftar");
+    //         } else if (user.password !== password) {
+    //           toast.error("Password salah");
+    //         } else {
+    //           toast.success("Login berhasil");
+    //           usenavigate("/log");
+    //         }
+    //       })
+    //       .catch(({ err }) => {
+    //         console.log(err);
+    //       });
+    //   }
+    // };
     
 
-    const validate = () => {
-      let result = true;
-      if(username === '' || username === null) {
-        result = false;
-        toast.warning('Masukkan Username');
-      }
-      if(password === '' || password === null) {
-        result = false;
-        toast.warning('Masukkan Password');
-      }
-      return result;
-    }
+    // const validate = () => {
+    //   let result = true;
+    //   if(username === '' || username === null) {
+    //     result = false;
+    //     toast.warning('Masukkan Username');
+    //   }
+    //   if(password === '' || password === null) {
+    //     result = false;
+    //     toast.warning('Masukkan Password');
+    //   }
+    //   return result;
+    // }
 
   return (
     <div
@@ -100,7 +98,8 @@ function Halaman_Login() {
             <div className="">
               <form
                 action=""
-                onSubmit={ProsesLogin}
+                // onSubmit={ProsesLogin}
+                onSubmit={handleSubmit}
                 class="gap-4 grid grid-rows-3 items-center justify-center"
               >
                 <div className="row-span-1 hover:scale-105 duration-300">
@@ -108,9 +107,11 @@ function Halaman_Login() {
                     class="w-64 p-2 rounded-xl border"
                     name="username"
                     placeholder="Username"
-                    value={username}
-                    onChange={e=>usernameupdate(e.target.value)}
+                    // value={username}
+                    // onChange={e=>usernameupdate(e.target.value)}
+                    onChange={handleInput}
                   />
+                  {errors.username && <span className='text-red-600'>{errors.username}</span>}
                 </div>
                 <div className="row-span-1 hover:scale-105 duration-300">
                   <input
@@ -118,9 +119,11 @@ function Halaman_Login() {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    value={password}
-                    onChange={e=>passwordupdate(e.target.value)}
+                    // value={password}
+                    // onChange={e=>passwordupdate(e.target.value)}
+                    onChange={handleInput}
                   />
+                  {errors.password && <span className='text-red-600'>{errors.password}</span>}
                 </div>
                 <div class="row-span-1 hover:scale-105 duration-400">
                   <button class="w-64 bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">

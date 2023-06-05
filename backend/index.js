@@ -4,31 +4,30 @@ const cors = require("cors") ;
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
-const con = mysql.createConnection(
+const db = mysql.createConnection(
     {
         user: "root",
         host: "localhost",
         password: "",
-        database: "register",
+        database: "bookstore",
     }
 )
 
-app.post('/register',(req,res) => {
-    const email = req.body.email;
-    const username = req.body.username;
-    const password = req.body.password;
-
-    con.query("INSERT INTO user (email, username, password) VALUES(?, ?, ?)", [email, username, password],
-        (err, result) => {
-            if(result) {
-                res.send(result);
-            } else {
-                res.send({message: "Masukkan Data Yang Benar"})
-            }
+app.post('/signup',(req,res) => {
+    con.query = "INSERT INTO user ('username', 'email', 'password') VALUES(?)";
+    const values = [
+        req.body.username,
+        req.body.email,
+        req.body.password
+    ]
+    db.query(sql, [values], (err,data) => {
+        if(err) {
+            return res.json("Error");
         }
-    
-    )
+        return res.json(data);
+    })
 })
 
 app.post('/login',(req,res) => {
@@ -52,6 +51,6 @@ app.post('/login',(req,res) => {
     )
 })
 
-app.listen(3001, () => {
+app.listen(8001, () => {
     console.log("Running Backend Server");
 })
