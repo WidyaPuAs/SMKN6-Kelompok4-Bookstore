@@ -24,8 +24,8 @@ function Halaman_about() {
           </p>
         </div>
 
-        <section class="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
-          <ul class="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
+        <section className="flex flex-col lg:flex-row justify-center px-4 mx-10 ">
+          <ul className="flex flex-wrap items-center justify-center w-full mt-8 lg:mt-0">
             <div className="grid grid-cols-3 gap-4 py-2 m-5 ">
               <div className="mx-4">
                 <div className="flex flex-col items-center">
