@@ -15,7 +15,7 @@ import Device from '../assets/icons/device.png';
 import Alert from '../assets/icons/alert.png';
 import Laptop from '../assets/icons/laptop.png';
 
-const Test = () => {
+const Tabslide = () => {
     const [activeTab, setActiveTab] = useState(0);
     const tabs = ['Biodata', 'Daftar Alamat', 'Keamanan', 'Wishlist', 'Pengaturan'];
     const navigate = useNavigate()
@@ -305,4 +305,4 @@ const Test = () => {
     );
   };
   
-  export default Test;
+  export default Tabslide;

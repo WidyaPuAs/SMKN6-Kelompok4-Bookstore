@@ -48,7 +48,9 @@ function Bar() {
         {/* Logo Bookstore */}
         <div className="flex items-center" onClick={() => navigate("/log")}>
           <img src={logoBook} alt="Logo" className="w-10 h-10 mr-2" />
-          <span className="font-bold text-xl">Bookstore</span>
+          <span className="font-bold text-xl sm:hidden xs:hidden">
+            Bookstore
+          </span>
         </div>
 
         {/* Search Bar */}
@@ -56,7 +58,7 @@ function Bar() {
           {isMobile ? (
             <input
               type="text"
-              className="flex-grow-1 w-10/12 sm:hidden xs:hidden justify-center border border-gray-300 px-4 py-2 rounded-r-md"
+              className="flex-grow-1 w-10/12 justify-center border border-gray-300 px-4 py-2 rounded-r-md"
               placeholder="Cari Buku ..."
             />
           ) : (
@@ -116,12 +118,12 @@ function Bar() {
                 </div>
                 <div>
                   <List>
-                    <ListItem>
+                    <ListItem onClick={() => navigate("/keranjang")}>
                       <ListItemPrefix>
                         <Avatar
-                          variant="circular"
-                          alt="candice"
-                          size="sm"
+                          variant="square"
+                          alt="keranjang"
+                          size="xs"
                           src={BasketIcon}
                         />
                       </ListItemPrefix>
@@ -138,12 +140,12 @@ function Bar() {
                         </Typography>
                       </div>
                     </ListItem>
-                    <ListItem>
+                    <ListItem onClick={() => navigate("/chat")}>
                       <ListItemPrefix>
                         <Avatar
-                          variant="circular"
-                          alt="alexander"
-                          size="sm"
+                          variant="square"
+                          alt="message"
+                          size="xs"
                           src={EmailIcon}
                         />
                       </ListItemPrefix>
@@ -160,12 +162,12 @@ function Bar() {
                         </Typography>
                       </div>
                     </ListItem>
-                    <ListItem>
+                    <ListItem onClick={() => navigate("/profile")}>
                       <ListItemPrefix>
                         <Avatar
-                          variant="circular"
-                          alt="emma"
-                          size="sm"
+                          variant="square"
+                          alt="account"
+                          size="xs"
                           src={AccountIcon}
                         />
                       </ListItemPrefix>
