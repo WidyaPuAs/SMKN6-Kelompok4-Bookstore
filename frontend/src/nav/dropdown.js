@@ -49,7 +49,7 @@ const Dropdown = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute z-10 w-96 py-1 mt-1 bg-white rounded-md shadow-lg grid grid-cols-3 gap-2`}
+        } absolute z-10 w-[600px] py-1 mt-1 bg-white rounded-md shadow-lg grid grid-cols-4 gap-2`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -110,11 +110,11 @@ const Dropdown = () => {
             className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
             role="menuitem"
             onClick={() => {
-              handleKategoriClick("sliceoflife");
+              handleKategoriClick("historical");
               toggleDropdown();
             }}
           >
-            Slice of Life
+            Historical
           </button>
         </div>
         <div className="flex flex-col">
@@ -122,11 +122,11 @@ const Dropdown = () => {
             className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
             role="menuitem"
             onClick={() => {
-              handleKategoriClick("fiction");
+              handleKategoriClick("teen_fiction");
               toggleDropdown();
             }}
           >
-            Fiction
+            Teen Fiction
           </button>
           <button
             className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
@@ -147,6 +147,38 @@ const Dropdown = () => {
             }}
           >
             Thriller
+          </button>
+        </div>
+        <div className="flex flex-col">
+          <button
+            className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
+            role="menuitem"
+            onClick={() => {
+              handleKategoriClick("fantasy");
+              toggleDropdown();
+            }}
+          >
+            mystery
+          </button>
+          <button
+            className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
+            role="menuitem"
+            onClick={() => {
+              handleKategoriClick("science");
+              toggleDropdown();
+            }}
+          >
+            Science
+          </button>
+          <button
+            className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900"
+            role="menuitem"
+            onClick={() => {
+              handleKategoriClick("adult");
+              toggleDropdown();
+            }}
+          >
+            Adult
           </button>
         </div>
       </div>
