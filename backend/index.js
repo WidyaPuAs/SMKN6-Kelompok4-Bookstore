@@ -1,56 +1,31 @@
-const express = require("express");
-const mysql = require("mysql") ;
-const cors = require("cors") ;
+import express from 'express';
+import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import db from './config/Database.js';
+import router from './routes/index.js';
+dotenv.config();
+
+import Users from './models/UserModel.js';
+import Product from './models/ProductModel.js';
+import Profile from './models/ProfileModel.js';
 
 const app = express();
-app.use(cors());
+
+try {
+    await db.authenticate();
+    console.log('Database Connected (＞﹏＜)');
+    // await Users.sync();
+    // await Product.sync();
+} catch (error) {
+    console.error(error);
+}
+
+app.use(cors({ credentials: true, origin:'http://localhost:3000' }));
+app.use(cookieParser());
 app.use(express.json());
+app.use(router);
 
-const db = mysql.createConnection(
-    {
-        user: "root",
-        host: "localhost",
-        password: "",
-        database: "bookstore",
-    }
-)
-
-app.post('/signup',(req,res) => {
-    con.query = "INSERT INTO user ('username', 'email', 'password') VALUES(?)";
-    const values = [
-        req.body.username,
-        req.body.email,
-        req.body.password
-    ]
-    db.query(sql, [values], (err,data) => {
-        if(err) {
-            return res.json("Error");
-        }
-        return res.json(data);
-    })
-})
-
-app.post('/login',(req,res) => {
-    const email = req.body.email;
-    const username = req.body.username;
-    const password = req.body.password;
-
-    con.query("SELECT FROM user WHERE username = ? AND password = ?", [username, password],
-        (err, result) => {
-            if(err) {
-                req.setEncoding({err: err});
-            } else {
-                if(result.lenght > 0 ) {
-                    res.send(result);
-                } else {
-                    res.send({message: "Username atau Password Salah"})
-                }
-            }
-        }
-    
-    )
-})
-
-app.listen(8001, () => {
+app.listen(8000, () => {
     console.log("Running Backend Server");
 })

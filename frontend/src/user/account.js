@@ -1,8 +1,10 @@
 import Bar from "../nav/navbar";
 import Tabslide from './tabslide.js'
 
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import jwt_decode from 'jwt-decode';
 
 import Pp from '../assets/assets/pp.png';
 import Rewardsilver from '../assets/icons/RewardsSilver.svg'
@@ -12,6 +14,36 @@ import Gopay from  '../assets/icons/gopay.png'
 
 function Halaman_Account() {
   const navigate = useNavigate();
+
+  const[username, setUsername] = useState ('');
+  const[email, setEmail] = useState('');
+  const[token, setToken] = useState ('');
+
+  useEffect(() => {
+    refreshToken();
+  }, []);
+
+  const refreshToken = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/token');
+      setToken(response.data.accessToken);
+      const decoded =jwt_decode(response.data.accessToken);
+      setUsername(decoded.username);
+      setEmail(decoded.email);
+    } catch (error) {
+      
+    }
+  }
+
+  const Logout = async() => {
+    try {
+      await axios.delete('http://localhost:8000/logout');
+      navigate('/login');
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
 	  <div className='bg-bg_cream'>
         <Bar />
@@ -21,10 +53,10 @@ function Halaman_Account() {
            <div className='flex'>
             <img src={Pp} className='w-36 ml-7 border-white border-2 rounded-full m-3'/>
            <div className='mx-4 py-8'>
-            <h1 className='font-barlow font-bold text-lg'>Nama User</h1>
-            <h1 className='font-barlow text-sm'>Email User</h1>
+            <h1 className='font-barlow font-bold text-lg'>{username}</h1>
+            <h1 className='font-barlow text-sm'>{email}</h1>
             <h1 className='font-barlow text-sm'>Member Silver</h1>
-            <button className="h-7 w-20 mt-4 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full" onClick={() => navigate('/login')}>Logout</button>
+            <button className="h-7 w-20 mt-4 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full" onClick={Logout}>Logout</button>
            </div>
            <div className='py-8 px-7 ml-auto'>
             <button className="h-8 w-24 m-3 bg-dark-cream  hover:bg-brown-cream font-barlow text-white font-bold text-xs rounded-full">Message</button>

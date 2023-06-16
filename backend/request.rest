@@ -1,0 +1,30 @@
+GET http://localhost:8000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTY4Njc0NzcyOSwiZXhwIjoxNjg2NzQ3NzQ0fQ.L3j8_ApXMXD-oe9Mv1wjutVfrbhf0gV6tkcAjw2kmxE
+
+###
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "confPassword": "admin"
+}
+
+###
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "admin"
+}
+
+
+###
+GET http://localhost:8000/token
+
+
+###
+DELETE http://localhost:8000/logout
