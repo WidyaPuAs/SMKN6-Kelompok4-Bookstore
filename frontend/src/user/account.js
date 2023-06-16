@@ -6,6 +6,11 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
+
+import Tabslide from './tabslide.js';
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 import Pp from '../assets/assets/pp.png';
 import Rewardsilver from '../assets/icons/RewardsSilver.svg'
 import Ovo from  '../assets/icons/ovo.png'
@@ -47,9 +52,9 @@ function Halaman_Account() {
   return (
 	  <div className='bg-bg_cream'>
         <Bar />
-        <div className=' container flex flex-row md:grid-col-2'>
-        <div className=' container flex flex-col md:flex-row sm:flex-row'>
-          <div className='basis-2/3 mx-auto w-1/5 bg-white h-screen my-6 rounded-xl p-0' id='kotak-top'>
+        <div className='container flex flex-row md:grid-col-2'>
+        <div className='container flex'>
+          <div className='basis-2/3 mx-auto bg-white h-screen my-6 rounded-xl p-0' id='kotak-top'>
            <div className='flex'>
             <img src={Pp} className='w-36 ml-7 border-white border-2 rounded-full m-3'/>
            <div className='mx-4 py-8'>
@@ -65,7 +70,7 @@ function Halaman_Account() {
            </div>
            <Tabslide/>
           </div>
-          <div className='basis-1/2 md:basis-1/4 my-6  mx-auto rounded-xl bg-white h-screen'>
+          <div className='basis-1/4 my-6  mx-auto rounded-xl bg-white h-screen'>
            <div className='flex'>
             <img src={Rewardsilver} className='m-2'/>
             <h1 className=' fort-barlow font-extrabold text-lg -ml-1 m-2'>Member Silver</h1>
