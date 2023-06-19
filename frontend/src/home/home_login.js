@@ -1,6 +1,12 @@
 import '../css/home.css';
-import { useState } from "react";
+import Bar from "../nav/navbar";
+import Footer from "../nav/footer";
+
+import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import jwt_decode from 'jwt-decode';
+
 import tereliyePergi from "../assets/books/tereliye-pergi.jpg";
 import tereliyeBulan from "../assets/books/bulan.jpg";
 import tereliyeAnakSpecial from "../assets/books/anak_special.jpg";
@@ -11,10 +17,31 @@ import tereliyeBedebah from "../assets/books/negeri_para_bedebah.jpg";
 import tereliyeHujan from "../assets/books/hujan.jpg";
 import tereliyeBumi from "../assets/books/bumi.jpg";
 import Test from "../assets/assets/test.png";
-import Bar from "../nav/navbar";
-import Footer from "../nav/footer";
 
 function Halaman_Home_Login() {
+
+  const[username, setUsername] = useState ('');
+  const[token, setToken] = useState ('');
+  const[expire, setExpire] = useState('');
+
+  useEffect(() => {
+    refreshToken();
+  }, []);
+
+  const refreshToken = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/token');
+      setToken(response.data.accessToken);
+      const decoded =jwt_decode(response.data.accessToken);
+      setUsername(decoded.username);
+      setExpire(decoded.exp);
+    } catch (error) {
+      if (error.response) {
+        navigate('/');
+      }
+    }
+  }
+
   const navigate = useNavigate()
   return (
     <div className="bg-bg-baru">
