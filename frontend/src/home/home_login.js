@@ -259,34 +259,43 @@ function Halaman_Home_Login() {
 
       {/* EEEEE */}
       <section class="flex flex-col lg:flex-row items-center lg:items-stretch justify-center lg:justify-start my-10 py-8 px-4 mx-10 bg-brown-cream rounded-xl z-0">
-        <div class="w-full lg:w-1/2 ml-5">
-          <h2 class="text-2xl lg:text-3xl text-white font-bold mb-4">Temukan Penulis Terkenal</h2>
-          <p class="text-white mb-8">Penulis penulis ini telah meliris banyak karya top seller</p>
-          <a href="#" class="bg-cornflower-blue text-dark-purple py-3 px-6 rounded-full text-lg transition duration-300 hover:bg-opacity-80 hover:shadow-md bg-light-cream">Cari Sekarang</a>
-        </div>
-        <ul class="flex flex-wrap items-center justify-center lg:justify-end w-full lg:w-1/2 mt-8 lg:mt-0">
-        <li class="w-full lg:w-1/3 md:1/5 h-62 relative overflow-hidden mb-4 lg:mb-0 lg:mr-4">
-            <img src={Test} alt="Mondstadt" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
-            <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
-          </li>
-          <li class="w-full lg:w-1/3 h-62 relative overflow-hidden mb-4 lg:mb-0 lg:mr-4">
-            <img src={Test} alt="Liyue" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
-            <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
-          </li>
-          <li class="w-full lg:w-1/3 h-62 relative overflow-hidden mb-4 lg:mb-0 lg:mr-4 my-5">
-            <img src={Test} alt="Mondstadt" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
-            <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
-          </li>
-          <li class="w-full lg:w-1/3 h-62 relative overflow-hidden mb-4 lg:mb-0 lg:mr-4 my-5">
-            <img src={Test} alt="Liyue" class="w-full h-62 object-cover transition duration-300 transform hover:scale-105"/>
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
-            <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
-          </li>
-        </ul>
-      </section>
+  <div class="w-full lg:w-1/2 ml-5">
+    <h2 class="text-2xl lg:text-3xl text-white font-bold mb-4">Temukan Penulis Terkenal</h2>
+    <p class="text-white mb-8">Penulis penulis ini telah meliris banyak karya top seller</p>
+    <a href="#" class="bg-cornflower-blue text-dark-purple py-3 px-6 rounded-full text-lg transition duration-300 hover:bg-opacity-80 hover:shadow-md bg-light-cream">Cari Sekarang</a>
+  </div>
+  <div class="flex flex-wrap items-center justify-center lg:justify-end w-full lg:w-1/2 mt-8 lg:mt-0">
+    <div class="w-full lg:w-1/2">
+      <ul class="grid grid-cols-2 gap-4">
+        <li class="h-48 lg:h-62 relative overflow-hidden">
+          <img src={Test} alt="Mondstadt" class="w-full h-full object-cover transition duration-300 transform hover:scale-105"/>
+          <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
+          <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
+        </li>
+        <li class="h-48 lg:h-62 relative overflow-hidden">
+          <img src={Test} alt="Liyue" class="w-full h-full object-cover transition duration-300 transform hover:scale-105"/>
+          <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
+          <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <ul class="grid grid-cols-2 gap-4">
+        <li class="h-48 lg:h-62 relative overflow-hidden my-5">
+          <img src={Test} alt="Mondstadt" class="w-full h-full object-cover transition duration-300 transform hover:scale-105"/>
+          <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
+          <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
+        </li>
+        <li class="h-48 lg:h-62 relative overflow-hidden my-5">
+          <img src={Test} alt="Liyue" class="w-full h-full object-cover transition duration-300 transform hover:scale-105"/>
+          <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-75 transition duration-300 hover:opacity-0"></div>
+          <div class="absolute bottom-0 left-0 w-full py-2 px-4 text-white text-lg font-semibold uppercase tracking-widest">tereliye</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    
 
       {/* View 2 */}
       <div class="flex justify-between mx-20 mt-10">
