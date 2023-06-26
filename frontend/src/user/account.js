@@ -6,11 +6,6 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
-
-import Tabslide from './tabslide.js';
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
-
 import Pp from '../assets/assets/pp.png';
 import Rewardsilver from '../assets/icons/RewardsSilver.svg'
 import Ovo from  '../assets/icons/ovo.png'
