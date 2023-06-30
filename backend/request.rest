@@ -1,30 +1,97 @@
-GET http://localhost:8000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTY4Njc0NzcyOSwiZXhwIjoxNjg2NzQ3NzQ0fQ.L3j8_ApXMXD-oe9Mv1wjutVfrbhf0gV6tkcAjw2kmxE
-
-###
-POST http://localhost:8000/users
+// Create User
+POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "username": "admin",
+    "username": "Raja Maheswara",
+    "email": "rajendraagrafm@gmail.com",
+    "password": "123",
+    "confPassword": "123",
+    "role": "user"
+}
+
+###
+// Get All User
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/9672f5f4-cbbf-43f2-ba71-be116e80ecd0
+
+###
+// Get Update User
+PATCH http://localhost:5000/users/d9531266-c736-42b7-8c8f-f0383433ea75
+Content-Type: application/json
+
+{
+    "username": "Raja",
+    "email": "rajendraagrafm@gmail.com",
+    "password": "1",
+    "confPassword": "1",
+    "role": "user"
+}
+
+###
+// Get Delete User
+DELETE http://localhost:5000/users/d9531266-c736-42b7-8c8f-f0383433ea75
+
+
+###
+// Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
     "email": "admin@gmail.com",
-    "password": "admin",
-    "confPassword": "admin"
+    "password": "123"
 }
 
 ###
-POST http://localhost:8000/login
+// Login User
+POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email" : "admin@gmail.com",
-    "password" : "admin"
+    "email": "rajendraagrafm@gmail.com",
+    "password": "123"
 }
 
+###
+// User
+GET http://localhost:5000/me
 
 ###
-GET http://localhost:8000/token
-
+// Logout
+DELETE http://localhost:5000/logout
 
 ###
-DELETE http://localhost:8000/logout
+// Get All Product
+GET http://localhost:5000/product
+
+###
+// Get Single Product
+GET http://localhost:5000/product/41ce5014-00a6-4809-9ab5-2f1b91e1dfd0
+
+###
+// Add Product
+POST http://localhost:5000/product
+Content-Type: application/json
+
+{
+    "judul_buku": "Hujan - Tereliye",
+    "harga": "89000"
+}
+
+###
+// Update Product
+PATCH  http://localhost:5000/product/41ce5014-00a6-4809-9ab5-2f1b91e1dfd0
+Content-Type: application/json
+
+{
+    "judul_buku": "Bulan - Tereliye",
+    "harga": "89000"
+}
+
+###
+// Delete Product
+DELETE http://localhost:5000/product/771f30e9-3d6a-4dd3-afbb-51047bc120cd
