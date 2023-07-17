@@ -8,6 +8,7 @@ import Ovo from "../assets/icons/ovo.png";
 import Saldo from "../assets/icons/saldo.png";
 import Gopay from "../assets/icons/gopay.png";
 import { Avatar, Button, Card, CardHeader, Typography } from "@material-tailwind/react";
+import TabAcc from "./tab";
 
 function Account() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Account() {
     <div className="bg-bg_cream w-full h-screen">
       <Bar />
       <div className="w-full p-5 flex flex-row md:flex-col sm:flex-col xs:flex-col">
-        <div className="kotak1 flex basis-2/3 md:w-full md:mb-20 h-[550px] mx-auto  rounded-sm">
+        <div className="kotak1 flex flex-col basis-2/3 md:w-full md:mb-20 h-[550px] mx-auto  rounded-sm">
           <div className="header w-full h-[160px] flex flex-row rounded-lg bg-white md:bg-transparent">
             <Avatar
               src={Pp}
@@ -47,23 +48,9 @@ function Account() {
             </div>
             <div></div>
           </div>
-        </div>
-        <div className="">
-          <Card className="w-full">
-            <CardHeader
-              variant="gradient"
-              color="white"
-              className="mb-4 grid h-20 place-items-center"
-            >
-              <div className="w-full h-full">
-                <div className="m-1.5 flex flex-row">
-                  <Button variant="text" color="green">Pesanan Saya</Button>
-                  <img className="ml-auto" src={Saldo} alt=""/>
-                </div>
-
-              </div>
-            </CardHeader>
-          </Card>
+          <div className="tab w-full h-[29rem] flex flex-row rounded-b-lg -mt-2 px-4 pt-5 bg-white">
+            <TabAcc />
+          </div>
         </div>
         <div className="kotak2 flex basis-1/4 h-[550px] mx-auto bg-white rounded-lg">
           <Avatar
