@@ -22,6 +22,7 @@ import Halaman_Status_Pembelian from './transaksi/status_pembelian';
 import Halaman_kategori from './page/kategori';
 import Desc from './pagebook/harrypotter';
 import Administrator from './admin/administrator';
+import Account from './user/accountbeta';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path='/keranjang' element={<Halaman_Keranjang/>} />
           <Route path='/keranjang1' element={<Beta_Keranjang/>} />
           <Route path='/profile' element={<Halaman_Account/>} />
+          <Route path='/profil' element={<Account/>} />
           <Route path='/pembayaran' element={<Halaman_Pembelian/>} />
           <Route path='/help' element={<Halaman_help/>} />
           <Route path='/about' element={<Halaman_about/>} />

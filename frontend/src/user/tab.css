@@ -1,0 +1,27 @@
+.hovered {
+  filter: brightness(70%);
+}
+
+.hover-overlay {
+  transition: background-color 0.3s ease;
+}
+
+.hover-content {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.hover-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.hover-button:hover {
+  background-color: #4b5563;
+}
