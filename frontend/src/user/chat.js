@@ -2,8 +2,6 @@ import Bar from "../nav/navbar";
 import Kazu from '../assets/assets/kazu.jpg'
 import Scara from '../assets/assets/scara.jpg'
 
-
-
 function Halaman_Chat() {
   return (
 	  <div>

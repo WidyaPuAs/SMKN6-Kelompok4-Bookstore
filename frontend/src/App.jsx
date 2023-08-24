@@ -14,7 +14,6 @@ import Halaman_Chat from './user/chat';
 import Halaman_Keranjang from './transaksi/keranjang';
 import Halaman_Account from './user/account';
 import Halaman_Pembelian from './transaksi/pembelian';
-import Halaman_Admin from './admin/admin';
 import Buku_Terbaru from './page/buku_terbaru';
 import Beta_Keranjang from './transaksi/beta_keranjang';
 import Halaman_help from './user/help';
@@ -22,6 +21,7 @@ import Halaman_about from './admin/about';
 import Halaman_Status_Pembelian from './transaksi/status_pembelian';
 import Halaman_kategori from './page/kategori';
 import Desc from './pagebook/harrypotter';
+import Administrator from './admin/administrator';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         <Routes>
           <Route>
           <Route path='/' element={<Halaman_Home_Guest/>} />
-          <Route path='/admin' element={<Halaman_Admin/>} />
+          <Route path='/admin' element={<Administrator/>} />
           <Route path='/signup' element={<Halaman_SignUp/>} />
           <Route path='/login' element={<Halaman_Login/>} />
           <Route path='/log' element={<Halaman_Home_Login/>} />

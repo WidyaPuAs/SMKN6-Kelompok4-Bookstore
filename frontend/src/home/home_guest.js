@@ -27,31 +27,32 @@ function Halaman_Home_Guest() {
   return (
     <div className="bg-bg-baru">
       <Bar_Guest />
-      <div class="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 h-4/5 bg-light-cream mt-14 py-4 rounded-md" id="kotak-top">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-10 gap-4 h-full">
-          <div class="sm:col-span-2 md:col-span-4 border ml-10" id="text-terlaris">
-            <h1 class="text-4xl mt-10 md:mt-16 ml-2 antialiased text-dark-purple bold font-bold">
+      <div class="mx-auto sm:w-4/5 md:w-4/5 lg:w-4/5 bg-light-cream mt-14 py-4 rounded-md" id="kotak-top">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-10 gap-4 h-full">
+          <div class="sm:col-span-1 md:col-span-3 border ml-10" id="text-terlaris">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl mt-6 md:mt-10 ml-2 antialiased text-dark-purple font-bold">
               Temukan Buku Terbaru
             </h1>
             <div class="mt-3">
-              <p class="ml-3">
+              <p class="ml-3 text-sm sm:text-base">
                 Jangan lewatkan buku-buku baru yang telah dirilis!
               </p>
-              <p class="ml-3">
+              <p class="ml-3 text-sm sm:text-base">
                 Temukan buku terbaru dari segala macam genre
               </p>
             </div>
-            <a href="#">
-              <button class="bg-brown-cream rounded-lg antialiased font-sans text-white py-2 px-2 ml-3 mt-5 mb-5">
+            <a href="#" class="mt-5 block">
+              <button class="bg-brown-cream rounded-lg antialiased font-sans text-white py-2 px-3 sm:px-4 md:px-5">
                 Buku Terbaru
               </button>
             </a>
           </div>
-          <div class="hidden sm:block sm:col-span-1 md:col-span-6">
+          <div class="hidden sm:block sm:col-span-1 md:col-span-7">
             {/* <img src={CoverTop} class="object-cover h-full w-full" alt="Cover Top" /> */}
           </div>
         </div>
       </div>
+
 
       {/* View */}
       <div class="flex justify-between mx-10 sm:mx-20 mt-14">
@@ -420,9 +421,6 @@ function Halaman_Home_Guest() {
           <img src={Test} class="h-62 w-full mt-4"/>
         </div>
       </section> */}
-
-
-
 
       <Footer />
       </div>
